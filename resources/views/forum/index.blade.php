@@ -27,6 +27,7 @@
                     </div>
                 </div>
             @endforeach
+                {{ $discussions->links() }}
             </div>
         </div>
     </div>

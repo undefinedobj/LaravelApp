@@ -2,17 +2,14 @@
 
 namespace App\Repositories;
 
-use App\Models\Discussion;
+use Prettus\Repository\Contracts\RepositoryInterface;
 
-class DiscussionRepository
+/**
+ * Interface DiscussionRepository.
+ *
+ * @package namespace App\Repositories;
+ */
+interface DiscussionRepository extends RepositoryInterface
 {
-    /**
-     * 根据id获取 Discussion 实例
-     * @param $id
-     * @return mixed
-     */
-    public function show($id)
-    {
-        return Discussion::findOrFail($id);
-    }
+    //
 }

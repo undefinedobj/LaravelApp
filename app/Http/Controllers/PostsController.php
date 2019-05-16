@@ -2,17 +2,24 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Discussion;
 use App\Repositories\DiscussionRepository;
 use Illuminate\Http\Request;
 
 class PostsController extends Controller
 {
-    protected $discussion_repositories;
+    /**
+     * @var DiscussionRepository
+     */
+    protected $repository;
 
-    public function __construct(DiscussionRepository $discussion_repositories)
+    /**
+     * PostsController constructor.
+     *
+     * @param DiscussionRepository $repository
+     */
+    public function __construct(DiscussionRepository $repository)
     {
-        $this->discussion_repositories = $discussion_repositories;
+        $this->repository = $repository;
     }
 
     /**
@@ -22,7 +29,9 @@ class PostsController extends Controller
      */
     public function index()
     {
-        $discussions = Discussion::get(['id', 'title', 'user_id']);
+        $columns = ['id','title','body','user_id'];
+
+        $discussions = $this->repository->paginate(10, $columns);
 
         return  view('forum.index', compact('discussions'));
     }
@@ -51,12 +60,13 @@ class PostsController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  Discussion $discussion
+     * @param  int $id
      * @return \Illuminate\Http\Response
      */
-    public function show(Discussion $discussion)
+    public function show($id)
     {
-        $discussion = $this->discussion_repositories->show($discussion->id);
+        $discussion = $this->repository->find($id);
+
         return  view('forum.show', compact('discussion'));
     }
 
