@@ -15,8 +15,8 @@
 Route::get('/', 'PostsController@index');
 
 Route::get('/user/register', 'UsersController@register');
-Route::get('/verify/{confirm_code}', 'UsersController@confirmEmail');
 Route::post('/user/register', 'UsersController@store');
+Route::get('/verify/{confirm_code}', 'UsersController@confirmEmail');
 
 Route::resources([
     'discussions' => 'PostsController',
@@ -29,3 +29,21 @@ Route::resources([
 ], function (Router $router) {
     $router->get('/', 'PostController@index');
 });*/
+
+
+/**
+ * 纯属瞎玩, 基本没啥用
+ *
+ * @return string
+ */
+Route::any('{namespace}/{class}/{action}', function ($namespace, $class, $action)
+{
+    $class = 'App\\Http\\Controllers\\'.ucfirst(strtolower($namespace)) .'\\'. ucfirst(strtolower($class)) .'Controller';
+
+    if (class_exists($class)) {
+        $classObject = new $class();
+        if (method_exists($classObject, $action)) return call_user_func(array($classObject, $action));
+    }else {
+        return $class. 'not found';
+    }
+});
