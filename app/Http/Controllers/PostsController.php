@@ -3,10 +3,18 @@
 namespace App\Http\Controllers;
 
 use App\Models\Discussion;
+use App\Repositories\DiscussionRepository;
 use Illuminate\Http\Request;
 
 class PostsController extends Controller
 {
+    protected $discussion_repositories;
+
+    public function __construct(DiscussionRepository $discussion_repositories)
+    {
+        $this->discussion_repositories = $discussion_repositories;
+    }
+
     /**
      * Display a listing of the resource.
      *
@@ -43,13 +51,12 @@ class PostsController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  int  $id
+     * @param  Discussion $discussion
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(Discussion $discussion)
     {
-        $discussion = Discussion::findOrfail($id);
-
+        $discussion = $this->discussion_repositories->show($discussion->id);
         return  view('forum.show', compact('discussion'));
     }
 

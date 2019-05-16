@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Http\Requests\UserRegisterRequest;
 use App\Models\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Mail;
 //use Naux\Mail\SendCloudException;
 
 class UsersController extends Controller
@@ -53,14 +54,30 @@ class UsersController extends Controller
         $view = 'email.register';
 
         $this->sendTo($user, $subject, $view, $data);
+        return redirect('/');
 
 //        \Mail::send('emails.welcome', $data, function ($message) {
 //            $message->from('us@example.com', 'Laravel');
 //            $message->to('foo@example.com')->cc('bar@example.com');
 //        });
-//        return redirect('/');
     }
 
+    public function confirmEmail($confirm_code)
+    {
+        $user = User::where('confirm_code', $confirm_code)->first();
+
+        if (is_null($user)) {
+            return redirect('/');
+        }
+
+        $user->is_confirmed = 1;
+        $user->confirm_code = \Str::random(48);
+        $user->save();
+//        \Session::flash('email_confirm', '');
+
+        return redirect('user/login');
+    }
+    
     /**
      * Display the specified resource.
      *
@@ -106,8 +123,24 @@ class UsersController extends Controller
         //
     }
 
-    public function sendTo($user, $subject, $view, $data)
+    public function sendTo($user, $subject, $view, $data=[])
     {
-        
+         Mail::queue($view, $data, function ($message) use ($user, $subject){
+                 $message->from('john@johndoe.com', 'John Doe');
+                 $message->sender('john@johndoe.com', 'John Doe');
+
+                 $message->to($user->email->subject($subject));
+
+                 $message->cc('john@johndoe.com', 'John Doe');
+                 $message->bcc('john@johndoe.com', 'John Doe');
+
+                 $message->replyTo('john@johndoe.com', 'John Doe');
+
+                 $message->subject('Subject');
+
+                 $message->priority(3);
+
+                 $message->attach('pathToFile');
+             });
     }
 }

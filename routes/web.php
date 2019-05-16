@@ -15,6 +15,7 @@
 Route::get('/', 'PostsController@index');
 
 Route::get('/user/register', 'UsersController@register');
+Route::get('/verify/{confirm_code}', 'UsersController@confirmEmail');
 Route::post('/user/register', 'UsersController@store');
 
 Route::resources([

@@ -9,6 +9,6 @@
 </head>
 <body>
     <h1>Hello Confirm Your Email</h1>
-    <a href="{{  }}">Click Your Confirm</a>
+    <a href="{{ url('verify/'.$confirm_code) }}">Click Your Confirm</a>
 </body>
 </html>
