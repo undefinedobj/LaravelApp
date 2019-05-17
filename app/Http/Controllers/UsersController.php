@@ -2,8 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\UserLoginRequest;
 use App\Http\Requests\UserRegisterRequest;
-use App\Models\User;
+use Carbon\Carbon;
 use Prettus\Validator\Contracts\ValidatorInterface;
 use Prettus\Validator\Exceptions\ValidatorException;
 use App\Http\Requests\UserCreateRequest;
@@ -11,6 +12,8 @@ use App\Http\Requests\UserUpdateRequest;
 use App\Repositories\UserRepository;
 use App\Validators\UserValidator;
 use Illuminate\Support\Facades\Mail;
+use Illuminate\Support\Facades\Session;
+use Illuminate\Support\Facades\Auth;
 
 /**
  * Class UsersController.
@@ -44,6 +47,47 @@ class UsersController extends Controller
     public function register()
     {
         return view('users.register');
+    }
+
+    public function login()
+    {
+        return view('users.login');
+    }
+
+    public function singIn(UserLoginRequest $request)
+    {
+        $user = $this->repository->findByField('email', $request->email)->first();
+
+//        登录验证并保存 Session
+        if (Auth::attempt([
+            'email'         => $request->email,
+            'password'      => $request->password,
+            'is_confirmed'  => 1,
+        ])) {
+            return redirect('/');
+        }
+
+        Session::flash('user_login_failed', "请填写正确的邮箱和密码, 并激活邮箱");
+        return redirect('/user/login')->withInput();
+
+//        更为详细的「登录验证错误反馈」方式
+//        if (! $user) {
+//            Session::flash('user_login_failed', '请输入正确的邮箱');
+//            return redirect('/user/login')->withInput();
+//        }
+//
+//        if (! Hash::check($request->password, $user->password)) {
+//            Session::flash('user_login_failed', '请输入正确的密码');
+//            return redirect('/user/login')->withInput();
+//        }
+//
+//        if ($user->is_confirmed != 1 || is_null($user->email_verified_at)) {
+//            Session::flash('user_login_failed', "请先激活您的 $user->email 邮箱");
+//            return redirect('/user/login')->withInput();
+//        }
+//
+//        session(['user' => $user]);
+//        return redirect('/');
     }
 
     /**
@@ -80,31 +124,19 @@ class UsersController extends Controller
         try {
             $request->flash();
             $data = [
-                'confirm_code' => \Str::random(48),
-                'avatar'=>'/images/default-avatar.jpg'
+                'confirm_code'      => \Str::random(48),
+                'avatar'            => '/images/default-avatar.jpg',
+                'password'          => bcrypt($request->password)
             ];
 
             $this->validator->with(array_merge($request->all(), $data))->passesOrFail(ValidatorInterface::RULE_CREATE);
 
             $user = $this->repository->create(array_merge($request->all(), $data));
 
-            $subject = 'Confirm Your Email';
-            $view = 'email.register';
+            Mail::to($user->email)->send(new \App\Mail\RegisterMail($user));
 
-            $this->sendTo($user, $subject, $view, $data);
             return redirect('/');
 
-//            $response = [
-//                'message' => 'User created.',
-//                'data'    => $user->toArray(),
-//            ];
-//
-//            if ($request->wantsJson()) {
-//
-//                return response()->json($response);
-//            }
-//
-//            return redirect()->back()->with('message', $response['message']);
         } catch (ValidatorException $e) {
             if ($request->wantsJson()) {
                 return response()->json([
@@ -125,10 +157,13 @@ class UsersController extends Controller
             return redirect('/');
         }
 
-        $user->is_confirmed = 1;
-        $user->confirm_code = \Str::random(48);
-        $user->save();
-//        \Session::flash('email_confirm', '');
+        $update = [
+            'is_confirmed'      => 1,
+            'confirm_code'      => \Str::random(48),
+            'email_verified_at' => Carbon::now()
+        ];
+
+        $this->repository->update( $update, $user->id );
 
         return redirect('user/login');
     }
@@ -232,13 +267,5 @@ class UsersController extends Controller
         }
 
         return redirect()->back()->with('message', 'User deleted.');
-    }
-
-    public function sendTo($user, $subject, $view, $data=[])
-    {
-//        Mail::queue($view, $data, function ($message) use ($user, $subject){
-        Mail::send($view, $data, function ($message) use ($user, $subject){
-                $message->to($user->email)->subject($subject);
-        });
     }
 }

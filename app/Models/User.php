@@ -72,8 +72,8 @@ class User extends Authenticatable
         return  $this->hasMany(Discussion::class);// $user->discussions
     }
 
-    public function setPasswordAttribute($password)
-    {
-        $this->attributes['password'] = \Hash::make($password);
-    }
+//    public function setPasswordAttribute($password)
+//    {
+//        $this->attributes['password'] = bcrypt($password);
+//    }
 }

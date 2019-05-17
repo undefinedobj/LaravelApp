@@ -40,9 +40,13 @@
                 </li>--}}
             </ul>
             <ul class="nav navbar-nav navbar-right">
-                <li class="{{ Request::is('user/register') ? 'active' : '' }}"><a href="{{ url('/user/register') }}">Register</a></li>
-                <li class="{{ Request::is('user/login') ? 'active' : '' }}"><a href="{{ url('/user/login') }}">Login In <span class="sr-only">(current)</span></a></li>
-                {{--<li><a href="../navbar-fixed-top/">Fixed top</a></li>--}}
+                @if (Auth::check())
+                    <li><a href="###">{{ Auth::user()->name }}</a></li>
+                @else
+                    <li class="{{ Request::is('user/register') ? 'active' : '' }}"><a href="{{ url('/user/register') }}">Register</a></li>
+                    <li class="{{ Request::is('user/login') ? 'active' : '' }}"><a href="{{ url('/user/login') }}">Login In <span class="sr-only">(current)</span></a></li>
+                    {{--<li><a href="../navbar-fixed-top/">Fixed top</a></li>--}}
+                @endif
             </ul>
         </div><!--/.nav-collapse -->
     </div>
