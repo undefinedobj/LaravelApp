@@ -236,22 +236,9 @@ class UsersController extends Controller
 
     public function sendTo($user, $subject, $view, $data=[])
     {
-        Mail::queue($view, $data, function ($message) use ($user, $subject){
-            $message->from('john@johndoe.com', 'John Doe');
-            $message->sender('john@johndoe.com', 'John Doe');
-
-            $message->to($user->email->subject($subject));
-
-            $message->cc('john@johndoe.com', 'John Doe');
-            $message->bcc('john@johndoe.com', 'John Doe');
-
-            $message->replyTo('john@johndoe.com', 'John Doe');
-
-            $message->subject('Subject');
-
-            $message->priority(3);
-
-            $message->attach('pathToFile');
+//        Mail::queue($view, $data, function ($message) use ($user, $subject){
+        Mail::send($view, $data, function ($message) use ($user, $subject){
+                $message->to($user->email)->subject($subject);
         });
     }
 }

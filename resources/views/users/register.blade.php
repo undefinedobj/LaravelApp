@@ -27,12 +27,12 @@
 
                 <div class="form-group">
                     {!! Form::label('password', '密码') !!}
-                    {!! Form::text('password', null, ['class' => 'form-control']) !!}
+                    {!! Form::password('password', ['class' => 'form-control']) !!}
                 </div>
 
                 <div class="form-group">
                     {!! Form::label('password_confirmation', '确认密码') !!}
-                    {!! Form::text('password_confirmation', null, ['class' => 'form-control']) !!}
+                    {!! Form::password('password_confirmation', ['class' => 'form-control']) !!}
                 </div>
 
                 {!! Form::submit('马上注册', ['class' => 'btn btn-success form-control']) !!}
