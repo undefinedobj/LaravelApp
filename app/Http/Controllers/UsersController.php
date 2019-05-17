@@ -58,7 +58,7 @@ class UsersController extends Controller
     {
         $user = $this->repository->findByField('email', $request->email)->first();
 
-//        登录验证并保存 Session
+//        登录验证并保存 Auth
         if (Auth::attempt([
             'email'         => $request->email,
             'password'      => $request->password,
