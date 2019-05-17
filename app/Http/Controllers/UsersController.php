@@ -56,8 +56,6 @@ class UsersController extends Controller
 
     public function singIn(UserLoginRequest $request)
     {
-        $user = $this->repository->findByField('email', $request->email)->first();
-
 //        登录验证并保存 Auth
         if (Auth::attempt([
             'email'         => $request->email,
@@ -71,6 +69,8 @@ class UsersController extends Controller
         return redirect('/user/login')->withInput();
 
 //        更为详细的「登录验证错误反馈」方式
+//        $user = $this->repository->findByField('email', $request->email)->first();
+
 //        if (! $user) {
 //            Session::flash('user_login_failed', '请输入正确的邮箱');
 //            return redirect('/user/login')->withInput();
