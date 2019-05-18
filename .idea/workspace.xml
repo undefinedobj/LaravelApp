@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="5e6bdba5-038a-45c5-a62f-8becf47afbde" name="Default Changelist" comment="" />
+    <list default="true" id="5e6bdba5-038a-45c5-a62f-8becf47afbde" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -131,22 +133,6 @@
   </component>
   <component name="FrameworkCommandLineHistory">
     <commandsHistory>
-      <command text="cp .env.example .env  " />
-      <command text="composer install  " />
-      <command text="composer install --ignore-platform-reqs" />
-      <command text="php artisan key:generate  " />
-      <command text="artisan migrate" />
-      <command text="artisan make" />
-      <command text="php artisan key:generate  " />
-      <command text="artisan tingker" />
-      <command text="arisan tinker" />
-      <command text="php artisan tinker" />
-      <command text="arisan tinker" />
-      <command text="arisan tinker;" />
-      <command text="artisank" />
-      <command text="artisan" />
-      <command text="artisan tinker" />
-      <command text="artisan migrate:rollback" />
       <command text="artisan migrate" />
       <command text="artisan tinker" />
       <command text="artisan migrate:rollback" />
@@ -156,6 +142,22 @@
       <command text="php artisan ide-helper:generate" />
       <command text="php artisan vendor:publish --provider=&quot;Barryvdh\LaravelIdeHelper\IdeHelperServiceProvider&quot; --tag=config" />
       <command text="php artisan ide-helper:meta" />
+      <command text="git add -A" />
+      <command text="git commit -m &quot;MSI computer deploy object LaravelApp&quot;" />
+      <command text="git pull" />
+      <command text="git push" />
+      <command text="git add -A" />
+      <command text="git commit -m &quot;Computer-MSI  deploy object LaravelApp&quot;" />
+      <command text="git pull" />
+      <command text="git push" />
+      <command text="git config --global push.default matching" />
+      <command text="git push" />
+      <command text="git add -A" />
+      <command text="git config --global push.default matching" />
+      <command text="git pull" />
+      <command text="git push" />
+      <command text="git remote -v" />
+      <command text=".git/" />
     </commandsHistory>
   </component>
   <component name="Git.Settings">
@@ -441,12 +443,12 @@
       <workItem from="1558054794947" duration="6703000" />
       <workItem from="1558062572453" duration="10363000" />
       <workItem from="1558160881830" duration="3424000" />
-      <workItem from="1558164473456" duration="493000" />
+      <workItem from="1558164473456" duration="1140000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="127123000" />
+    <option name="totallyTimeSpent" value="127770000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
