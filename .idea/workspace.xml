@@ -131,18 +131,6 @@
   </component>
   <component name="FrameworkCommandLineHistory">
     <commandsHistory>
-      <command text="php artisan ide-helper:generate" />
-      <command text="php artisan vendor:publish --provider=&quot;Barryvdh\LaravelIdeHelper\IdeHelperServiceProvider&quot; --tag=config" />
-      <command text="php artisan ide-helper:meta" />
-      <command text="git add -A" />
-      <command text="git commit -m &quot;MSI computer deploy object LaravelApp&quot;" />
-      <command text="git pull" />
-      <command text="git push" />
-      <command text="git add -A" />
-      <command text="git commit -m &quot;Computer-MSI  deploy object LaravelApp&quot;" />
-      <command text="git pull" />
-      <command text="git push" />
-      <command text="git config --global push.default matching" />
       <command text="git push" />
       <command text="git add -A" />
       <command text="git config --global push.default matching" />
@@ -156,6 +144,18 @@
       <command text="git commit -m &quot;Computer-MSI  deploy object LaravelApp&quot;" />
       <command text="git pull" />
       <command text="git push" />
+      <command text="git config --global user.name &quot;undefinedobj&quot;" />
+      <command text="git config --global user.email 8wy701645@163.com" />
+      <command text="git add -A" />
+      <command text="git commit -m &quot;Computer-MSI  deploy object LaravelApp&quot;" />
+      <command text="git pull" />
+      <command text="git push" />
+      <command text="repo: ssh://git@github.com/undefinedobj/undefinedobj.github.io" />
+      <command text="ssh://git@github.com/undefinedobj/undefinedobj.github.io" />
+      <command text="git remote set-url origin git@github.com:undefinedobj/undefinedobj.git" />
+      <command text="git config --global push.default matching " />
+      <command text="git push" />
+      <command text="git remote -v" />
     </commandsHistory>
   </component>
   <component name="Git.Settings">
@@ -441,15 +441,15 @@
       <workItem from="1558054794947" duration="6703000" />
       <workItem from="1558062572453" duration="10363000" />
       <workItem from="1558160881830" duration="3424000" />
-      <workItem from="1558164473456" duration="1444000" />
+      <workItem from="1558164473456" duration="2738000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="128074000" />
+    <option name="totallyTimeSpent" value="129368000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="1550" height="838" extended-state="7" />
+    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49944752" visible="true" weight="0.21715818" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
