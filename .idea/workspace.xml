@@ -131,13 +131,6 @@
   </component>
   <component name="FrameworkCommandLineHistory">
     <commandsHistory>
-      <command text="git push" />
-      <command text="git add -A" />
-      <command text="git config --global push.default matching" />
-      <command text="git pull" />
-      <command text="git push" />
-      <command text="git remote -v" />
-      <command text=".git/" />
       <command text="git config --global credential.helper wincred" />
       <command text="git push" />
       <command text="git add -A" />
@@ -156,6 +149,13 @@
       <command text="git config --global push.default matching " />
       <command text="git push" />
       <command text="git remote -v" />
+      <command text="git remote add origin git@LaravelApp" />
+      <command text="git remote rm origin" />
+      <command text="git remote add origin git@github.com:undefinedobj/LaravelApp" />
+      <command text="git push origin master" />
+      <command text="git add -A" />
+      <command text="git commit -m &quot;Computer-MSI  deploy object LaravelApp&quot;" />
+      <command text="git pull" />
     </commandsHistory>
   </component>
   <component name="Git.Settings">
@@ -441,12 +441,12 @@
       <workItem from="1558054794947" duration="6703000" />
       <workItem from="1558062572453" duration="10363000" />
       <workItem from="1558160881830" duration="3424000" />
-      <workItem from="1558164473456" duration="2738000" />
+      <workItem from="1558164473456" duration="2986000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="129368000" />
+    <option name="totallyTimeSpent" value="129616000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
