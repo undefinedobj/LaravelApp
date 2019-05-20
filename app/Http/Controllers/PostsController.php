@@ -139,6 +139,10 @@ class PostsController extends Controller
     {
         $discussion = $this->repository->find($id);
 
+        if (\Auth::user()->id !== $discussion->user_id) {
+            return redirect('/');
+        }
+
         return view('forum.edit', compact('discussion'));
     }
 
