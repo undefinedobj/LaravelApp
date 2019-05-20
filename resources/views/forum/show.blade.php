@@ -12,7 +12,7 @@
                     </a>
                 </div>
                 <div class="media-body">
-                    <a class="btn btn-primary btn-lg pull-right" href="#" role="button">修改帖子</a>
+                    <a class="btn btn-primary btn-lg pull-right" href="{{ url("discussions/$discussion->id/edit") }}" role="button">修改帖子</a>
                     <h4 class="media-heading">{{ $discussion->title }}</h4>
                     {{ $discussion->user->name }}
                 </div>
