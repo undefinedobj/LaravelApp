@@ -67,27 +67,6 @@ class UsersController extends Controller
 
         Session::flash('user_login_failed', "请填写正确的邮箱和密码, 并激活邮箱");
         return redirect('/user/login')->withInput();
-
-//        更为详细的「登录验证错误反馈」方式
-//        $user = $this->repository->findByField('email', $request->email)->first();
-
-//        if (! $user) {
-//            Session::flash('user_login_failed', '请输入正确的邮箱');
-//            return redirect('/user/login')->withInput();
-//        }
-//
-//        if (! Hash::check($request->password, $user->password)) {
-//            Session::flash('user_login_failed', '请输入正确的密码');
-//            return redirect('/user/login')->withInput();
-//        }
-//
-//        if ($user->is_confirmed != 1 || is_null($user->email_verified_at)) {
-//            Session::flash('user_login_failed', "请先激活您的 $user->email 邮箱");
-//            return redirect('/user/login')->withInput();
-//        }
-//
-//        session(['user' => $user]);
-//        return redirect('/');
     }
 
     /**
