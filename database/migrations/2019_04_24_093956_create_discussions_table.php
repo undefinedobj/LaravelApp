@@ -16,7 +16,7 @@ class CreateDiscussionsTable extends Migration
         Schema::create('discussions', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('title');
-            $table->string('body');
+            $table->text('body');
             $table->integer('user_id')->unsigned();
             $table->integer('last_user_id')->unsigned();
 //            定义这张表的id 必须为`users`表的外键

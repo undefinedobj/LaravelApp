@@ -22,7 +22,7 @@
 
                 <div class="form-group">
                     {!! Form::label('email', '邮箱') !!}
-                    {!! Form::text('email', old('email'), ['class' => 'form-control']) !!}
+                    {!! Form::email('email', old('email'), ['class' => 'form-control']) !!}
                 </div>
 
                 <div class="form-group">
