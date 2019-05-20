@@ -67,6 +67,9 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
     ];
 
+    /**
+     * 获取用户的帖子
+     */
     public function discussions()
     {
         return  $this->hasMany(Discussion::class);// $user->discussions

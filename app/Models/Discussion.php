@@ -33,8 +33,16 @@ class Discussion extends Model implements Transformable
 {
     use TransformableTrait;
 
+    /**
+     * 可以被批量赋值的属性。
+     *
+     * @var array
+     */
     protected $fillable = ['title', 'body', 'user_id', 'last_user_id'];
 
+    /**
+     * 获得拥有此帖子的用户
+     */
     public function user()
     {
         return  $this->belongsTo(User::class,'user_id');

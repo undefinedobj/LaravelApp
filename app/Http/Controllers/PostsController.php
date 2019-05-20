@@ -6,6 +6,7 @@ use App\Http\Requests\DiscussionCreateRequest;
 use App\Repositories\DiscussionRepository;
 use App\Validators\DiscussionValidator;
 use App\Transformers\DiscussionTransformer;
+use HyperDown\Parser;
 use Illuminate\Http\Request;
 use Prettus\Validator\Contracts\ValidatorInterface;
 use Prettus\Validator\Exceptions\ValidatorException;
@@ -121,8 +122,10 @@ class PostsController extends Controller
     public function show($id)
     {
         $discussion = $this->repository->find($id);
+        $parser = new Parser();
+        $html = $parser->makeHtml($discussion->body);
 
-        return  view('forum.show', compact('discussion'));
+        return  view('forum.show', compact('discussion', 'html'));
     }
 
     /**

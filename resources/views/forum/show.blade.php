@@ -27,7 +27,7 @@
                     <div class="blog-post">
 
                     </div><!-- /.blog-post -->
-                        {{ $discussion->body }}
+                        {!! $html !!}
                     <nav>
                         <ul class="pager">
                             <li><a href="#">Previous</a></li>
