@@ -54,7 +54,7 @@ class UsersController extends Controller
         return view('users.login');
     }
 
-    public function singIn(UserLoginRequest $request)
+    public function signIn(UserLoginRequest $request)
     {
 //        登录验证并保存 Auth
         if (Auth::attempt([
@@ -267,5 +267,11 @@ class UsersController extends Controller
         }
 
         return redirect()->back()->with('message', 'User deleted.');
+    }
+
+    public function logout()
+    {
+        \Auth::logout();
+        return redirect('/');
     }
 }

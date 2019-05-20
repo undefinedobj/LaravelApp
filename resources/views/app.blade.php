@@ -42,6 +42,7 @@
             <ul class="nav navbar-nav navbar-right">
                 @if (Auth::check())
                     <li><a href="###">{{ Auth::user()->name }}</a></li>
+                    <li><a href="{{ url('user/logout') }}"> Logout </a></li>
                 @else
                     <li class="{{ Request::is('user/register') ? 'active' : '' }}"><a href="{{ url('/user/register') }}">Register</a></li>
                     <li class="{{ Request::is('user/login') ? 'active' : '' }}"><a href="{{ url('/user/login') }}">Login In <span class="sr-only">(current)</span></a></li>

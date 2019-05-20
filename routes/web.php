@@ -17,10 +17,10 @@ Route::get('/', 'PostsController@index');
 Route::get('/user/register', 'UsersController@register');
 Route::post('/user/register', 'UsersController@store');
 Route::get('user/login', 'UsersController@login')->name('login');
-Route::post('user/login', 'UsersController@singIn');
-Route::get('user/logout', 'UsersController@logout')->name('login');
+Route::post('user/login', 'UsersController@signIn');
+Route::get('user/logout', 'UsersController@logout')->name('logout');
 
-Route::get('/verify/{confirm_code}', 'UsersController@confirmEmail');
+Route::get('/verify/{confirm_code}', 'UsersController@confirmEmail')->name('mail-verify');
 
 Route::resources([
     'discussions' => 'PostsController',
