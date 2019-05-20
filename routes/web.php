@@ -16,8 +16,10 @@ Route::get('/', 'PostsController@index');
 
 Route::get('/user/register', 'UsersController@register');
 Route::post('/user/register', 'UsersController@store');
-Route::get('user/login', 'UsersController@login');
+Route::get('user/login', 'UsersController@login')->name('login');
 Route::post('user/login', 'UsersController@singIn');
+Route::get('user/logout', 'UsersController@logout')->name('login');
+
 Route::get('/verify/{confirm_code}', 'UsersController@confirmEmail');
 
 Route::resources([

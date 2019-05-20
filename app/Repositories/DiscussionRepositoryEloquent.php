@@ -25,7 +25,17 @@ class DiscussionRepositoryEloquent extends BaseRepository implements DiscussionR
         return Discussion::class;
     }
 
-    
+    /**
+    * Specify Validator class name
+    *
+    * @return mixed
+    */
+    public function validator()
+    {
+
+        return DiscussionValidator::class;
+    }
+
 
     /**
      * Boot up the repository, pushing criteria

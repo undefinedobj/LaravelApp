@@ -2,8 +2,13 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\DiscussionCreateRequest;
 use App\Repositories\DiscussionRepository;
+use App\Validators\DiscussionValidator;
+use App\Transformers\DiscussionTransformer;
 use Illuminate\Http\Request;
+use Prettus\Validator\Contracts\ValidatorInterface;
+use Prettus\Validator\Exceptions\ValidatorException;
 
 class PostsController extends Controller
 {
@@ -13,13 +18,28 @@ class PostsController extends Controller
     protected $repository;
 
     /**
+     * @var DiscussionValidator
+     */
+    protected $validator;
+
+    /**
+     * @var DiscussionTransformer
+     */
+    protected $transformer;
+
+    /**
      * PostsController constructor.
      *
      * @param DiscussionRepository $repository
+     * @param DiscussionValidator $validator
+     * @param DiscussionTransformer $transformer
      */
-    public function __construct(DiscussionRepository $repository)
+    public function __construct(DiscussionRepository $repository, DiscussionValidator $validator, DiscussionTransformer $transformer)
     {
         $this->repository = $repository;
+        $this->validator  = $validator;
+        $this->transformer  = $transformer;
+        $this->middleware('auth', ['only' => ['create','store','edit','update']]);
     }
 
     /**
@@ -43,18 +63,53 @@ class PostsController extends Controller
      */
     public function create()
     {
-        //
+        return  view('forum.create');
     }
 
     /**
      * Store a newly created resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
+     * @param  DiscussionCreateRequest $request
+     *
      * @return \Illuminate\Http\Response
+     *
+     * @throws \Prettus\Validator\Exceptions\ValidatorException
      */
-    public function store(Request $request)
+    public function store(DiscussionCreateRequest $request)
     {
-        //
+        try {
+            $data = [
+                'user_id'       =>   (int) \Auth::user()->id,
+                'last_user_id'  =>   (int) \Auth::user()->id,
+            ];
+
+            $this->validator->with(array_merge($request->all(), $data))->passesOrFail(ValidatorInterface::RULE_CREATE);
+
+            $discussion = $this->repository->create(array_merge($request->all(), $data));
+
+            $response = [
+                'message' => 'Discussion created.',
+                'data'    => $discussion->toArray(),
+            ];
+
+            if ($request->wantsJson()) {
+
+                return response()->json($response);
+            }
+
+            return redirect()->action('PostsController@show', ['id'=>$discussion->id]);
+
+        } catch (ValidatorException $e) {
+            if ($request->wantsJson()) {
+                return response()->json([
+                    'error'   => true,
+                    'message' => $e->getMessageBag()
+                ]);
+            }
+
+            return redirect()->back()->withErrors($e->getMessageBag())->withInput();
+        }
+
     }
 
     /**
@@ -102,5 +157,11 @@ class PostsController extends Controller
     public function destroy($id)
     {
         //
+    }
+
+    public function logout()
+    {
+        \Auth::logout();
+        return redirect('/');
     }
 }

@@ -1,6 +1,6 @@
 @extends('app')
 
-@section('title', 'Page Title')
+@section('title', env('APP_NAME'))
 
 @section('content')
     <div class="jumbotron">

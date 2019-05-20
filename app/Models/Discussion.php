@@ -3,6 +3,8 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
+use Prettus\Repository\Contracts\Transformable;
+use Prettus\Repository\Traits\TransformableTrait;
 
 /**
  * App\Models\Discussion
@@ -27,8 +29,10 @@ use Illuminate\Database\Eloquent\Model;
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Discussion whereUserId($value)
  * @mixin \Eloquent
  */
-class Discussion extends Model
+class Discussion extends Model implements Transformable
 {
+    use TransformableTrait;
+
     protected $fillable = ['title', 'body', 'user_id', 'last_user_id'];
 
     public function user()
