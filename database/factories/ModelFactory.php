@@ -38,4 +38,14 @@ $factory->define(App\Models\Discussion::class, function (Faker $faker) {
     ];
 });
 
+$factory->define(App\Models\Comment::class, function (Faker $faker) {
 
+    $user_ids = App\Models\User::pluck('id')->toArray();
+    $discussion_ids = App\Models\Discussion::pluck('id')->toArray();
+
+    return [
+        'body' => $faker->paragraph,
+        'user_id' => $faker->randomElement($user_ids),
+        'discussion_id' => $faker->randomElement($discussion_ids)
+    ];
+});

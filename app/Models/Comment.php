@@ -7,6 +7,13 @@ use Illuminate\Database\Eloquent\Model;
 class Comment extends Model
 {
     /**
+     * 可以被批量赋值的属性。
+     *
+     * @var array
+     */
+    protected $fillable = ['body', 'user_id', 'discussion_id'];
+
+    /**
      * 获得拥有此评论的用户
      */
     public function user()

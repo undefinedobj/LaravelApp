@@ -104,6 +104,10 @@
       <path value="$PROJECT_DIR$/vendor/prettus/l5-repository" />
       <path value="$PROJECT_DIR$/vendor/league/fractal" />
       <path value="$PROJECT_DIR$/vendor/joyqi/hyper-down" />
+      <path value="$PROJECT_DIR$/vendor/storage/logs" />
+      <path value="$PROJECT_DIR$/vendor/storage/debugbar" />
+      <path value="$PROJECT_DIR$/vendor/storage/framework" />
+      <path value="$PROJECT_DIR$/vendor/storage/app" />
     </include_path>
   </component>
   <component name="PhpProjectSharedConfiguration" php_language_level="7.1" />
