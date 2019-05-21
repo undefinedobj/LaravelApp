@@ -44,16 +44,26 @@ class UsersController extends Controller
         $this->validator  = $validator;
     }
 
+    /**
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
+     */
     public function register()
     {
         return view('users.register');
     }
 
+    /**
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
+     */
     public function login()
     {
         return view('users.login');
     }
 
+    /**
+     * @param UserLoginRequest $request
+     * @return \Illuminate\Http\RedirectResponse|\Illuminate\Routing\Redirector
+     */
     public function signIn(UserLoginRequest $request)
     {
 //        登录验证并保存 Auth
@@ -128,6 +138,10 @@ class UsersController extends Controller
         }
     }
 
+    /**
+     * @param $confirm_code
+     * @return \Illuminate\Http\RedirectResponse|\Illuminate\Routing\Redirector
+     */
     public function confirmEmail($confirm_code)
     {
         $user = $this->repository->findByField('confirm_code', $confirm_code)->first();
@@ -248,6 +262,9 @@ class UsersController extends Controller
         return redirect()->back()->with('message', 'User deleted.');
     }
 
+    /**
+     * @return \Illuminate\Http\RedirectResponse|\Illuminate\Routing\Redirector
+     */
     public function logout()
     {
         \Auth::logout();
