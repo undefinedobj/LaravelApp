@@ -47,4 +47,12 @@ class Discussion extends Model implements Transformable
     {
         return  $this->belongsTo(User::class,'user_id');
     }
+
+    /**
+     * 获得此帖子所拥有的评论
+     */
+    public function comments()
+    {
+        return  $this->hasMany(Comment::class);
+    }
 }

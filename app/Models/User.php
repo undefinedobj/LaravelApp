@@ -75,6 +75,14 @@ class User extends Authenticatable
         return  $this->hasMany(Discussion::class);// $user->discussions
     }
 
+    /**
+     * 获取用户的评论
+     */
+    public function comments()
+    {
+        return  $this->hasMany(Comment::class);
+    }
+    
 //    public function setPasswordAttribute($password)
 //    {
 //        $this->attributes['password'] = bcrypt($password);
