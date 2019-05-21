@@ -25,20 +25,29 @@
     <div class="container">
         <div class="row">
             <div class="col-md-9" role="main">
-                <div class="col-sm-8 blog-main">
+                <div class="blog-post">
 
-                    <div class="blog-post">
+                </div><!-- /.blog-post -->
+                {!! $html !!}
 
-                    </div><!-- /.blog-post -->
-                        {!! $html !!}
-                    <nav>
-                        <ul class="pager">
-                            <li><a href="#">Previous</a></li>
-                            <li><a href="#">Next</a></li>
-                        </ul>
-                    </nav>
+                <hr>
 
-                </div>
+                {{-- 评论 --}}
+                @foreach ($discussion->comments as $comment)
+                    <div class="media">
+                        <div class="media-left">
+                            <a href="#">
+                                <img class="media-object img-circle" src="{{ $comment->user->avatar }}" alt="64*64" style="width: 64px; height: 64px">
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="media-body">
+                            <h4 class="media-heading">{{ $comment->user->name }}</h4>
+                            {{ $comment->body }}
+                    </div>
+                @endforeach
+
             </div>
         </div>
     </div>

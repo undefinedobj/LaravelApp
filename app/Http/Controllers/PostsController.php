@@ -122,7 +122,7 @@ class PostsController extends Controller
      */
     public function show($id, Parser $parser)
     {
-        $discussion = $this->repository->find($id);
+        $discussion = $this->repository->with(['comments', 'user'])->find($id);
 
         $html = $parser->makeHtml($discussion->body);
 
