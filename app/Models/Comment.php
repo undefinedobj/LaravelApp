@@ -3,9 +3,18 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
+use Prettus\Repository\Contracts\Transformable;
+use Prettus\Repository\Traits\TransformableTrait;
 
-class Comment extends Model
+/**
+ * Class Comment.
+ *
+ * @package namespace App\Models;
+ */
+class Comment extends Model implements Transformable
 {
+    use TransformableTrait;
+
     /**
      * 可以被批量赋值的属性。
      *

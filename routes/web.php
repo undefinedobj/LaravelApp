@@ -23,8 +23,9 @@ Route::get('user/logout', 'UsersController@logout')->name('logout');
 Route::get('/verify/{confirm_code}', 'UsersController@confirmEmail')->name('mail-verify');
 
 Route::resources([
-    'discussions' => 'PostsController',
-    'users' => 'UsersController',
+    'discussions'       =>      'PostsController',
+    'users'             =>      'UsersController',
+    'comments'          =>      'CommentsController',
 ]);
 
 /*Route::group([
