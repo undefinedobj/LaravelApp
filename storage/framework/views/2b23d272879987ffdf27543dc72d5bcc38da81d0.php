@@ -21,7 +21,16 @@
                     </div>
                     <div class="media-body">
                         
-                        <h4 class="media-heading"><a href="/discussions/<?php echo e($discussion->id); ?>"><?php echo e($discussion->title); ?></a></h4>
+                        <h4 class="media-heading">
+                            <a href="/discussions/<?php echo e($discussion->id); ?>"><?php echo e($discussion->title); ?></a>
+
+                            <div class="media-conversation-meta">
+                                <span class="media-conversation-replies">
+                                    <a href="#"><?php echo e(count($discussion->comments)); ?></a>
+                                    回复
+                                </span>
+                            </div>
+                        </h4>
                         <?php echo e($discussion->user->name); ?>
 
                     </div>
@@ -33,4 +42,5 @@
         </div>
     </div>
 <?php $__env->stopSection(); ?>
+
 <?php echo $__env->make('app', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH D:\laragon\www\laravelapp\resources\views/forum/index.blade.php ENDPATH**/ ?>
