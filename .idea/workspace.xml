@@ -2,8 +2,46 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e7441571-f487-46a0-8a65-1b6ba75734c6" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/public/vendor/font-awesome-4.7.0/HELP-US-OUT.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/vendor/font-awesome-4.7.0/css/font-awesome.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/vendor/font-awesome-4.7.0/css/font-awesome.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/vendor/font-awesome-4.7.0/fonts/FontAwesome.otf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/vendor/font-awesome-4.7.0/fonts/fontawesome-webfont.eot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/vendor/font-awesome-4.7.0/fonts/fontawesome-webfont.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/vendor/font-awesome-4.7.0/fonts/fontawesome-webfont.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/vendor/font-awesome-4.7.0/fonts/fontawesome-webfont.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/vendor/font-awesome-4.7.0/fonts/fontawesome-webfont.woff2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/vendor/font-awesome-4.7.0/less/animated.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/vendor/font-awesome-4.7.0/less/bordered-pulled.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/vendor/font-awesome-4.7.0/less/core.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/vendor/font-awesome-4.7.0/less/fixed-width.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/vendor/font-awesome-4.7.0/less/font-awesome.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/vendor/font-awesome-4.7.0/less/icons.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/vendor/font-awesome-4.7.0/less/larger.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/vendor/font-awesome-4.7.0/less/list.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/vendor/font-awesome-4.7.0/less/mixins.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/vendor/font-awesome-4.7.0/less/path.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/vendor/font-awesome-4.7.0/less/rotated-flipped.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/vendor/font-awesome-4.7.0/less/screen-reader.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/vendor/font-awesome-4.7.0/less/stacked.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/vendor/font-awesome-4.7.0/less/variables.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/vendor/font-awesome-4.7.0/scss/_animated.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/vendor/font-awesome-4.7.0/scss/_bordered-pulled.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/vendor/font-awesome-4.7.0/scss/_core.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/vendor/font-awesome-4.7.0/scss/_fixed-width.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/vendor/font-awesome-4.7.0/scss/_icons.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/vendor/font-awesome-4.7.0/scss/_larger.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/vendor/font-awesome-4.7.0/scss/_list.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/vendor/font-awesome-4.7.0/scss/_mixins.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/vendor/font-awesome-4.7.0/scss/_path.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/vendor/font-awesome-4.7.0/scss/_rotated-flipped.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/vendor/font-awesome-4.7.0/scss/_screen-reader.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/vendor/font-awesome-4.7.0/scss/_stacked.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/vendor/font-awesome-4.7.0/scss/_variables.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/vendor/font-awesome-4.7.0/scss/font-awesome.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/app.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/framework/sessions/VzKx9cmBt26BUWEoVYtRjqcEz7EzsyDEL2jABMYf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/framework/sessions/0ICEazSitpQmaPdrr6uF9rjhuzl94dI5OqECN6cV" beforeDir="false" afterPath="$PROJECT_DIR$/storage/framework/sessions/K8P4fM0M51cznA9AFICdBXuzBO4GKPzxdYGNcmk2" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/storage/framework/views/c78aecc00726b084348f81265d8649f7fc11db86.php" beforeDir="false" afterPath="$PROJECT_DIR$/storage/framework/views/c78aecc00726b084348f81265d8649f7fc11db86.php" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/node_modules/" />
@@ -151,7 +189,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/PostsController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="591">
+            <state relative-caret-position="1482">
               <caret line="57" column="29" selection-start-line="57" selection-start-column="29" selection-end-line="57" selection-end-column="29" />
               <folding>
                 <element signature="e#40#86#0#PHP" expanded="true" />
@@ -160,11 +198,20 @@
           </provider>
         </entry>
       </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/resources/views/forum/show.blade.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="598">
+              <caret line="77" column="86" selection-start-line="77" selection-start-column="86" selection-end-line="77" selection-end-column="86" />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/resources/views/app.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="553">
-              <caret line="53" column="70" lean-forward="true" selection-start-line="53" selection-start-column="70" selection-end-line="53" selection-end-column="70" />
+            <state relative-caret-position="234">
+              <caret line="9" column="33" selection-start-line="9" selection-start-column="33" selection-end-line="9" selection-end-column="33" />
             </state>
           </provider>
         </entry>
@@ -202,11 +249,6 @@
   </component>
   <component name="FrameworkCommandLineHistory">
     <commandsHistory>
-      <command text="git add -A" />
-      <command text="git commit -m &quot;Comment function complete&quot;" />
-      <command text="git pull" />
-      <command text="git push" />
-      <command text="git add -A" />
       <command text="git commit -m &quot;缩进对齐&quot;" />
       <command text="git pull" />
       <command text="git push" />
@@ -227,6 +269,11 @@
       <command text="git commit -m &quot;创建并使用自定义分页视图文件与 css 样式文件&quot;" />
       <command text="git pull" />
       <command text="git push" />
+      <command text="git add -A" />
+      <command text="git commit -m &quot;点击用户登录的头像图标---下拉菜单&quot;" />
+      <command text="git pull" />
+      <command text="git push" />
+      <command text="git add -A" />
     </commandsHistory>
   </component>
   <component name="Git.Settings">
@@ -420,28 +467,6 @@
               <item name="resources" type="462c0819:PsiDirectoryNode" />
               <item name="views" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="laravelapp" type="b2602c69:ProjectViewProjectNode" />
-              <item name="laravelapp" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="forum" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="laravelapp" type="b2602c69:ProjectViewProjectNode" />
-              <item name="laravelapp" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="vendor" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="laravelapp" type="b2602c69:ProjectViewProjectNode" />
-              <item name="laravelapp" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="vendor" type="462c0819:PsiDirectoryNode" />
-              <item name="pagination" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
@@ -453,7 +478,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="com.jetbrains.php.phpunit.codeGeneration.PhpNewTestDialog.defaultLibrary" value="PHPUnit" />
     <property name="editor.config.ad.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../recallyu" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
@@ -503,12 +528,15 @@
       <workItem from="1558425068948" duration="96000" />
       <workItem from="1558427703808" duration="373000" />
       <workItem from="1558428119270" duration="5669000" />
-      <workItem from="1558486747692" duration="20426000" />
+      <workItem from="1558486747692" duration="20551000" />
+      <workItem from="1558515569731" duration="103000" />
+      <workItem from="1558516860580" duration="37000" />
+      <workItem from="1558518238629" duration="1302000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="55727000" />
+    <option name="totallyTimeSpent" value="57294000" />
   </component>
   <component name="TodoView" selected-index="3">
     <todo-panel id="selected-file">
@@ -523,7 +551,7 @@
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49659863" weight="0.22055675" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49659863" visible="true" weight="0.22055675" />
       <window_info id="Structure" order="1" sideWeight="0.5022676" side_tool="true" weight="0.21788009" />
       <window_info id="npm" order="2" sideWeight="0.50340134" side_tool="true" weight="0.22055675" />
       <window_info id="Favorites" order="3" sideWeight="0.5022676" side_tool="true" weight="0.21788009" />
@@ -537,7 +565,7 @@
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" weight="0.32993197" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
-      <window_info anchor="bottom" id="Command Line Tools Console" order="10" weight="0.38662133" />
+      <window_info active="true" anchor="bottom" id="Command Line Tools Console" order="10" visible="true" weight="0.38662133" />
       <window_info anchor="bottom" id="Terminal" order="11" weight="0.32993197" />
       <window_info anchor="bottom" id="Event Log" order="12" side_tool="true" weight="0.32993197" />
       <window_info anchor="bottom" id="Messages" order="13" />
@@ -712,13 +740,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/database/migrations/2019_05_22_093855_create_comments_table.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="26">
-          <caret line="8" column="6" selection-start-line="8" selection-start-column="6" selection-end-line="8" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/database/migrations/2019_05_22_093855_create_comments_table.php" />
     <entry file="file://$PROJECT_DIR$/app/Http/Kernel.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="156">
@@ -726,16 +748,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Models/Comments.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="468">
-          <caret line="18" selection-start-line="18" selection-end-line="18" selection-end-column="47" />
-          <folding>
-            <element signature="e#30#69#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Models/Comments.php" />
     <entry file="file://$PROJECT_DIR$/app/Presenters/CommentsPresenter.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="598">
@@ -874,19 +887,8 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/js/emoji_jQuery.min.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/js/jquery.min.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="156">
-          <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="6" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/public/js/emoji_jQuery.min.js" />
+    <entry file="file://$PROJECT_DIR$/public/js/jquery.min.js" />
     <entry file="file://$PROJECT_DIR$/resources/views/forum/create.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="130">
@@ -911,13 +913,6 @@
           <folding>
             <element signature="e#40#68#0#PHP" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/forum/show.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="78">
-          <caret line="18" column="75" selection-start-line="18" selection-start-column="75" selection-end-line="18" selection-end-column="75" />
         </state>
       </provider>
     </entry>
@@ -956,6 +951,13 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/forum/index.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="12" selection-start-column="12" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/routes/web.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="130">
@@ -965,7 +967,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/PostsController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="591">
+        <state relative-caret-position="1482">
           <caret line="57" column="29" selection-start-line="57" selection-start-column="29" selection-end-line="57" selection-end-column="29" />
           <folding>
             <element signature="e#40#86#0#PHP" expanded="true" />
@@ -973,17 +975,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/forum/index.blade.php">
+    <entry file="file://$PROJECT_DIR$/resources/views/forum/show.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="12" selection-start-column="12" selection-end-column="12" />
+        <state relative-caret-position="598">
+          <caret line="77" column="86" selection-start-line="77" selection-start-column="86" selection-end-line="77" selection-end-column="86" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/app.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="553">
-          <caret line="53" column="70" lean-forward="true" selection-start-line="53" selection-start-column="70" selection-end-line="53" selection-end-column="70" />
+        <state relative-caret-position="234">
+          <caret line="9" column="33" selection-start-line="9" selection-start-column="33" selection-end-line="9" selection-end-column="33" />
         </state>
       </provider>
     </entry>
