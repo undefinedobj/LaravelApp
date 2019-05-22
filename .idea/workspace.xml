@@ -3,16 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="e7441571-f487-46a0-8a65-1b6ba75734c6" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/CommentsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/CommentsController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Requests/CommentsCreateRequest.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Requests/CommentsCreateRequest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/lang/en/validation.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/lang/en/validation.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/forum/show.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/forum/show.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/framework/sessions/6EL0xLDRoUACyHEGQ76lWWqI8UAw9YNAcOYFEac1" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/framework/sessions/eXuNc1HCkK3nMmP45ehz9BYCPZ6Z1lLCnfvgjVU4" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/framework/sessions/i3kGouGHmaXVeMIxCqz0rjNIqm6Rd4QLw1RCl3zi" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/framework/views/1449438de36903777a9cc57eafc84701e921f917.php" beforeDir="false" afterPath="$PROJECT_DIR$/storage/framework/views/1449438de36903777a9cc57eafc84701e921f917.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/framework/views/77df15352cb647cc7c06ed05c3cb0a099007e9c3.php" beforeDir="false" afterPath="$PROJECT_DIR$/storage/framework/views/77df15352cb647cc7c06ed05c3cb0a099007e9c3.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/logs/laravel-2019-05-22.log" beforeDir="false" afterPath="$PROJECT_DIR$/storage/logs/laravel-2019-05-22.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/UsersController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/UsersController.php" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/node_modules/" />
     <ignored path="$PROJECT_DIR$/vendor/barryvdh/laravel-debugbar/" />
@@ -168,11 +159,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/views/users/login.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="364">
-              <caret line="20" column="17" lean-forward="true" selection-start-line="20" selection-start-column="17" selection-end-line="20" selection-end-column="17" />
+            <state relative-caret-position="676">
+              <caret line="26" column="38" selection-start-line="26" selection-start-column="38" selection-end-line="26" selection-end-column="38" />
             </state>
           </provider>
         </entry>
@@ -180,10 +171,22 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/CommentsController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="338">
-              <caret line="79" column="57" lean-forward="true" selection-start-line="79" selection-start-column="57" selection-end-line="79" selection-end-column="57" />
+            <state relative-caret-position="858">
+              <caret line="84" column="14" lean-forward="true" selection-start-line="84" selection-start-column="14" selection-end-line="84" selection-end-column="14" />
               <folding>
                 <element signature="e#40#68#0#PHP" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/UsersController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="323">
+              <caret line="68" column="22" lean-forward="true" selection-start-line="68" selection-start-column="22" selection-end-line="68" selection-end-column="22" />
+              <folding>
+                <element signature="e#40#79#0#PHP" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -230,10 +233,6 @@
   </component>
   <component name="FrameworkCommandLineHistory">
     <commandsHistory>
-      <command text="git add -A\" />
-      <command text="git add -A" />
-      <command text="git commit -m &quot;声明 comment 可以被批量赋值的属性 &amp; ModelFactory 添加 Comment&quot;" />
-      <command text="git pull" />
       <command text="git push" />
       <command text="artisan view:clear" />
       <command text="artisan config:clear" />
@@ -253,6 +252,10 @@
       <command text="php artisan make:entity Comments" />
       <command text="git add -A" />
       <command text="git commit -m &quot;To generate everything you need for your Model&quot;" />
+      <command text="git pull" />
+      <command text="git push" />
+      <command text="git add -A" />
+      <command text="git commit -m &quot;Comment function complete&quot;" />
       <command text="git pull" />
       <command text="git push" />
     </commandsHistory>
@@ -460,6 +463,23 @@
               <item name="Controllers" type="462c0819:PsiDirectoryNode" />
               <item name="CommentsController.php" type="88303cf5:PhpFileNode" />
             </path>
+            <path>
+              <item name="laravelapp" type="b2602c69:ProjectViewProjectNode" />
+              <item name="laravelapp" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="Http" type="462c0819:PsiDirectoryNode" />
+              <item name="Controllers" type="462c0819:PsiDirectoryNode" />
+              <item name="UsersController.php" type="88303cf5:PhpFileNode" />
+            </path>
+            <path>
+              <item name="laravelapp" type="b2602c69:ProjectViewProjectNode" />
+              <item name="laravelapp" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="Http" type="462c0819:PsiDirectoryNode" />
+              <item name="Controllers" type="462c0819:PsiDirectoryNode" />
+              <item name="UsersController.php" type="88303cf5:PhpFileNode" />
+              <item name="UsersController" type="e2efd96b:PhpElementNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -521,12 +541,12 @@
       <workItem from="1558425068948" duration="96000" />
       <workItem from="1558427703808" duration="373000" />
       <workItem from="1558428119270" duration="5669000" />
-      <workItem from="1558486747692" duration="8084000" />
+      <workItem from="1558486747692" duration="8367000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="43385000" />
+    <option name="totallyTimeSpent" value="43668000" />
   </component>
   <component name="TodoView" selected-index="3">
     <todo-panel id="selected-file">
@@ -541,7 +561,7 @@
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49773243" visible="true" weight="0.22055675" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49773243" visible="true" weight="0.22055675" />
       <window_info id="Structure" order="1" sideWeight="0.5022676" side_tool="true" weight="0.21788009" />
       <window_info id="npm" order="2" sideWeight="0.5022676" side_tool="true" weight="0.21788009" />
       <window_info id="Favorites" order="3" sideWeight="0.5022676" side_tool="true" weight="0.21788009" />
@@ -946,16 +966,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/CommentsController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="338">
-          <caret line="79" column="57" lean-forward="true" selection-start-line="79" selection-start-column="57" selection-end-line="79" selection-end-column="57" />
-          <folding>
-            <element signature="e#40#68#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/forum/show.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1820">
@@ -970,13 +980,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/UsersController.php">
+    <entry file="file://$PROJECT_DIR$/resources/views/users/login.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="687">
-          <caret line="101" column="7" lean-forward="true" selection-start-line="101" selection-start-column="7" selection-end-line="101" selection-end-column="7" />
-          <folding>
-            <element signature="e#40#79#0#PHP" expanded="true" />
-          </folding>
+        <state relative-caret-position="676">
+          <caret line="26" column="38" selection-start-line="26" selection-start-column="38" selection-end-line="26" selection-end-column="38" />
         </state>
       </provider>
     </entry>
@@ -990,10 +997,23 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/users/login.blade.php">
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/CommentsController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="364">
-          <caret line="20" column="17" lean-forward="true" selection-start-line="20" selection-start-column="17" selection-end-line="20" selection-end-column="17" />
+        <state relative-caret-position="858">
+          <caret line="84" column="14" lean-forward="true" selection-start-line="84" selection-start-column="14" selection-end-line="84" selection-end-column="14" />
+          <folding>
+            <element signature="e#40#68#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/UsersController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="68" column="22" lean-forward="true" selection-start-line="68" selection-start-column="22" selection-end-line="68" selection-end-column="22" />
+          <folding>
+            <element signature="e#40#79#0#PHP" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
