@@ -3,6 +3,7 @@
 namespace App\Providers;
 
 use Illuminate\Support\ServiceProvider;
+use Illuminate\Pagination\Paginator;
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -20,6 +21,9 @@ class AppServiceProvider extends ServiceProvider
 
 //        将Eloquent Repository与其相应的Repository Interface绑定, 并加载
         $this->app->register(RepositoryServiceProvider::class);
+
+//        使用自定义分页视图
+        Paginator::defaultView('vendor.pagination.bootstrap-4');
     }
 
     /**
