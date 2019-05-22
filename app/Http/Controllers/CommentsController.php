@@ -73,10 +73,11 @@ class CommentsController extends Controller
     public function store(CommentsCreateRequest $request)
     {
         try {
+            $merge = array_merge($request->all(), ['user_id' =>\Auth::user()->id]);
 
-            $this->validator->with($request->all())->passesOrFail(ValidatorInterface::RULE_CREATE);
+            $this->validator->with($merge)->passesOrFail(ValidatorInterface::RULE_CREATE);
 
-            $comment = $this->repository->create($request->all());
+            $comment = $this->repository->create($merge);
 
             $response = [
                 'message' => 'Comments created.',
@@ -88,7 +89,7 @@ class CommentsController extends Controller
                 return response()->json($response);
             }
 
-            return redirect()->back()->with('message', $response['message']);
+            return redirect()->action('PostsController@show', ['id' => $comment->discussion_id]);
         } catch (ValidatorException $e) {
             if ($request->wantsJson()) {
                 return response()->json([

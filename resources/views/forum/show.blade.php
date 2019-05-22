@@ -48,6 +48,36 @@
                     </div>
                 @endforeach
 
+                <hr>
+
+                {{-- 评论输框 --}}
+                @if (Auth::check())
+                    @if ($errors->any())
+                        <ul class="list-group">
+                            @foreach ($errors->all() as $error)
+                                <li class="list-group-item list-group-item-danger">{{ $error }}</li>
+                            @endforeach
+                        </ul>
+                    @endif
+
+                    {!! Form::open(['url' => '/comments', 'method' => 'post']) !!}
+
+                    <div class="form-group">
+                        {!! Form::hidden('discussion_id', $discussion->id, ['class' => 'form-control']) !!}
+                    </div>
+
+                    <div class="form-group">
+                        {!! Form::textarea('body', null, ['class' => 'form-control']) !!}
+                    </div>
+
+                    <div>
+                        {!! Form::submit('发表评论', ['class' => 'btn btn-primary form-control']) !!}
+                    </div>
+                    {!! Form::close() !!}
+                @else
+                    <a href="/user/login" class="btn btn-block btn-success">登录参与评论</a>
+                @endif
+
             </div>
         </div>
     </div>

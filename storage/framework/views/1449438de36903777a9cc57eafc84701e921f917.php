@@ -49,6 +49,41 @@
                     </div>
                 <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
 
+                <hr>
+
+                
+                <?php if(Auth::check()): ?>
+                    <?php if($errors->any()): ?>
+                        <ul class="list-group">
+                            <?php $__currentLoopData = $errors->all(); $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $error): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+                                <li class="list-group-item list-group-item-danger"><?php echo e($error); ?></li>
+                            <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
+                        </ul>
+                    <?php endif; ?>
+
+                    <?php echo Form::open(['url' => '/comments', 'method' => 'post']); ?>
+
+
+                    <div class="form-group">
+                        <?php echo Form::hidden('discussion_id', $discussion->id, ['class' => 'form-control']); ?>
+
+                    </div>
+
+                    <div class="form-group">
+                        <?php echo Form::textarea('body', null, ['class' => 'form-control']); ?>
+
+                    </div>
+
+                    <div>
+                        <?php echo Form::submit('发表评论', ['class' => 'btn btn-primary form-control']); ?>
+
+                    </div>
+                    <?php echo Form::close(); ?>
+
+                <?php else: ?>
+                    <a href="/user/login" class="btn btn-block btn-success">登录参与评论</a>
+                <?php endif; ?>
+
             </div>
         </div>
     </div>
