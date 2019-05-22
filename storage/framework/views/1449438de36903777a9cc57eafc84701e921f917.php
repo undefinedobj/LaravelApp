@@ -64,20 +64,20 @@
                     <?php echo Form::open(['url' => '/comments', 'method' => 'post']); ?>
 
 
-                    <div class="form-group">
-                        <?php echo Form::hidden('discussion_id', $discussion->id, ['class' => 'form-control']); ?>
+                        <div class="form-group">
+                            <?php echo Form::hidden('discussion_id', $discussion->id, ['class' => 'form-control']); ?>
 
-                    </div>
+                        </div>
 
-                    <div class="form-group">
-                        <?php echo Form::textarea('body', null, ['class' => 'form-control']); ?>
+                        <div class="form-group">
+                            <?php echo Form::textarea('body', null, ['class' => 'form-control']); ?>
 
-                    </div>
+                        </div>
 
-                    <div>
-                        <?php echo Form::submit('发表评论', ['class' => 'btn btn-primary form-control']); ?>
+                        <div>
+                            <?php echo Form::submit('发表评论', ['class' => 'btn btn-primary form-control']); ?>
 
-                    </div>
+                        </div>
                     <?php echo Form::close(); ?>
 
                 <?php else: ?>

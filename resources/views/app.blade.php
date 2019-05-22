@@ -8,6 +8,11 @@
     <title>@yield('title')</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="{{ asset('css/style.css') }}">
+    <style>
+        body{
+            background-color: #f5f5f1;
+        }
+    </style>
 </head>
 <body>
 <nav class="navbar navbar-default navbar-static-top">
