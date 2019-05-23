@@ -14,6 +14,7 @@
         "guzzlehttp/guzzle": "6.3.3",
         "joyqi/hyper-down": "dev-master",
         "laravel/framework": "5.8.*",
+        "laravel/horizon": "^3.2",
         "laravel/tinker": "^1.0",
         "laravelcollective/html": "^5.8",
         "league/fractal": "^0.18.0",

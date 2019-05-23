@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>@yield('title')</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css">
-    <link href="{{ asset('package/font-awesome-4.7.0/css/font-awesome.css') }}" rel="stylesheet">
+    <link href="{{ asset('vendor/font-awesome-4.7.0/css/font-awesome.css') }}" rel="stylesheet">
     <link rel="stylesheet" href="{{ asset('css/style.css') }}">
     <link rel="stylesheet" href="{{ asset('css/app-style.css') }}">
 </head>
