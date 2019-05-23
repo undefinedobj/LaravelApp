@@ -53,7 +53,9 @@ class PostsController extends Controller
     {
         $columns = ['id','title','body','user_id'];
 
-        $discussions = $this->repository->paginate(null, $columns);
+        $discussions = $this->repository->orderBy('created_at', 'desc')
+            ->orderBy('updated_at', 'desc')
+            ->paginate(null, $columns);
 
         return  view('forum.index', compact('discussions'));
     }
