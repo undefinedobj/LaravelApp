@@ -7,8 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title><?php echo $__env->yieldContent('title'); ?></title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css">
-    <link href="<?php echo e(asset('vendor/font-awesome-4.7.0/css/font-awesome.css')); ?>" rel="stylesheet">
-
+    <link href="<?php echo e(asset('package/font-awesome-4.7.0/css/font-awesome.css')); ?>" rel="stylesheet">
     <link rel="stylesheet" href="<?php echo e(asset('css/style.css')); ?>">
     <link rel="stylesheet" href="<?php echo e(asset('css/app-style.css')); ?>">
 </head>
