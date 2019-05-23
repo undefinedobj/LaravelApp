@@ -148,6 +148,11 @@ return [
         'body' => [
             'required' => '主体内容不能为空',
         ],
+        'avatar' => [
+            'required'  => '图片文件不能为空',
+            'file'      => '必须是成功上传的文件',
+            'image'     => '必须是图片 (jpeg, png, bmp, gif, 或 svg)',
+        ],
     ],
 
     /*

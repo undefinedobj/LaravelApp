@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\UserAvatarUpdateRequest;
 use App\Http\Requests\UserLoginRequest;
 use App\Http\Requests\UserRegisterRequest;
 use Carbon\Carbon;
@@ -263,11 +264,31 @@ class UsersController extends Controller
     }
 
     /**
+     * 退出登录
+     *
      * @return \Illuminate\Http\RedirectResponse|\Illuminate\Routing\Redirector
      */
     public function logout()
     {
         \Auth::logout();
         return redirect('/');
+    }
+
+    /**
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
+     */
+    public function avatar()
+    {
+        return  view('users.avatar');
+    }
+
+    /**
+     * 用户头像修改
+     *
+     * @param UserAvatarUpdateRequest $request
+     */
+    public function storeAvatar(UserAvatarUpdateRequest $request)
+    {
+        dd($request);
     }
 }

@@ -19,6 +19,8 @@ Route::post('/user/register', 'UsersController@store');
 Route::get('user/login', 'UsersController@login')->name('login');
 Route::post('user/login', 'UsersController@signIn');
 Route::get('user/logout', 'UsersController@logout')->name('logout');
+Route::get('user/avatar', 'UsersController@avatar');
+Route::post('user/avatar', 'UsersController@storeAvatar')->name('avatar');
 
 Route::get('/verify/{confirm_code}', 'UsersController@confirmEmail')->name('mail-verify');
 

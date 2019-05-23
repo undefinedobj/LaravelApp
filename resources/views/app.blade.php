@@ -47,7 +47,7 @@
                         <a id="" type="button" data-toggle="dropdown" href="###"><img src="{{ Auth::user()->avatar }}" class="img-circle" width="42" alt=""></a>
                         <ul class="dropdown-menu" aria-labelledby="dLabel">
                             <li><a href="#"> <i class="fa fa-bath"></i> {{ Auth::user()->name }}</a></li>
-                            <li><a href="#"> <i class="fa fa-user"></i> 更换头像</a></li>
+                            <li><a href="/user/avatar"> <i class="fa fa-user"></i> 更换头像</a></li>
                             <li><a href="#"> <i class="fa fa-cog"></i> 更换密码</a></li>
                             <li><a href="#"> <i class="fa fa-heart"></i> 特别感谢</a></li>
                             <li role="separator" class="divider"></li>
