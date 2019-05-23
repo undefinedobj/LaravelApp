@@ -15,7 +15,7 @@
                     <img src="<?php echo e(Auth::user()->avatar); ?>" width="50" class="img-circle" alt="">
 
                     
-                    <?php echo Form::open(['route' => 'avatar', 'method' => 'post']); ?>
+                    <?php echo Form::open(['route' => 'avatar', 'enctype' => 'multipart/form-data', 'method' => 'post']); ?>
 
                     <?php echo Form::file('avatar'); ?>
 

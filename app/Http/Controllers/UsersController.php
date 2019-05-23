@@ -5,7 +5,9 @@ namespace App\Http\Controllers;
 use App\Http\Requests\UserAvatarUpdateRequest;
 use App\Http\Requests\UserLoginRequest;
 use App\Http\Requests\UserRegisterRequest;
+use App\Models\User;
 use Carbon\Carbon;
+use Illuminate\Http\Request;
 use Prettus\Validator\Contracts\ValidatorInterface;
 use Prettus\Validator\Exceptions\ValidatorException;
 use App\Http\Requests\UserCreateRequest;
@@ -15,6 +17,7 @@ use App\Validators\UserValidator;
 use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Session;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Storage;
 
 /**
  * Class UsersController.
@@ -287,8 +290,21 @@ class UsersController extends Controller
      *
      * @param UserAvatarUpdateRequest $request
      */
-    public function storeAvatar(UserAvatarUpdateRequest $request)
+    public function updateAvatar(UserAvatarUpdateRequest $request)
     {
-        dd($request);
+
+        $file = $request->avatar;
+
+        $timestamp = Carbon::now()->timestamp;
+
+        $filename = '/uploads/'.Auth::user()->id.'-'.$timestamp.'-'.$file->getClientOriginalName();
+
+        $file->move('uploads/', $filename);
+
+        $user = User::findOrFail(Auth::user()->id);
+        $user->avatar = $filename;
+        $user->save();
+
+        return redirect()->action('UsersController@avatar');
     }
 }

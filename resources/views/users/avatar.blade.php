@@ -17,7 +17,7 @@
                     <img src="{{ Auth::user()->avatar }}" width="50" class="img-circle" alt="">
 
                     {{-- 头像上传.form --}}
-                    {!! Form::open(['route' => 'avatar', 'method' => 'post']) !!}
+                    {!! Form::open(['route' => 'avatar', 'enctype' => 'multipart/form-data', 'method' => 'post']) !!}
                     {!! Form::file('avatar') !!}
                     {!! Form::submit('上传头像', ['class' => 'btn btn-success pull-right']) !!}
                     {!! Form::close() !!}
