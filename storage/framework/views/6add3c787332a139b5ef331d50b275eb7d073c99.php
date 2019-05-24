@@ -14,8 +14,12 @@
                 <div class="text-center">
                     <img src="<?php echo e(Auth::user()->avatar); ?>" width="50" class="img-circle" alt="">
 
+                    <?php
+                        $id = Auth::user()->id
+                    ?>
+
                     
-                    <?php echo Form::open(['route' => 'avatar', 'enctype' => 'multipart/form-data', 'method' => 'post']); ?>
+                    <?php echo Form::open(['url' => "user/$id/avatar", 'enctype' => 'multipart/form-data', 'method' => 'post']); ?>
 
                     <?php echo Form::file('avatar'); ?>
 

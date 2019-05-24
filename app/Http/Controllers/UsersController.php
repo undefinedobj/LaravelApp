@@ -277,6 +277,8 @@ class UsersController extends Controller
     }
 
     /**
+     * User Avatar View
+     *
      * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
      */
     public function avatar()
@@ -285,26 +287,51 @@ class UsersController extends Controller
     }
 
     /**
-     * 用户头像修改
+     * Update the specified resource in storage.
      *
-     * @param UserAvatarUpdateRequest $request
+     * @param  UserAvatarUpdateRequest $request
+     * @param  string            $id
+     *
+     * @return Response
+     *
+     * @throws \Prettus\Validator\Exceptions\ValidatorException
      */
-    public function updateAvatar(UserAvatarUpdateRequest $request)
+    public function updateAvatar(UserAvatarUpdateRequest $request, $id)
     {
+        try {
+            $this->validator->with($request->all())->passesOrFail(ValidatorInterface::RULE_UPDATE);
 
-        $file = $request->avatar;
+//            upload files
+            $file = $request->avatar;
+            $timestamp = Carbon::now()->timestamp;
+            $filepath = '/uploads/'.Auth::user()->id.'-'.$timestamp.'-'.$file->getClientOriginalName();
+//            intervention image
+            Image::make($file)->resize(200)->save(public_path($filepath));
 
-        $timestamp = Carbon::now()->timestamp;
+            $user = $this->repository->update(['avatar' => $filepath], $id);
 
-        $filepath = '/uploads/'.Auth::user()->id.'-'.$timestamp.'-'.$file->getClientOriginalName();
+            $response = [
+                'message' => 'UserAvatar updated.',
+                'data'    => $user->toArray(),
+            ];
 
-//        intervention image
-        Image::make($file)->resize(200)->save(public_path($filepath));
+            if ($request->wantsJson()) {
 
-        $user = User::findOrFail(Auth::user()->id);
-        $user->avatar = $filepath;
-        $user->save();
+                return response()->json($response);
+            }
 
-        return redirect()->action('UsersController@avatar');
+            return redirect()->action('UsersController@avatar');
+        } catch (ValidatorException $e) {
+
+            if ($request->wantsJson()) {
+
+                return response()->json([
+                    'error'   => true,
+                    'message' => $e->getMessageBag()
+                ]);
+            }
+
+            return redirect()->back()->withErrors($e->getMessageBag())->withInput();
+        }
     }
 }
