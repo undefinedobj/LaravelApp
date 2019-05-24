@@ -5,7 +5,6 @@ namespace App\Http\Controllers;
 use App\Http\Requests\UserAvatarUpdateRequest;
 use App\Http\Requests\UserLoginRequest;
 use App\Http\Requests\UserRegisterRequest;
-use App\Models\User;
 use Carbon\Carbon;
 use Intervention\Image\Facades\Image;
 use Prettus\Validator\Contracts\ValidatorInterface;
