@@ -297,6 +297,7 @@ class UsersController extends Controller
      */
     public function updateAvatar(UserAvatarUpdateRequest $request, $id)
     {
+        dd($request);
         try {
             $this->validator->with($request->all())->passesOrFail(ValidatorInterface::RULE_UPDATE);
 
@@ -314,12 +315,17 @@ class UsersController extends Controller
                 'data'    => $user->toArray(),
             ];
 
-            if ($request->wantsJson()) {
+            return  \Response::json([
+               'success' => true,
+                'avatar' => asset($filepath)
+            ]);
 
-                return response()->json($response);
-            }
+//            if ($request->wantsJson()) {
+//
+//                return response()->json($response);
+//            }
 
-            return redirect()->action('UsersController@avatar');
+//            return redirect()->action('UsersController@avatar');
         } catch (ValidatorException $e) {
 
             if ($request->wantsJson()) {

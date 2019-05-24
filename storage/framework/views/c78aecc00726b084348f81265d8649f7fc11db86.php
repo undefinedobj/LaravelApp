@@ -10,6 +10,9 @@
     <link href="<?php echo e(asset('vendor/font-awesome-4.7.0/css/font-awesome.css')); ?>" rel="stylesheet">
     <link rel="stylesheet" href="<?php echo e(asset('css/style.css')); ?>">
     <link rel="stylesheet" href="<?php echo e(asset('css/app-style.css')); ?>">
+    <script src="<?php echo e(asset('js/jquery-2.1.4.min.js')); ?>"></script>
+    <script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.js"></script>
+    <script src="//cdn.bootcss.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 </head>
 <body>
 <nav class="navbar navbar-default navbar-static-top">
@@ -54,10 +57,6 @@
     </div>
 </nav>
     <?php echo $__env->yieldContent('content', 'Default Content'); ?>
-
-<script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.js"></script>
-<script src="//cdn.bootcss.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
-
 </body>
 </html>
 <?php /**PATH D:\laragon\www\laravelapp\resources\views/app.blade.php ENDPATH**/ ?>

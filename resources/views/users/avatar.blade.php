@@ -14,20 +14,65 @@
                     </ul>
                 @endif
                 <div class="text-center">
-                    <img src="{{ Auth::user()->avatar }}" width="50" class="img-circle" alt="">
+                    <div id="validation-errors"></div>
+                    <img src="{{ Auth::user()->avatar }}" width="120" class="img-circle" id="user-avatar" alt="">
 
                     @php
                         $id = Auth::user()->id
                     @endphp
 
                     {{-- 头像上传.form --}}
-                    {!! Form::open(['url' => "user/$id/avatar", 'enctype' => 'multipart/form-data', 'method' => 'post']) !!}
-                    {!! Form::file('avatar') !!}
-                    {!! Form::submit('上传头像', ['class' => 'btn btn-success pull-right']) !!}
+                    {!! Form::open(['url'=>'/user/$id/avatar','files'=>true,'id'=>'avatar']) !!}
+                    <div class="text-center">
+                        <button type="button" class="btn btn-success avatar-button" id="upload-avatar">上传新的头像</button>
+                    </div>
+                    {!! Form::file('avatar',['class'=>'avatar','id'=>'image']) !!}
                     {!! Form::close() !!}
 
+                    <div class="span5">
+                        <div id="output" style="display:none">
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
+
+    <script>
+        $(document).ready(function() {
+            var options = {
+                beforeSubmit:  showRequest,
+                success:       showResponse,
+                dataType: 'json'
+            };
+            $('#image').on('change', function(){
+                $('#upload-avatar').html('正在上传...');
+                $('#avatar').ajaxForm(options).submit();
+            });
+        });
+        function showRequest() {
+            $("#validation-errors").hide().empty();
+            $("#output").css('display','none');
+            return true;
+        }
+
+        function showResponse(response)  {
+            if(response.success == false)
+            {
+                var responseErrors = response.errors;
+                $.each(responseErrors, function(index, value)
+                {
+                    if (value.length != 0)
+                    {
+                        $("#validation-errors").append('<div class="alert alert-error"><strong>'+ value +'</strong><div>');
+                    }
+                });
+                $("#validation-errors").show();
+            } else {
+                $('#user-avatar').attr('src',response.avatar);
+                $('#upload-avatar').html('更换新的头像');
+            }
+        }
+    </script>
+
 @endsection
