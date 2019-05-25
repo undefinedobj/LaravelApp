@@ -7,7 +7,7 @@
 {{--引入Markdown编辑器代码--}}
 @include('editor::head')
 
-<div class="container">
+    <div class="container">
         <div class="row">
             <div class="col-md-offset-2" role="main">
 
