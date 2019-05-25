@@ -5,7 +5,7 @@
 
 <?php echo $__env->make('editor::head', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
 
-<div class="container">
+    <div class="container">
         <div class="row">
             <div class="col-md-offset-2" role="main">
 
