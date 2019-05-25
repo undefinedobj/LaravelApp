@@ -209,11 +209,12 @@ class PostsController extends Controller
     }
 
 
-    public function markdownUpload(){
+    public function markdownUpload()
+    {
 
-        // path 为 public 下面目录，比如我的图片上传到 public/uploads 那么这个参数你传uploads 就行了
+        // path 为 public 下面目录，比如我的图片上传到 public/uploads 那么这个参数你传 uploads 就行了
 
-        $data = EndaEditor::uploadImgFile('path');
+        $data = EndaEditor::uploadImgFile('uploads');
 
         return json_encode($data);
 
