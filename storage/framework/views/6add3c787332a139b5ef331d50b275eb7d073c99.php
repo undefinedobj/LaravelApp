@@ -20,12 +20,19 @@
                     ?>
 
                     
-                    <?php echo Form::open(['url'=>'/user/$id/avatar','files'=>true,'id'=>'avatar']); ?>
 
-                    <div class="text-center">
-                        <button type="button" class="btn btn-success avatar-button" id="upload-avatar">上传新的头像</button>
-                    </div>
-                    <?php echo Form::file('avatar',['class'=>'avatar','id'=>'image']); ?>
+
+
+
+
+
+
+                    
+                    <?php echo Form::open(['url' => "user/$id/avatar", 'enctype' => 'multipart/form-data', 'method' => 'post']); ?>
+
+                    <?php echo Form::file('avatar'); ?>
+
+                    <?php echo Form::submit('上传头像', ['class' => 'btn btn-success pull-right']); ?>
 
                     <?php echo Form::close(); ?>
 
@@ -39,42 +46,42 @@
         </div>
     </div>
 
-    <script>
-        $(document).ready(function() {
-            var options = {
-                beforeSubmit:  showRequest,
-                success:       showResponse,
-                dataType: 'json'
-            };
-            $('#image').on('change', function(){
-                $('#upload-avatar').html('正在上传...');
-                $('#avatar').ajaxForm(options).submit();
-            });
-        });
-        function showRequest() {
-            $("#validation-errors").hide().empty();
-            $("#output").css('display','none');
-            return true;
-        }
 
-        function showResponse(response)  {
-            if(response.success == false)
-            {
-                var responseErrors = response.errors;
-                $.each(responseErrors, function(index, value)
-                {
-                    if (value.length != 0)
-                    {
-                        $("#validation-errors").append('<div class="alert alert-error"><strong>'+ value +'</strong><div>');
-                    }
-                });
-                $("#validation-errors").show();
-            } else {
-                $('#user-avatar').attr('src',response.avatar);
-                $('#upload-avatar').html('更换新的头像');
-            }
-        }
-    </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 <?php $__env->stopSection(); ?>
 

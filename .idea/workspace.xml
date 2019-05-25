@@ -4,12 +4,158 @@
     <list default="true" id="e7441571-f487-46a0-8a65-1b6ba75734c6" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/UsersController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/UsersController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/app.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/users/avatar.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/users/avatar.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/framework/sessions/5XkYY19xAyLpAHEqw9aEeMx7rlDiU7QpxCvooh7O" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/debugbar/X0068e46a4e552a56297b534ce762e02e.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/debugbar/X0072fc2ec3fc1a2a49dd2382bfc357e6.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/debugbar/X0173df5978082e4129def27fe91f0459.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/debugbar/X0179cf9b5fa1a983aa5b706e9616808c.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/debugbar/X03c0c54905fd2317d3a86a264b428bd2.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/debugbar/X04aea6fc3c6db64ad3718849540c6f02.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/debugbar/X056c4732a05069ca10ef1f36d47bde28.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/debugbar/X094d06644d5a4bc7d74b133289e77678.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/debugbar/X0cde87d96412a6611d509c4980af9f85.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/debugbar/X0f694456a619ca6b453605daf6713a17.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/debugbar/X10117d9306f8ecef14a67d36c64ff836.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/debugbar/X1254d7bc8a5f491606cafb6a8d4a0641.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/debugbar/X16095683b07c66966532163e52de2cf6.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/debugbar/X177282f0f04c18399b5085eed83f0ef9.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/debugbar/X196c7a7651469f897d3226d8dddf5add.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/debugbar/X1a60942d80fec7ffd2967ebd0d9e4407.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/debugbar/X1b09997324f8be6cf2ea1e089f1ad166.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/debugbar/X1b3307de28c0948b5a8cf739ea43e606.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/debugbar/X22d08c48066d792a7dfe31365f10dcf6.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/debugbar/X24374d0b8cd1b82dda73354d884b830f.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/debugbar/X27fa924172c12677d1b743437becaa34.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/debugbar/X2d305fc3b86ddadaede2d67c3028d68f.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/debugbar/X2d32d301cad900191327bd916150b083.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/debugbar/X2dfe725a6120d21907c45cd859ff5fce.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/debugbar/X2e51cf59d749258e253f7f9384d77415.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/debugbar/X34484646d59711e4f6b568212dacc4ff.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/debugbar/X382c36f8eb94ba5f1a3fac9bde899d68.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/debugbar/X39f3146d90a1704cc805f98ffa2a9c30.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/debugbar/X3a631c8b5e062b813b2c014703b2bfe8.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/debugbar/X3b6a312aea70dca4065b9f257e086845.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/debugbar/X3bbe8625f0860592b022a8d2d657c15d.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/debugbar/X41ac6d4d6524600b64eaac1935165064.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/debugbar/X43449dc0b81b2e8ed7179b34a72dde83.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/debugbar/X43ac1993ca4f9bc52a332d1582a27282.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/debugbar/X43e1cb7f55f4674a52e7a62f1ff9595c.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/debugbar/X43f5f52164b3c4529b44c830631780dd.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/debugbar/X4bd31067e3ce047dcd30b4a2eb0b84d8.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/debugbar/X4c828a6cd046f6f3300de1253a56fdc3.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/debugbar/X4d597d6d3c47b9e11f8caeb683486f14.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/debugbar/X4dd38317ebd330706dd8a0473ba9dd5c.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/debugbar/X507348023aa16382442a167465f1ab16.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/debugbar/X516b9e16bde97df7522d3232e1290c9b.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/debugbar/X53b249faa02666edd0bdbfa90d9b0853.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/debugbar/X57300eca66bad187532a89af4c5b1de8.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/debugbar/X58a71ec60e4c4d256a4b1633712d44e1.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/debugbar/X5d1c2158580b7d9977aa5f72297de013.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/debugbar/X5ed50a233eb15dafc5a1077d77d3ff58.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/debugbar/X60f172a27d7ff0851af04f703fc828d1.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/debugbar/X61574e35c5678f6214626f82f6ef7705.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/debugbar/X62c3d55da6a720b4ce4c7f2589b80cd2.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/debugbar/X62c9f1a0ce1439fcd2baefaeb61e8914.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/debugbar/X63cdec1579e0e8f3fdbd71863a4a69fd.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/debugbar/X650707b28c6cb6a0a335724eb4002571.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/debugbar/X65dd4caf4055f61382534156f1f2e49d.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/debugbar/X668254b3c301ddf7c62a996c4eb64318.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/debugbar/X684490a954fdde8f3b2b357cb0eaa343.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/debugbar/X6b52d8487cfaed8e1b6c2e385dccce94.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/debugbar/X6b9a79062c5338d83ec4fe391c1e7707.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/debugbar/X6c95c8136d558655d17b9d01825a2ca4.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/debugbar/X6d65dd75d37ff44b9eb9bb06b612b4de.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/debugbar/X7336fa02dd0fefcd5a61fb0d843c0282.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/debugbar/X73e2e3b02c561c21925d75f6e6733db7.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/debugbar/X7594d846bfbff3be82ffa2a3d9c7f322.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/debugbar/X761059ff8da6fad1ebf826996ec224ef.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/debugbar/X7719e2ba7a4eafa85ee66012d0914c61.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/debugbar/X771ea22a724465d9e9c452bb2ade0f15.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/debugbar/X78254389b3e6aefed353431731156511.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/debugbar/X78e64650d1d6def36c5d1c99a2964dac.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/debugbar/X796b995d7e9ce58a05207a9000faddcc.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/debugbar/X79c5d2de7bea11a7626338a0fd5de9a4.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/debugbar/X7a2ae39bd85ca07896b5feab2730eb4f.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/debugbar/X7d29fb670e865862f858da4c1d9480a4.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/debugbar/X7d49af199d17a629b6ba04be29b68132.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/debugbar/X80f85d4e4fbb2c8ce209cf7d19b137fa.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/debugbar/X83a7ac23e7df4974fe72b040e748d1f3.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/debugbar/X83e96bcfe65811feaf53d6f1fc828b06.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/debugbar/X85206284bd825e9f93f5916252d35d85.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/debugbar/X85453424833bdd117290329ef1f3e948.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/debugbar/X87d144397bb6471214c65ae59482eadf.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/debugbar/X88247a67cbd51c4384e8662bd2270c60.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/debugbar/X8c7c5543bbb6e937173fe10f7902e3d0.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/debugbar/X8ce8d728fdaaa89fce2621dadd8aacbb.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/debugbar/X8d2198cb5c46c6887c12254ae5ffd44d.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/debugbar/X8f18a7646d61863e787c7c2f57232c4f.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/debugbar/X90216b65c2e143382407f5d38ef0e7ef.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/debugbar/X92cccc43d941abb92e090b40f212e416.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/debugbar/X94a5e82b31c65957de6aa06d17a4f05b.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/debugbar/X94df44e8a639f41333d30b8a1566c021.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/debugbar/X96bc437e7f26fe5b13077c3e1d9bfb85.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/debugbar/X9ab4cbed194769ea2b925179d9938cc8.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/debugbar/X9afe0e9abaa885597eb60dd1b118b87d.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/debugbar/X9b9258d483b15144ae4ef09f30f1e897.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/debugbar/X9f4dd3cfbca8d7249e92d0b3480bfa7f.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/debugbar/X9ff8d83c3af8dfea4513658b781a640c.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/debugbar/Xa1313ed40ba3ce67526774cc942d661d.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/debugbar/Xa3a5959d2dd6f16ce096fd8b14c9f284.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/debugbar/Xa557d9fc477ab1301079f6ee33b5b6aa.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/debugbar/Xaf293bc8d4daf04b59caeb2d959856bb.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/debugbar/Xaf90e992a593ba2db897adc362a93eaf.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/debugbar/Xb4652e425fae50fc56d6d754f647480f.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/debugbar/Xb4d6d7fcc8189c32a67c784161727530.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/debugbar/Xb6b37dcbce947d8dc6d89cd5b3c3ccdc.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/debugbar/Xba42eb6711f9e9c172a608e4d2ede1ba.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/debugbar/Xbaad138218349b2a37610b8fe9146166.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/debugbar/Xbaba34b6b1fb8c45aff59f5d6458f4b7.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/debugbar/Xc028d6c9979263a90bd45415358865a7.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/debugbar/Xc349fff9e1d948718517d1d9336c200d.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/debugbar/Xc42aab391713c116acb2dfad0185565d.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/debugbar/Xc7ca7f0782e34783e6bc94b4d492fd9d.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/debugbar/Xc8c279e74eefeaa7944f29d0e41bb1c1.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/debugbar/Xd41de5324325e26129d5e67ac3c07450.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/debugbar/Xd66a185d95ceb33417173c3d6246e3fd.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/debugbar/Xd8932de5c9ac3dd35a6e35508718e194.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/debugbar/Xd9995a18eb5556dac6d606a33633ef8e.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/debugbar/Xd9f4afcd06c51929776625c3feba8bd4.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/debugbar/Xe107762a34dfb31fa22987d4536ae1e5.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/debugbar/Xe37877b3d546d033e951a39922957420.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/debugbar/Xe3feec48be846c39d2892e320a561f98.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/debugbar/Xe4030e748928140681e1029e6fe2239c.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/debugbar/Xe86a49a9aba741bfc1e4fedb4799b0a8.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/debugbar/Xeee26d65329dd24f5b327532df2a1485.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/debugbar/Xeff4112b0b48c89d0bb6cee5c54d5caa.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/debugbar/Xf11a3b0c3ebb33b84d0f297e8824e0cf.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/debugbar/Xf18cba78c7d1de019148b678e2bbe751.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/debugbar/Xf23732822f5be7ca21dbc5153eeb76c6.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/debugbar/Xf258e403989e040492b1a7ef0c5b2472.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/debugbar/Xf291a0e0f634f674a3a872790aad9400.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/debugbar/Xf2d9b949b73256b739dc8180bedbb888.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/debugbar/Xf3e8616921ccb5a08d713fcad497eab5.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/debugbar/Xf4413c78bd218f2c95d9dedc2df37b53.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/debugbar/Xf686902171ca45e3114c1ad55629dbbb.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/debugbar/Xf68c37c1c07fb2a113b5eb29ffebf3d7.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/debugbar/Xf75cc81a1be574b710f149c25be677d8.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/debugbar/Xf8af7ab1c3c778afc6869f19786cf31a.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/debugbar/Xf910a71261482b7e74887f6263f7d997.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/debugbar/Xfd788128581cd14169f65ba461f670ec.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/debugbar/Xfe5af9d206dfcd9c1d1f8cb780a5a3a9.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/framework/sessions/VExSRLgyx55QaYnw9nb9iqNXPiWuCChncE7S5wJv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/framework/views/1449438de36903777a9cc57eafc84701e921f917.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/framework/views/25bf8ece76e6faf3ce3b9958f7a1b708071bd7c5.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/framework/views/4e9bd2efe85c1fd9b064b3d11313dd34e469beda.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/framework/views/4fdc5cb28fa7cd3d92d1e63efa9de958c8b4c3ad.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/framework/views/5d383ae1ae221024f7d575a51d981cbe6ab35922.php" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/storage/framework/views/6add3c787332a139b5ef331d50b275eb7d073c99.php" beforeDir="false" afterPath="$PROJECT_DIR$/storage/framework/views/6add3c787332a139b5ef331d50b275eb7d073c99.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/framework/views/c78aecc00726b084348f81265d8649f7fc11db86.php" beforeDir="false" afterPath="$PROJECT_DIR$/storage/framework/views/c78aecc00726b084348f81265d8649f7fc11db86.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/logs/laravel-2019-05-24.log" beforeDir="false" afterPath="$PROJECT_DIR$/storage/logs/laravel-2019-05-24.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/framework/views/77df15352cb647cc7c06ed05c3cb0a099007e9c3.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/framework/views/7e06b8e14a10fdc9b4756bae15f500f967e794da.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/framework/views/9d2271dcbcdc7e342067a187d4a1dcaa64e77590.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/framework/views/afdec6aae2c5179fee10e9f961ffba6f73e5485c.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/framework/views/c6e01872e519464e12d361e748895e4260b6e7fd.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/framework/views/ec7d5ee2e0b76f0babd74ae946a27c13eef82a64.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/framework/views/edbf9b1f63804f4ef5aaeede57e5bebaaefb3039.php" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/node_modules/" />
     <ignored path="$PROJECT_DIR$/vendor/barryvdh/laravel-debugbar/" />
@@ -147,8 +293,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/routes/web.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="572">
-              <caret line="31" selection-start-line="31" selection-end-line="31" />
+            <state relative-caret-position="546">
+              <caret line="30" column="3" selection-start-line="30" selection-start-column="3" selection-end-line="30" selection-end-column="3" />
             </state>
           </provider>
         </entry>
@@ -165,29 +311,23 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/UsersController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="104">
-              <caret line="299" column="21" selection-start-line="299" selection-start-column="21" selection-end-line="299" selection-end-column="21" />
+            <state relative-caret-position="167">
+              <caret line="284" column="32" selection-start-line="284" selection-start-column="32" selection-end-line="284" selection-end-column="32" />
+              <folding>
+                <element signature="e#40#86#0#PHP" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/resources/views/users/avatar.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="494">
-              <caret line="31" column="39" lean-forward="true" selection-start-line="31" selection-start-column="39" selection-end-line="31" selection-end-column="39" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/views/app.blade.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="312">
-              <caret line="12" column="65" selection-start-line="12" selection-start-column="65" selection-end-line="12" selection-end-column="65" />
+            <state relative-caret-position="416">
+              <caret line="46" column="17" selection-start-line="46" selection-start-column="17" selection-end-line="46" selection-end-column="17" />
             </state>
           </provider>
         </entry>
@@ -196,9 +336,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>MAIL_LOG_CHANNEL</find>
-      <find>MAIL_PASSWORD</find>
-      <find>DB_CONNECTION</find>
       <find>REPOSITORY_PAGINATION</find>
       <find>DRIVER</find>
       <find>QUEUE_DRIVER</find>
@@ -214,7 +351,6 @@
       <find>orderBy</find>
       <find>paginate</find>
       <find>pluck</find>
-      <find>avatar</find>
       <find>vendor</find>
       <find>trim</find>
       <find>redis</find>
@@ -226,17 +362,14 @@
       <find>read_write_timeout</find>
       <find>User</find>
       <find>Session</find>
+      <find>avatar</find>
+      <find>validation-errors</find>
+      <find>output</find>
+      <find>user/avatar</find>
     </findStrings>
   </component>
   <component name="FrameworkCommandLineHistory">
     <commandsHistory>
-      <command text="artisan config:publish intervention/image" />
-      <command text="vendor:publish " />
-      <command text="artisan vendor:publish " />
-      <command text="artisan make:request UserAvatarUpdate" />
-      <command text="artisan make:request UserAvatarUpdateRequest" />
-      <command text="git add -A" />
-      <command text="git commit -m &quot;用户头像修改&quot;" />
       <command text="git pull" />
       <command text="git push" />
       <command text="git add -A" />
@@ -255,10 +388,20 @@
       <command text="git commit -m &quot;Code Cleanup And Refactoring&quot;" />
       <command text="git pull" />
       <command text="git push" />
+      <command text="git add -A" />
+      <command text="git commit -m &quot;使用Ajax上传用户头像&quot;" />
+      <command text="git pull" />
+      <command text="git push" />
+      <command text="artisan view:clear" />
+      <command text="artisan cache:clear " />
+      <command text="artisan route:clear" />
     </commandsHistory>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="mock:///Dummy.txt" root0="SKIP_INSPECTION" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -299,12 +442,13 @@
         <option value="$PROJECT_DIR$/app/Http/Requests/UserAvatarUpdateRequest.php" />
         <option value="$PROJECT_DIR$/config/filesystems.php" />
         <option value="$PROJECT_DIR$/.gitignore" />
-        <option value="$PROJECT_DIR$/routes/web.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/PostsController.php" />
         <option value="$PROJECT_DIR$/public/js/jquery-2.1.4.min.js" />
         <option value="$PROJECT_DIR$/resources/views/app.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/users/avatar.blade.php" />
+        <option value="$PROJECT_DIR$/routes/web.php" />
+        <option value="$PROJECT_DIR$/resources/views/users/avatar2.blade.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/UsersController.php" />
+        <option value="$PROJECT_DIR$/resources/views/users/avatar.blade.php" />
       </list>
     </option>
   </component>
@@ -436,7 +580,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -447,33 +590,13 @@
             <path>
               <item name="laravelapp" type="b2602c69:ProjectViewProjectNode" />
               <item name="laravelapp" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="laravelapp" type="b2602c69:ProjectViewProjectNode" />
-              <item name="laravelapp" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="Http" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="laravelapp" type="b2602c69:ProjectViewProjectNode" />
-              <item name="laravelapp" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="Http" type="462c0819:PsiDirectoryNode" />
-              <item name="Controllers" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="laravelapp" type="b2602c69:ProjectViewProjectNode" />
-              <item name="laravelapp" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="Http" type="462c0819:PsiDirectoryNode" />
-              <item name="Controllers" type="462c0819:PsiDirectoryNode" />
-              <item name="UsersController.php" type="88303cf5:PhpFileNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -539,12 +662,17 @@
       <workItem from="1558596267514" duration="9609000" />
       <workItem from="1558660749350" duration="819000" />
       <workItem from="1558664230309" duration="13597000" />
-      <workItem from="1558695136872" duration="311000" />
+      <workItem from="1558695136872" duration="585000" />
+      <workItem from="1558745890401" duration="697000" />
+      <workItem from="1558768503857" duration="1526000" />
+      <workItem from="1558771036748" duration="136000" />
+      <workItem from="1558772382409" duration="110000" />
+      <workItem from="1558776465213" duration="1121000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="91509000" />
+    <option name="totallyTimeSpent" value="95373000" />
   </component>
   <component name="TodoView" selected-index="3">
     <todo-panel id="selected-file">
@@ -559,7 +687,7 @@
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49659863" visible="true" weight="0.23340471" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49659863" visible="true" weight="0.24946466" />
       <window_info id="Structure" order="1" sideWeight="0.5022676" side_tool="true" weight="0.21788009" />
       <window_info id="npm" order="2" sideWeight="0.50340134" side_tool="true" weight="0.22055675" />
       <window_info id="Favorites" order="3" sideWeight="0.5022676" side_tool="true" weight="0.21788009" />
@@ -637,27 +765,6 @@
     </option>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/resources/views/vendor/pagination/bootstrap-4.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="390">
-          <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
-          <folding>
-            <element signature="e#534#542#1#HTML" expanded="true" />
-            <element signature="e#565#573#0#HTML" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Providers/AppServiceProvider.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="553">
-          <caret line="24" column="19" lean-forward="true" selection-start-line="24" selection-start-column="19" selection-end-line="24" selection-end-column="19" />
-          <folding>
-            <element signature="e#33#72#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Transformers/DiscussionTransformer.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="501">
@@ -868,13 +975,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/_ide_helper.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="350">
-          <caret line="14655" column="8" lean-forward="true" selection-start-line="14655" selection-start-column="8" selection-end-line="14655" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/config/filesystems.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="605">
@@ -969,10 +1069,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/routes/web.php">
+    <entry file="file://$PROJECT_DIR$/_ide_helper.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="572">
-          <caret line="31" selection-start-line="31" selection-end-line="31" />
+        <state relative-caret-position="324">
+          <caret line="9985" column="45" lean-forward="true" selection-start-line="9985" selection-start-column="45" selection-end-line="9985" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Http/Concerns/InteractsWithContentTypes.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="139" column="20" selection-start-line="139" selection-start-column="20" selection-end-line="139" selection-end-column="20" />
         </state>
       </provider>
     </entry>
@@ -986,6 +1093,23 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/users/avatar2.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="208">
+          <caret line="8" column="55" selection-start-line="8" selection-start-column="55" selection-end-line="8" selection-end-column="55" />
+          <folding>
+            <element signature="e#921#941#0#HTML" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routes/web.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="546">
+          <caret line="30" column="3" selection-start-line="30" selection-start-column="3" selection-end-line="30" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/app.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="312">
@@ -993,17 +1117,20 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/users/avatar.blade.php">
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/UsersController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="494">
-          <caret line="31" column="39" lean-forward="true" selection-start-line="31" selection-start-column="39" selection-end-line="31" selection-end-column="39" />
+        <state relative-caret-position="167">
+          <caret line="284" column="32" selection-start-line="284" selection-start-column="32" selection-end-line="284" selection-end-column="32" />
+          <folding>
+            <element signature="e#40#86#0#PHP" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/UsersController.php">
+    <entry file="file://$PROJECT_DIR$/resources/views/users/avatar.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="104">
-          <caret line="299" column="21" selection-start-line="299" selection-start-column="21" selection-end-line="299" selection-end-column="21" />
+        <state relative-caret-position="416">
+          <caret line="46" column="17" selection-start-line="46" selection-start-column="17" selection-end-line="46" selection-end-column="17" />
         </state>
       </provider>
     </entry>
