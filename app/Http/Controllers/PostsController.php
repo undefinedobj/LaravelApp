@@ -11,6 +11,7 @@ use HyperDown\Parser;
 use Illuminate\Http\Request;
 use Prettus\Validator\Contracts\ValidatorInterface;
 use Prettus\Validator\Exceptions\ValidatorException;
+use EndaEditor;
 
 class PostsController extends Controller
 {
@@ -205,5 +206,16 @@ class PostsController extends Controller
     public function destroy($id)
     {
         //
+    }
+
+
+    public function markdownUpload(){
+
+        // path 为 public 下面目录，比如我的图片上传到 public/uploads 那么这个参数你传uploads 就行了
+
+        $data = EndaEditor::uploadImgFile('path');
+
+        return json_encode($data);
+
     }
 }

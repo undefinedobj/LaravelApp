@@ -13,7 +13,8 @@
 //use Illuminate\Routing\Router;
 
 Route::get('/', 'PostsController@index');
-
+// laravel 5 Markdown 编辑器 - 图片上传
+Route::post('makrdown-upload', 'PostsController@markdownUpload');
 Route::get('/user/register', 'UsersController@register');
 Route::post('/user/register', 'UsersController@store');
 Route::get('user/login', 'UsersController@login')->name('login');
