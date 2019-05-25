@@ -4,6 +4,9 @@
 /public/uploads
 /storage/*.key
 /vendor
+/.idea
+/.vscode
+/.vagrant
 .env
 .phpunit.result.cache
 Homestead.json
