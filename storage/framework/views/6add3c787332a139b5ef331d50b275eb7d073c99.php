@@ -20,14 +20,6 @@
                     ?>
 
                     
-
-
-
-
-
-
-
-                    
                     <?php echo Form::open(['url' => "user/$id/avatar", 'enctype' => 'multipart/form-data', 'method' => 'post']); ?>
 
                     <?php echo Form::file('avatar'); ?>
@@ -35,6 +27,14 @@
                     <?php echo Form::submit('上传头像', ['class' => 'btn btn-success pull-right']); ?>
 
                     <?php echo Form::close(); ?>
+
+
+                    
+
+
+
+
+
 
 
                     <div class="span5">

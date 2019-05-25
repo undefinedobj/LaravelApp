@@ -22,7 +22,8 @@
         "naux/sendcloud": "^1.1",
         "overtrue/laravel-lang": "~3.0",
         "predis/predis": "^1.1",
-        "prettus/l5-repository": "^2.6"
+        "prettus/l5-repository": "^2.6",
+        "yuanchao/laravel-5-markdown-editor": "dev-master"
     },
     "require-dev": {
         "barryvdh/laravel-debugbar": "^3.2",

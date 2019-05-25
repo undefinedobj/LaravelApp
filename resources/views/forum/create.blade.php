@@ -2,6 +2,9 @@
 
 @section('title', env('APP_NAME'))
 
+{{--引入Markdown编辑器代码--}}
+@include('editor::head')
+
 @section('content')
     <div class="container">
         <div class="row">

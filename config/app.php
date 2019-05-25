@@ -178,6 +178,8 @@ return [
         Barryvdh\Debugbar\ServiceProvider::class,
 //        Laravel 使用 Intervention/image 处理图片
         Intervention\Image\ImageServiceProvider::class,
+//        Laravel 使用 laravel-5-markdown-editor
+        YuanChao\Editor\EndaEditorServiceProvider::class,
 
         /*
          * Application Service Providers...
@@ -242,6 +244,7 @@ return [
         'Html' => Collective\Html\HtmlFacade::class,
         'Debugbar' => Barryvdh\Debugbar\Facade::class,
         'Image' => Intervention\Image\Facades\Image::class,
+        'EndaEditor' => YuanChao\Editor\Facade\EndaEditorFacade::class
     ],
 
 ];
