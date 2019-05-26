@@ -8,7 +8,6 @@
 /.idea
 /.vscode
 /.vagrant
-.idea
 .env
 .phpunit.result.cache
 Homestead.json
