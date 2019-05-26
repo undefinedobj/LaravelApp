@@ -209,6 +209,11 @@ class PostsController extends Controller
     }
 
 
+    /**
+     * Markdown 编辑器 - 中的图片上传
+     *
+     * @return false|string
+     */
     public function markdownUpload()
     {
 
