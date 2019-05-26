@@ -60,7 +60,7 @@
                             @{{ comment.body }}
                         </div>
                     </div>
-                {{-- vue.js.end--}}
+                    {{-- vue.js.end--}}
                 <hr>
 
                 {{-- 评论输框 --}}
@@ -114,7 +114,7 @@
                 }
             },
             methods: {
-                onsubmitForm:function (element) {
+                onSubmitForm:function (element) {
                     element.preventDefault();
                     var comment = this.newComment;
                     var post = this.newPost;
@@ -123,7 +123,6 @@
                     this.$http.post('/comments', post, function () {
                         this.comments.push(comment);
                     });
-
                     this.newComment = {
                         name: '{{ Auth::user()->name }}',
                         avatar: '{{ Auth::user()->avatar }}',
