@@ -3,8 +3,7 @@
 /public/storage
 /public/uploads
 /storage/*.key
-/storage/febugbar
-/storage/framework
+/storage/*
 /vendor
 /.idea
 /.vscode
