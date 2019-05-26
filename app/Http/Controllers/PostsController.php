@@ -8,7 +8,6 @@ use App\Repositories\DiscussionRepository;
 use App\Validators\DiscussionValidator;
 use App\Transformers\DiscussionTransformer;
 use HyperDown\Parser;
-use Illuminate\Http\Request;
 use Prettus\Validator\Contracts\ValidatorInterface;
 use Prettus\Validator\Exceptions\ValidatorException;
 use EndaEditor;
@@ -209,6 +208,11 @@ class PostsController extends Controller
     }
 
 
+    /**
+     * Markdown 编辑器 - 中的图片上传
+     *
+     * @return false|string
+     */
     public function markdownUpload()
     {
 
