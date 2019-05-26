@@ -8,7 +8,6 @@ use App\Repositories\DiscussionRepository;
 use App\Validators\DiscussionValidator;
 use App\Transformers\DiscussionTransformer;
 use HyperDown\Parser;
-use Illuminate\Http\Request;
 use Prettus\Validator\Contracts\ValidatorInterface;
 use Prettus\Validator\Exceptions\ValidatorException;
 use EndaEditor;
