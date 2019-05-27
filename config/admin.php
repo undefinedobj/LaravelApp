@@ -62,7 +62,8 @@ return [
 
         'namespace' => 'App\\Admin\\Controllers',
 
-        'middleware' => ['web', 'admin'],
+//      `use lock-screen package` add middleware `admin.lock` into this array.
+        'middleware'    => ['web', 'admin', 'admin.lock'],
     ],
 
     /*
