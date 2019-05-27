@@ -355,8 +355,14 @@ return [
 //      for laravel-admin package
 //      Material-UI extension for laravel-admin
         'material-ui' => [
-            // If the value is set to false, this extension will be disabled
+//          If the value is set to false, this extension will be disabled
             'enable' => true
+        ],
+//        中国省/市/区（县）三级级联选择器
+        'china-distpicker' => [
+//          If the value is set to false, this extension will be disabled
+            'enable' => true,
         ]
+
     ],
 ];
