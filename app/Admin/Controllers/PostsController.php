@@ -83,12 +83,20 @@ class PostsController extends Controller
         $grid->id('Id');
         $grid->title(trans('admin.title'))->expand(function ($model) {
 
-            $comments = $model->comments()->take(10)->get()->map(function ($comment) {
-                return $comment->only(['id', 'body', 'created_at']);
-            });
+/************************************** 此处有 BUG ***************************************/
 
-            return new Table(['ID', trans('admin.discussion.body'), trans('admin.created_at')], $comments->toArray());
+            $comments = $model->comments()->take(10)->get()->map(function ($comment) {
+                return $comment->only(['id', /*'user_id',*/ 'body', 'created_at']);
+            })->toArray();
+
+//            $user = $model->user()->take(10)->get()->map(function ($comment) {
+//                return $comment->only(['id', 'name']);
+//            })->toArray();
+
+            return new Table(['ID', trans('admin.discussion.body'), trans('admin.created_at'), trans('admin.user.name')], $comments);
         });
+/************************************** 此处有 BUG ***************************************/
+
         $grid->user_id(trans('admin.username'))->display(function($user_id) {
             return User::find($user_id)->name;
         });
