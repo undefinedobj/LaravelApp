@@ -20,7 +20,7 @@ class CreateDiscussionsTable extends Migration
             $table->integer('user_id')->unsigned();
             $table->integer('last_user_id')->unsigned();
 //            定义这张表的id 必须为`users`表的外键
-//            $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
+            $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
             $table->timestamps();
         });
     }

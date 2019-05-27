@@ -10,7 +10,6 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
-//use Illuminate\Routing\Router;
 
 Route::get('/', 'PostsController@index');
 // laravel 5 Markdown 编辑器 - 图片上传
@@ -30,14 +29,6 @@ Route::resources([
     'users'             =>      'UsersController',
     'comments'          =>      'CommentsController',
 ]);
-
-/*Route::group([
-//    'prefix'        => config('admin.route.prefix'),
-//     ...
-], function (Router $router) {
-    $router->get('/', 'PostController@index');
-});*/
-
 
 /**
  * 纯属瞎玩, 基本没啥用

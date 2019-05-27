@@ -12,4 +12,9 @@ Route::group([
 
     $router->get('/', 'HomeController@index')->name('admin.home');
 
+    $router->resources([
+        'users'         => 'UsersController',
+        'discussions'   => 'PostsController',
+        'comments'      => 'CommentsController',
+    ]);
 });

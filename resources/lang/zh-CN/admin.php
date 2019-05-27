@@ -99,4 +99,16 @@ return [
         'filter_placeholder' => '过滤',
     ],
     'menu_titles' => [],
+    'verification'          => [
+        'email_verified_at'     => '邮箱验证时间',
+        'is_confirmed'          => '验证状态'
+    ],
+    'user'                  => [
+        'name'              => '名字',
+        'avatar'            => '头像',
+        'email'             => '邮箱',
+    ],
+    'discussion'            => [
+        'body'              => '主体内容',
+    ],
 ];

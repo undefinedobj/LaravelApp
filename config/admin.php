@@ -11,7 +11,7 @@ return [
     | login page.
     |
     */
-    'name' => 'Laravel-App',
+    'name' => config('app.name', 'Laravel-App'),
 
     /*
     |--------------------------------------------------------------------------
