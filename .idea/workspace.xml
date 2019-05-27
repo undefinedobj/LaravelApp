@@ -1,11 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e7441571-f487-46a0-8a65-1b6ba75734c6" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
-    </list>
+    <list default="true" id="e7441571-f487-46a0-8a65-1b6ba75734c6" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/node_modules/" />
     <ignored path="$PROJECT_DIR$/vendor/barryvdh/laravel-debugbar/" />
     <ignored path="$PROJECT_DIR$/vendor/barryvdh/laravel-ide-helper/" />
@@ -225,15 +221,6 @@
   </component>
   <component name="FrameworkCommandLineHistory">
     <commandsHistory>
-      <command text="composer require encore/laravel-admin --ignore-platform-reqs" />
-      <command text="artisan vendor:publish --provider=&quot;Encore\Admin\AdminServiceProvider&quot;" />
-      <command text="artisan vendor:publish " />
-      <command text="php artisan admin:install" />
-      <command text="composer require laravel-admin-ext/helpers" />
-      <command text="composer require laravel-admin-ext/helpers --ignore-platform-reqs" />
-      <command text="artisan admin:import helpers" />
-      <command text="require jxlwqq/material-ui" />
-      <command text="composer require jxlwqq/material-ui --ignore-platform-reqs" />
       <command text="composer update jxlwqq/material-ui --ignore-platform-reqs" />
       <command text="artisan vendor:publish --tag=laravel-admin-material-ui --force" />
       <command text="git add -A" />
@@ -250,6 +237,15 @@
       <command text="git commit -m &quot;install lock-screen package&quot;" />
       <command text="composer require laravel-admin-ext/redis-manager --ignore-platform-reqs" />
       <command text="artisan admin:import redis-manager" />
+      <command text="git commit -m &quot;install laravel-admin-extensions/redis-manager package&quot;" />
+      <command text="git add -A" />
+      <command text="git commit -m &quot;install laravel-admin-extensions/redis-manager package&quot;" />
+      <command text="git pull" />
+      <command text="git push" />
+      <command text="git pull" />
+      <command text="git push\" />
+      <command text="git push" />
+      <command text="git pull --rebase origin master" />
     </commandsHistory>
   </component>
   <component name="Git.Settings">
@@ -451,10 +447,6 @@
           <expand>
             <path>
               <item name="laravelapp" type="b2602c69:ProjectViewProjectNode" />
-              <item name="laravelapp" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="laravelapp" type="b2602c69:ProjectViewProjectNode" />
               <item name="External Libraries" type="bcb0276e:PhpExternalLibrariesNodePatcher$PatchedExternalLibrariesNode" />
             </path>
           </expand>
@@ -538,12 +530,12 @@
       <workItem from="1558838551639" duration="695000" />
       <workItem from="1558854668661" duration="4806000" />
       <workItem from="1558861307967" duration="4081000" />
-      <workItem from="1558919186160" duration="2363000" />
+      <workItem from="1558919186160" duration="2950000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="110011000" />
+    <option name="totallyTimeSpent" value="110598000" />
   </component>
   <component name="TodoView" selected-index="3">
     <todo-panel id="selected-file">
