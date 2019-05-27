@@ -39,6 +39,7 @@
       <excludeFolder url="file://$MODULE_DIR$/vendor/laravel-admin-ext/china-distpicker" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/laravel-admin-ext/helpers" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/laravel-admin-ext/lock-screen" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/laravel-admin-ext/redis-manager" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/laravel/framework" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/laravel/horizon" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/laravel/tinker" />

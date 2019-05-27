@@ -119,6 +119,7 @@
       <path value="$PROJECT_DIR$/vendor/jxlwqq/material-ui" />
       <path value="$PROJECT_DIR$/vendor/laravel-admin-ext/china-distpicker" />
       <path value="$PROJECT_DIR$/vendor/laravel-admin-ext/lock-screen" />
+      <path value="$PROJECT_DIR$/vendor/laravel-admin-ext/redis-manager" />
     </include_path>
   </component>
   <component name="PhpProjectSharedConfiguration" php_language_level="7.1" />
