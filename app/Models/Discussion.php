@@ -55,4 +55,15 @@ class Discussion extends Model implements Transformable
     {
         return  $this->hasMany(Comment::class);
     }
+
+
+    /**
+     * 远程一对多关联
+     * 当前国家所有文章。
+     * 当前帖子下的所有评论人
+     */
+    public function users()
+    {
+        return $this->hasManyThrough('App\Models\User', 'App\Models\Discussion');
+    }
 }

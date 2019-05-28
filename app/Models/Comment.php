@@ -38,4 +38,6 @@ class Comment extends Model implements Transformable
         return  $this->belongsTo(Discussion::class);
     }
 
+
+
 }

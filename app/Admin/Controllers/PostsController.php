@@ -85,7 +85,7 @@ class PostsController extends Controller
 
 /************************************** 此处有 BUG ***************************************/
 
-            $comments = $model->comments()->take(10)->get()->map(function ($comment) {
+            $rows = $model->comments()->take(10)->get()->map(function ($comment) {
                 return $comment->only(['id', /*'user_id',*/ 'body', 'created_at']);
             })->toArray();
 
@@ -93,7 +93,9 @@ class PostsController extends Controller
 //                return $comment->only(['id', 'name']);
 //            })->toArray();
 
-            return new Table(['ID', trans('admin.discussion.body'), trans('admin.created_at'), trans('admin.user.name')], $comments);
+            $headers = ['ID', trans('admin.discussion.body'), trans('admin.created_at')/*, trans('admin.user.name')*/];
+
+            return new Table($headers, $rows);
         });
 /************************************** 此处有 BUG ***************************************/
 
