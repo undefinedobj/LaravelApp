@@ -124,7 +124,11 @@ class UsersController extends Controller
 
             $user = $this->repository->create(array_merge($request->all(), $data));
 
-            Mail::to($user->email)->send(new \App\Mail\RegisterMail($user));
+//            Mail::to($user->email)->send(new \App\Mail\RegisterMail($user));
+
+//            使用队列给用户发送邮件
+//            将邮件发送任务推送到队列
+            Mail::to($user->email)->queue(new \App\Mail\RegisterMail($user));
 
             return redirect('/');
 
