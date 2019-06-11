@@ -35,14 +35,14 @@ Route::resources([
  *
  * @return string
  */
-Route::any('{namespace}/{class}/{action}', function ($namespace, $class, $action)
-{
-    $class = 'App\\Http\\Controllers\\'.ucfirst(strtolower($namespace)) .'\\'. ucfirst(strtolower($class)) .'Controller';
-
-    if (class_exists($class)) {
-        $classObject = new $class();
-        if (method_exists($classObject, $action)) return call_user_func(array($classObject, $action));
-    }else {
-        return $class. 'not found';
-    }
-});
+//Route::any('{namespace}/{class}/{action}', function ($namespace, $class, $action)
+//{
+//    $class = 'App\\Http\\Controllers\\'.ucfirst(strtolower($namespace)) .'\\'. ucfirst(strtolower($class)) .'Controller';
+//
+//    if (class_exists($class)) {
+//        $classObject = new $class();
+//        if (method_exists($classObject, $action)) return call_user_func(array($classObject, $action));
+//    }else {
+//        return $class. 'not found';
+//    }
+//});
