@@ -8,6 +8,8 @@
 | App 路由 Demo
 |
 */
-Route::group(['namespace' => 'Api'], function () {
-    Route::resource('user', 'UserController');
+Route::group(['namespace' => 'Api', 'prefix' => 'v1'], function () {
+    Route::resources([
+        'user' => 'UserController',
+    ]);
 });
