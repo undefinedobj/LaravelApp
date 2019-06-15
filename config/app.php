@@ -1,4 +1,4 @@
-<?php
+    <?php
 
 use Barryvdh\Debugbar\ServiceProvider;
 use Barryvdh\LaravelIdeHelper\IdeHelperServiceProvider;

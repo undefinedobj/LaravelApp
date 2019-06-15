@@ -16,8 +16,8 @@
         <tbody>
         <tr>
             <td class="header" style="font-family: Avenir, Helvetica, sans-serif; box-sizing: border-box; padding: 25px 0; text-align: center;">
-                <a href="https://zhihu.carsonlius.vip/" style="font-family: Avenir, Helvetica, sans-serif; box-sizing: border-box; color: #bbbfc3; font-size: 19px; font-weight: bold; text-decoration: none; text-shadow: 0 1px 0 white;">
-                    {{ env('APP_NAME') }}
+                <a href="https://github.com/undefinedobj" style="font-family: Avenir, Helvetica, sans-serif; box-sizing: border-box; color: #bbbfc3; font-size: 19px; font-weight: bold; text-decoration: none; text-shadow: 0 1px 0 white;">
+                    {{ config('app.name') }}
                 </a>
             </td>
         </tr>
@@ -67,7 +67,7 @@
                     <tbody>
                     <tr>
                         <td class="content-cell" align="center" style="font-family: Avenir, Helvetica, sans-serif; box-sizing: border-box; padding: 35px;">
-                            <p style="font-family: Avenir, Helvetica, sans-serif; box-sizing: border-box; line-height: 1.5em; margin-top: 0; color: #AEAEAE; font-size: 12px; text-align: center;">© 2019 {{ env('APP_NAME') }}. All rights reserved.</p>
+                            <p style="font-family: Avenir, Helvetica, sans-serif; box-sizing: border-box; line-height: 1.5em; margin-top: 0; color: #AEAEAE; font-size: 12px; text-align: center;">© 2019 {{ config('app.name') }}. All rights reserved.</p>
                         </td>
                     </tr>
                     </tbody>
