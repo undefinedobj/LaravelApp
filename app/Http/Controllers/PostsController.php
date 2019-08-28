@@ -58,7 +58,7 @@ class PostsController extends Controller
                 $query->select('id','name','avatar');
             },
             'comments' => function($query){
-                $query->select('id');
+                $query->select('id', 'discussion_id');
             },
         ])->orderBy('updated_at', 'desc')
             ->orderBy('created_at', 'desc')
