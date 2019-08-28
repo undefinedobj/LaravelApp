@@ -53,7 +53,14 @@ class PostsController extends Controller
     {
         $columns = ['id','title','body','user_id'];
 
-        $discussions = $this->repository->orderBy('updated_at', 'desc')
+        $discussions = $this->repository->with([
+            'user' => function($query){
+                $query->select('id','name','avatar');
+            },
+            'comments' => function($query){
+                $query->select('id');
+            },
+        ])->orderBy('updated_at', 'desc')
             ->orderBy('created_at', 'desc')
             ->paginate(null, $columns);
 
