@@ -1,12 +1,12 @@
 @extends('app')
 
-@section('title', env('APP_NAME'))
+@section('title', config('app.name'))
 
 @section('content')
     <div class="jumbotron">
         <div class="container">
-            <h2>Welcome To {{ env('APP_NAME') }}
-                <a class="btn btn-danger btn-lg pull-right" href="{{ url('discussions/create') }}" role="button">发布新的帖子 »</a>
+            <h2>Welcome To {{ config('app.name') }}
+{{--                <a class="btn btn-danger btn-lg pull-right" href="{{ url('discussions/create') }}" role="button">发布新的帖子 »</a>--}}
             </h2>
         </div>
     </div>

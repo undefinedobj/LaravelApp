@@ -32,7 +32,7 @@
         </div>
         <div id="navbar" class="navbar-collapse collapse">
             <ul class="nav navbar-nav">
-                <li class="active"><a href="/">Home</a></li>
+                <li class="active"><a href="/">文章</a></li>
                 {{--<li><a href="#about">About</a></li>
                 <li><a href="#contact">Contact</a></li>
                 <li class="dropdown">
@@ -65,8 +65,8 @@
 {{--                    <li><a href="{{ url('user/logout') }}"> Logout </a></li>--}}
 {{--                    <li><img src="{{ Auth::user()->avatar }}" class="img-circle" width="42" alt=""></li>--}}
                 @else
-                    <li class="{{ Request::is('user/register') ? 'active' : '' }}"><a href="{{ url('/user/register') }}">Register</a></li>
-                    <li class="{{ Request::is('user/login') ? 'active' : '' }}"><a href="{{ url('/user/login') }}">Login In <span class="sr-only">(current)</span></a></li>
+                    <li class="{{ Request::is('user/register') ? 'active' : '' }}"><a href="{{ url('/user/register') }}">注册</a></li>
+                    <li class="{{ Request::is('user/login') ? 'active' : '' }}"><a href="{{ url('/user/login') }}">登录 <span class="sr-only">(current)</span></a></li>
                     {{--<li><a href="../navbar-fixed-top/">Fixed top</a></li>--}}
                 @endif
             </ul>
