@@ -4,7 +4,9 @@
     <list default="true" id="e7441571-f487-46a0-8a65-1b6ba75734c6" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/UsersController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/UsersController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Mail/RegisterMail.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Mail/RegisterMail.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/email/register.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/email/register.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -34,6 +36,13 @@
   </component>
   <component name="FavoritesManager">
     <favorites_list name="laravelapp" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+      </list>
+    </option>
   </component>
   <component name="FrameworkCommandLineHistory">
     <commandsHistory>
@@ -195,8 +204,10 @@
   </component>
   <component name="ProjectId" id="1PbzoNmm3Hd7nqenFVpUrTpTmHA" />
   <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/New Scratch File" value="Blade" />
     <property name="com.jetbrains.php.phpunit.codeGeneration.PhpNewTestDialog.defaultLibrary" value="PHPUnit" />
     <property name="editor.config.ad.shown" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../laravelTesting" />
@@ -205,7 +216,7 @@
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="php.override.implement.member.chooser.php.doc" value="DEFAULT" />
-    <property name="settings.editor.selected.configurable" value="SensioLabs.Insight" />
+    <property name="settings.editor.selected.configurable" value="Console" />
     <property name="ts.external.directory.path" value="D:\Program Files (x86)\JetBrains\PhpStorm 2018.3.4\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
   </component>
   <component name="RecentsManager">
@@ -226,8 +237,10 @@
       <command value="git pull " />
       <command value="git push" />
       <command value="git commit -m &quot;修改页面样式，env 函数改为 config 函数&quot;" />
-      <command value="git add -A" />
       <command value="git commit -m &quot;首页的SQL 查询优化&quot;" />
+      <command value="git add -A" />
+      <command value="git commit -m &quot;env 函数改为 config 函数&quot;" />
+      <command value="artisan tinker" />
     </option>
   </component>
   <component name="RunDashboard">
@@ -369,7 +382,7 @@
       <workItem from="1566377601187" duration="950000" />
       <workItem from="1566545687468" duration="19000" />
       <workItem from="1566562249985" duration="3000" />
-      <workItem from="1567000020905" duration="6405000" />
+      <workItem from="1567000020905" duration="24903000" />
     </task>
     <servers />
   </component>

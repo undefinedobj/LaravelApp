@@ -16,6 +16,8 @@ use App\Validators\UserValidator;
 use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Session;
 use Illuminate\Support\Facades\Auth;
+use App\Mail\RegisterMail;
+use Illuminate\Foundation\Auth\RegistersUsers;
 
 /**
  * Class UsersController.
@@ -24,6 +26,8 @@ use Illuminate\Support\Facades\Auth;
  */
 class UsersController extends Controller
 {
+    use RegistersUsers;
+
     /**
      * @var UserRepository
      */
@@ -72,33 +76,13 @@ class UsersController extends Controller
         if (Auth::attempt([
             'email'         => $request->email,
             'password'      => $request->password,
-            'is_confirmed'  => 1,
+//            'is_confirmed'  => 1,
         ])) {
             return redirect('/');
         }
 
-        Session::flash('user_login_failed', "请填写正确的邮箱和密码, 并激活邮箱");
+        Session::flash('user_login_failed', "请填写正确的邮箱和密码");
         return redirect('/user/login')->withInput();
-    }
-
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function index()
-    {
-        $this->repository->pushCriteria(app('Prettus\Repository\Criteria\RequestCriteria'));
-        $users = $this->repository->all();
-
-        if (request()->wantsJson()) {
-
-            return response()->json([
-                'data' => $users,
-            ]);
-        }
-
-        return view('users.index', compact('users'));
     }
 
     /**
@@ -124,11 +108,15 @@ class UsersController extends Controller
 
             $user = $this->repository->create(array_merge($request->all(), $data));
 
-            Mail::to($user->email)->send(new \App\Mail\RegisterMail($user));
+//            将邮件推送到队列
+            $message = (new RegisterMail($user))
+                ->onConnection('redis')
+                ->onQueue('emails');
 
-//            使用队列给用户发送邮件
-//            将邮件发送任务推送到队列
-//            Mail::to($user->email)->queue(new \App\Mail\RegisterMail($user));
+            Mail::to($user->email)->queue($message);
+
+//             登录
+            $this->guard()->login($user);
 
             return redirect('/');
 

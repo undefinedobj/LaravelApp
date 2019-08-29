@@ -23,8 +23,8 @@
         </tr>
         <tr>
             <td class="content-cell" style="font-family: Avenir, Helvetica, sans-serif; box-sizing: border-box; padding: 35px;">
-                <h1 style="font-family: Avenir, Helvetica, sans-serif; box-sizing: border-box; color: #2F3133; font-size: 19px; font-weight: bold; margin-top: 0; text-align: left;">Hey {{ $user->name }}!</h1>
-                <h3 style="font-family: Avenir, Helvetica, sans-serif; box-sizing: border-box; color: #2F3133; font-size: 14px; font-weight: bold; margin-top: 0; text-align: left;">感谢您对 {{ config('app.name') }} 的支持。</h3>
+                <h1 style="font-family: Avenir, Helvetica, sans-serif; box-sizing: border-box; color: #2F3133; font-size: 19px; font-weight: bold; margin-top: 0; text-align: left;">Hi, {{ $user->name }}:</h1>
+                <h3 style="font-family: Avenir, Helvetica, sans-serif; box-sizing: border-box; color: #2F3133; font-size: 14px; font-weight: bold; margin-top: 0; text-align: left;">感谢您注册 {{ config('app.name') }} 。</h3>
                 <pre style="font-family: Avenir, Helvetica, sans-serif; box-sizing: border-box;"><code>您的论坛帐号为：{{ $user->name }}.
 邮箱验证成功后，您可以使用邮箱作为登录帐号。请点击以下链接进行验证：</code></pre>
                 <table class="action" align="center" width="100%" cellpadding="0" cellspacing="0" style="font-family: Avenir, Helvetica, sans-serif; box-sizing: border-box; margin: 30px auto; padding: 0; text-align: center; width: 100%; -premailer-cellpadding: 0; -premailer-cellspacing: 0; -premailer-width: 100%;">
