@@ -104,7 +104,7 @@ class UsersController extends Controller
 
             $data = [
                 'confirm_code'      => \Str::random(48),
-                'avatar'            => $avatar,
+                'avatar'            => config('app.url').'/'.$avatar,
                 'password'          => bcrypt($request->password)
             ];
 
