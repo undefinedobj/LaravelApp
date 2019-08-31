@@ -167,6 +167,8 @@ return [
         Illuminate\Translation\TranslationServiceProvider::class,
 //        Overtrue\LaravelLang\TranslationServiceProvider::class,
         Illuminate\Validation\ValidationServiceProvider::class,
+//        laravolt/avatar
+        Laravolt\Avatar\ServiceProvider::class,
 
         /*
          * Package Service Providers...
@@ -244,7 +246,8 @@ return [
         'Html' => Collective\Html\HtmlFacade::class,
         'Debugbar' => Barryvdh\Debugbar\Facade::class,
         'Image' => Intervention\Image\Facades\Image::class,
-        'EndaEditor' => YuanChao\Editor\Facade\EndaEditorFacade::class
+        'EndaEditor' => YuanChao\Editor\Facade\EndaEditorFacade::class,
+        'Avatar'    => Laravolt\Avatar\Facade::class,
     ],
 
 ];

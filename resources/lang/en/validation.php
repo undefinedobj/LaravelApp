@@ -132,21 +132,22 @@ return [
 //            'rule-name' => 'custom-message',
 //        ],
         'name' => [
-            'required' => '用户名不能为空',
-            'min' => '用户名长度不能少于4个字符'
+            'required'  => '用户名不能为空',
+            'min'       => '用户名长度不能少于4个字符',
+            'unique'    => '用户名已被使用'
         ],
         'email' => [
-            'required' => '邮箱不能为空',
-            'email' => '邮箱格式不正确',
-            'unique' => '邮箱已被使用'
+            'required'  => '邮箱不能为空',
+            'email'     => '邮箱格式不正确',
+            'unique'    => '邮箱已被使用'
         ],
         'password' => [
-            'required' => '密码不能为空',
+            'required'  => '密码不能为空',
             'min' => '密码长度不能少于6个字符',
             'confirmed' => '两次密码不一致',
         ],
         'body' => [
-            'required' => '主体内容不能为空',
+            'required'  => '主体内容不能为空',
         ],
         'avatar' => [
             'required'  => '图片文件不能为空',

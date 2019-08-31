@@ -18,6 +18,7 @@ use Illuminate\Support\Facades\Session;
 use Illuminate\Support\Facades\Auth;
 use App\Mail\RegisterMail;
 use Illuminate\Foundation\Auth\RegistersUsers;
+use Avatar;
 
 /**
  * Class UsersController.
@@ -98,9 +99,12 @@ class UsersController extends Controller
     {
         try {
             $request->flash();
+
+            Avatar::create("$request->name")->save($avatar = 'images/'.$request->name.uniqid('_').'.jpg', 100);
+
             $data = [
                 'confirm_code'      => \Str::random(48),
-                'avatar'            => '/images/default-avatar.jpg',
+                'avatar'            => $avatar,
                 'password'          => bcrypt($request->password)
             ];
 

@@ -1,7 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e7441571-f487-46a0-8a65-1b6ba75734c6" name="Default Changelist" comment="" />
+    <list default="true" id="e7441571-f487-46a0-8a65-1b6ba75734c6" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/laravelapp.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/laravelapp.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/UsersController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/UsersController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Requests/UserRegisterRequest.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Requests/UserRegisterRequest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/app.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/app.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/lang/en/validation.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/lang/en/validation.php" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -11,7 +21,7 @@
   <component name="ComposerSettings" doNotAsk="true" synchronizationState="SYNCHRONIZE">
     <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
     <execution>
-      <executable />
+      <executable path="composer" />
     </execution>
   </component>
   <component name="DatabaseView">
@@ -194,10 +204,13 @@
       <path value="$PROJECT_DIR$/vendor/laravel-admin-ext/lock-screen" />
       <path value="$PROJECT_DIR$/vendor/laravel-admin-ext/redis-manager" />
       <path value="$PROJECT_DIR$/vendor/laracasts/flash" />
+      <path value="$PROJECT_DIR$/vendor/danielstjules/stringy" />
+      <path value="$PROJECT_DIR$/vendor/laravolt/avatar" />
     </include_path>
   </component>
   <component name="ProjectId" id="1PbzoNmm3Hd7nqenFVpUrTpTmHA" />
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
@@ -229,13 +242,15 @@
       <command value="artisan make:controller" />
       <command value="git commit -m &quot;重构项目&quot;" />
       <command value="git pull " />
-      <command value="git push" />
       <command value="git commit -m &quot;修改页面样式，env 函数改为 config 函数&quot;" />
       <command value="git commit -m &quot;首页的SQL 查询优化&quot;" />
       <command value="git commit -m &quot;env 函数改为 config 函数&quot;" />
       <command value="artisan tinker" />
-      <command value="git add -A" />
       <command value="git commit -m &quot;重构登录、注册、邮件发送业务，&quot;" />
+      <command value="git add -A" />
+      <command value="git commit -m &quot;更改迁移文件表结构&quot;" />
+      <command value="git pull" />
+      <command value="git push" />
     </option>
   </component>
   <component name="RunDashboard">
@@ -377,7 +392,8 @@
       <workItem from="1566377601187" duration="950000" />
       <workItem from="1566545687468" duration="19000" />
       <workItem from="1566562249985" duration="3000" />
-      <workItem from="1567000020905" duration="25248000" />
+      <workItem from="1567000020905" duration="29219000" />
+      <workItem from="1567134445877" duration="13348000" />
     </task>
     <servers />
   </component>

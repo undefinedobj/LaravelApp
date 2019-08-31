@@ -25,6 +25,7 @@
         "laravel/horizon": "^3.2",
         "laravel/tinker": "^1.0",
         "laravelcollective/html": "^5.8",
+        "laravolt/avatar": "^2.2",
         "league/fractal": "^0.18.0",
         "naux/sendcloud": "^1.1",
         "overtrue/laravel-lang": "~3.0",

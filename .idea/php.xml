@@ -121,6 +121,8 @@
       <path value="$PROJECT_DIR$/vendor/laravel-admin-ext/lock-screen" />
       <path value="$PROJECT_DIR$/vendor/laravel-admin-ext/redis-manager" />
       <path value="$PROJECT_DIR$/vendor/laracasts/flash" />
+      <path value="$PROJECT_DIR$/vendor/danielstjules/stringy" />
+      <path value="$PROJECT_DIR$/vendor/laravolt/avatar" />
     </include_path>
   </component>
   <component name="PhpProjectSharedConfiguration" php_language_level="7.1" />
