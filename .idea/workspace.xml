@@ -2,8 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e7441571-f487-46a0-8a65-1b6ba75734c6" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/resources/views/users/person.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/UsersController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/UsersController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/app.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -241,10 +244,14 @@
       <command value="artisan tinker" />
       <command value="git commit -m &quot;重构登录、注册、邮件发送业务，&quot;" />
       <command value="git commit -m &quot;更改迁移文件表结构&quot;" />
-      <command value="git add -A" />
       <command value="git commit -m &quot;安装 laravolt/avatar 且兼容中文头像&quot;" />
+      <command value="git commit -m &quot;avatar_uri  加上 app_uri&quot;" />
       <command value="git pull" />
       <command value="git push" />
+      <command value="git add -A" />
+      <command value="git commit -m &quot;更改  .gitignore 配置&quot;" />
+      <command value="artisan " />
+      <command value="artisan key:generate" />
     </option>
   </component>
   <component name="RunDashboard">
@@ -387,7 +394,8 @@
       <workItem from="1566545687468" duration="19000" />
       <workItem from="1566562249985" duration="3000" />
       <workItem from="1567000020905" duration="29219000" />
-      <workItem from="1567134445877" duration="15429000" />
+      <workItem from="1567134445877" duration="15776000" />
+      <workItem from="1567308260532" duration="14035000" />
     </task>
     <servers />
   </component>

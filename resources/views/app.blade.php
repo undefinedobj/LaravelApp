@@ -11,6 +11,7 @@
     <link href="{{ asset('vendor/font-awesome-4.7.0/css/font-awesome.css') }}" rel="stylesheet">
     <link rel="stylesheet" href="{{ asset('css/style.css') }}">
     <link rel="stylesheet" href="{{ asset('css/app-style.css') }}">
+    <link rel="stylesheet" href="https://cdn.bootcss.com/font-awesome/5.10.2/css/all.css">
 
     <script src="{{ asset('js/jquery-2.1.4.min.js') }}"></script>
     <script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.js"></script>
@@ -32,28 +33,37 @@
         </div>
         <div id="navbar" class="navbar-collapse collapse">
             <ul class="nav navbar-nav">
-                <li class="active"><a href="/">文章</a></li>
-                {{--<li><a href="#about">About</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li  class="active"><a href="#html"><i class="fab fa-html5"></i> 前端</a></li>
+                <li><a href="/"><i class="fab fa-laravel"></i> 后端</a></li>
+                <li><a href="#service"><i class="fas fa-server"></i> 服务器</a></li>
+                <li><a href="#tool"><i class="fa fa-wrench"></i> 工具</a></li>
+                <li><a href="#others"><i class="fas fa-cube"></i> 其它</a></li>
                 <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i class="fas fa-database"></i> 数据库 <span class="caret"></span></a>
                     <ul class="dropdown-menu">
-                        <li><a href="#">Action</a></li>
-                        <li><a href="#">Another action</a></li>
-                        <li><a href="#">Something else here</a></li>
+                        <li><a href="#">MySQL</a></li>
+                        <li><a href="#">Oracle</a></li>
+                        <li><a href="#">SQLServer</a></li>
                         <li role="separator" class="divider"></li>
-                        <li class="dropdown-header">Nav header</li>
-                        <li><a href="#">Separated link</a></li>
-                        <li><a href="#">One more separated link</a></li>
+                        <li class="dropdown-header">NoSQL</li>
+                        <li><a href="#">Redis</a></li>
+                        <li><a href="#">Memcache</a></li>
                     </ul>
-                </li>--}}
+                </li>
+{{--                <div class="view">--}}
+{{--                    <form class="form-search">--}}
+{{--                        <input class="input-medium search-query" type="text">--}}
+{{--                        <button type="submit" class="btn" contenteditable="true">查找</button>--}}
+{{--                    </form>--}}
+{{--                </div>--}}
             </ul>
             <ul class="nav navbar-nav navbar-right">
                 @if (Auth::check())
                     <li>
                         <a id="" type="button" data-toggle="dropdown" href="###"><img src="{{ Auth::user()->avatar }}" class="img-circle" width="42" alt=""></a>
                         <ul class="dropdown-menu" aria-labelledby="dLabel">
-                            <li><a href="#"> <i class="fa fa-bath"></i> {{ Auth::user()->name }}</a></li>
+                            <li><a href="/user/person"> <i class="fa fa-bath"></i> {{ Auth::user()->name }}</a></li>
+{{--                            <li><a href="#"> <i class="fa fa-bath"></i> {{ Auth::user()->name }}</a></li>--}}
                             <li><a href="/user/avatar"> <i class="fa fa-user"></i> 更换头像</a></li>
                             <li><a href="#"> <i class="fa fa-cog"></i> 更换密码</a></li>
                             <li><a href="#"> <i class="fa fa-heart"></i> 特别感谢</a></li>

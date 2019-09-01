@@ -319,4 +319,10 @@ class UsersController extends Controller
             return redirect()->back()->withErrors($e->getMessageBag())->withInput();
         }
     }
+
+    public function person()
+    {
+//        dd(123);
+        return view('users.person');
+    }
 }

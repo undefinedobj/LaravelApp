@@ -29,6 +29,7 @@ Route::resources([
     'users'             =>      'UsersController',
     'comments'          =>      'CommentsController',
 ]);
+Route::get('user/person', 'UsersController@person');
 
 /**
  * 纯属瞎玩, 基本没啥用
