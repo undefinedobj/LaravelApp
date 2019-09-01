@@ -140,7 +140,7 @@ class PostsController extends Controller
             'user' => function($query){
                 $query->select('id','name','avatar');
             },
-        ])->find($id, ['id', 'title', 'body', 'user_id']);
+        ])->find($id, ['id', 'title', 'body', 'preface', 'user_id']);
 
         $html = $parser->makeHtml($discussion->body);
 

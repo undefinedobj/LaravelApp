@@ -16,8 +16,17 @@
                         <a class="btn btn-primary btn-lg pull-right" href="{{ url("discussions/$discussion->id/edit") }}" role="button">修改帖子</a>
                     @endif
 
-                    <h4 class="media-heading">{{ $discussion->title }}</h4>
-                    {{ $discussion->user->name }}
+                    {{--<h4 class="media-heading">{{ $discussion->title }}</h4>
+                    {{ $discussion->user->name }}--}}
+                    <span>
+                        <i class="fa fa-tags"></i>
+                        <span href="###">阅读 <span>(10)</span></span>
+                    </span>
+                        <span>
+                        <i class="fa fa-tags"></i>
+                        <a href="###">拍黄片</a>
+                    </span><br><br>
+                    <span><i class="fa fa-calendar-alt"></i> 2019-08-12 17:35:40</span>
                 </div>
             </div>
         </div>
@@ -26,7 +35,10 @@
         <div class="row">
             <div class="col-md-9" role="main" id="post">
                 <div class="blog-post">
-
+                    <h2>{{ $discussion->title }}</h2>
+                    <blockquote>
+                        <p>{{ $discussion->preface }}</p>
+                    </blockquote>
                 </div><!-- /.blog-post -->
                 {!! $html !!}
 
