@@ -53,7 +53,7 @@ class PostsController extends Controller
      */
     public function index()
     {
-        $columns = ['id','title','preface','body','user_id'];
+        $columns = ['id','title','preface','img','body','user_id'];
 
         $discussions = $this->repository->with([
             'user' => function($query){
@@ -63,6 +63,7 @@ class PostsController extends Controller
                 $query->select('id', 'discussion_id');
             },
         ])->orderBy('updated_at', 'desc')
+            ->orderBy('sort', 'desc')
             ->orderBy('created_at', 'desc')
             ->paginate(null, $columns);
 

@@ -42,7 +42,7 @@
                     </div>
                 </div>
                 <div class="col-md-5">
-                    <img class="featurette-image img-responsive center-block" style="height: 190px" src="http://static.golang365.com/3Z5xGSiKEUEmnKxQYSWDrtefAC9aHuhMV7jYAmsy.png" data-holder-rendered="true">
+                    <img class="featurette-image img-responsive center-block" style="height: 190px" src="{{ $discussion->img }}" data-holder-rendered="true">
                 </div>
             </div>
 
