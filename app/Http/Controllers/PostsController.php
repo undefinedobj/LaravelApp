@@ -53,7 +53,7 @@ class PostsController extends Controller
      */
     public function index()
     {
-        $columns = ['id','title','preface','img','body','user_id'];
+        $columns = ['id','title','preface','img','body','user_id','created_at'];
 
         $discussions = $this->repository->with([
             'user' => function($query){

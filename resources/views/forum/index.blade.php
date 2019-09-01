@@ -28,20 +28,21 @@
                                 <i class="fa fa-user-tie"></i> {{ $discussion->user->name }}
                             </span>
                             <span>
-                                <i class="fa fa-folder-open"></i> <a href="###">PHP</a>
+                                <i class="fa fa-folder-open"></i> <a style="color: #15b982" href="###">PHP</a>
                             </span>
                             <span>
                                 <i class="fa fa-tags"></i>
-                                <a href="###">拍黄片</a>
+                                <a href="" style="color: #15b982" href="###">拍黄片</a>
                             </span>
                             </div>
                         </div>
                         <div class="col-md-6">
-                            <span><i class="fa fa-calendar-alt"></i> 2019-08-12 17:35:40</span>
+                            <span><i class="fa fa-calendar-alt"></i> {{ $discussion->created_at }}</span>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-5">
+                    {{--445.1 * 190--}}
                     <img class="featurette-image img-responsive center-block" style="height: 190px" src="{{ $discussion->img }}" data-holder-rendered="true">
                 </div>
             </div>
