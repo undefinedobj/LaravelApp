@@ -11,6 +11,54 @@
         </div>
     </div>
     <div class="container">
+        <div class="container marketing">
+            <!-- START THE FEATURETTES -->
+            <hr class="featurette-divider">
+            @foreach($discussions as $discussion)
+            <div class="row featurette">
+                <div class="col-md-7">
+                    <h3 class="featurette-heading">
+                        <a href="/discussions/{{ $discussion->id }}">{{ $discussion->title }}</a>
+                    </h3>
+                    <p class="list-enter-active">{{ $discussion->preface ?? '...' }}</p>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="post_mata ">
+                            <span>
+                                <i class="fa fa-user-tie"></i> {{ $discussion->user->name }}
+                            </span>
+                            <span>
+                                <i class="fa fa-folder-open"></i> <a href="###">PHP</a>
+                            </span>
+                            <span>
+                                <i class="fa fa-tags"></i>
+                                <a href="###">拍黄片</a>
+                            </span>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <span><i class="fa fa-calendar-alt"></i> 2019-08-12 17:35:40</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-5">
+                    <img class="featurette-image img-responsive center-block" style="height: 190px" src="http://static.golang365.com/3Z5xGSiKEUEmnKxQYSWDrtefAC9aHuhMV7jYAmsy.png" data-holder-rendered="true">
+                </div>
+            </div>
+
+            <hr class="featurette-divider">
+            @endforeach
+            {{ $discussions->links() }}
+            <!-- /END THE FEATURETTES -->
+
+            <!-- FOOTER -->
+            <footer>
+                <p class="pull-right"><a href="#">Back to top</a></p>
+            </footer>
+        </div>
+    </div>
+
+    {{--<div class="container">
         <div class="row">
             <div class="col-md-9" role="main">
             @foreach($discussions as $discussion)
@@ -21,7 +69,7 @@
                         </a>
                     </div>
                     <div class="media-body">
-                        {{--<h4 class="media-heading">{{ $discussion->title }}</h4>--}}
+                        <h4 class="media-heading">{{ $discussion->title }}</h4>
                         <h4 class="media-heading">
                             <a href="/discussions/{{ $discussion->id }}">{{ $discussion->title }}</a>
 
@@ -39,5 +87,5 @@
                 {{ $discussions->links() }}
             </div>
         </div>
-    </div>
+    </div>--}}
 @endsection

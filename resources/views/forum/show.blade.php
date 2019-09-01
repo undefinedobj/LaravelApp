@@ -103,13 +103,13 @@
             data: {
                 comments: [],
                 newComment: {
-                    name: '{{ Auth::user()->name }}',
-                    avatar: '{{ Auth::user()->avatar }}',
+                    name: '{{ Auth::user()->name ?? null }}',
+                    avatar: '{{ Auth::user()->avatar ?? null }}',
                     body: ''
                 },
                 newPost: {
                     discussion_id: '{{ $discussion->id }}',
-                    user_id: '{{ Auth::user()->id }}',
+                    user_id: '{{ Auth::user()->id ?? null }}',
                     body: ''
                 }
             },
@@ -124,8 +124,8 @@
                         this.comments.push(comment);
                     });
                     this.newComment = {
-                        name: '{{ Auth::user()->name }}',
-                        avatar: '{{ Auth::user()->avatar }}',
+                        name: '{{ Auth::user()->name ?? null }}',
+                        avatar: '{{ Auth::user()->avatar ?? null }}',
                         body: ''
                     };
                 }

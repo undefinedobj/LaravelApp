@@ -7,10 +7,12 @@ use App\Http\Requests\DiscussionUpdateRequest;
 use App\Repositories\DiscussionRepository;
 use App\Validators\DiscussionValidator;
 use App\Transformers\DiscussionTransformer;
+use http\Client\Curl\User;
 use HyperDown\Parser;
 use Prettus\Validator\Contracts\ValidatorInterface;
 use Prettus\Validator\Exceptions\ValidatorException;
 use EndaEditor;
+use function foo\func;
 
 class PostsController extends Controller
 {
@@ -51,7 +53,7 @@ class PostsController extends Controller
      */
     public function index()
     {
-        $columns = ['id','title','body','user_id'];
+        $columns = ['id','title','preface','body','user_id'];
 
         $discussions = $this->repository->with([
             'user' => function($query){
@@ -131,7 +133,14 @@ class PostsController extends Controller
      */
     public function show($id, Parser $parser)
     {
-        $discussion = $this->repository->with(['comments', 'user'])->find($id);
+        $discussion = $this->repository->with([
+            'comments' => function($query){
+                $query->select('id','body','user_id','discussion_id');
+            },
+            'user' => function($query){
+                $query->select('id','name','avatar');
+            },
+        ])->find($id, ['id', 'title', 'body', 'user_id']);
 
         $html = $parser->makeHtml($discussion->body);
 

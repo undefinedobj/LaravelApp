@@ -60,29 +60,49 @@
             <ul class="nav navbar-nav navbar-right">
                 @if (Auth::check())
                     <li>
-                        <a id="" type="button" data-toggle="dropdown" href="###"><img src="{{ Auth::user()->avatar }}" class="img-circle" width="42" alt=""></a>
+                        <a id="" type="button" data-toggle="dropdown" href="###">
+                            <img src="{{ Auth::user()->avatar }}" class="img-circle" width="42" alt="">
+                            {{ Auth::user()->name }}
+                        </a>
                         <ul class="dropdown-menu" aria-labelledby="dLabel">
                             <li><a href="/user/person"> <i class="fa fa-bath"></i> {{ Auth::user()->name }}</a></li>
 {{--                            <li><a href="#"> <i class="fa fa-bath"></i> {{ Auth::user()->name }}</a></li>--}}
                             <li><a href="/user/avatar"> <i class="fa fa-user"></i> 更换头像</a></li>
                             <li><a href="#"> <i class="fa fa-cog"></i> 更换密码</a></li>
-                            <li><a href="#"> <i class="fa fa-heart"></i> 特别感谢</a></li>
                             <li role="separator" class="divider"></li>
-                            <li><a href="{{ url('user/logout') }}"><i class="fa fa-sign-out"></i> 退出登录</a></li>
+                            <li><a href="{{ url('user/logout') }}"><i class="glyphicon glyphicon-log-out"></i> 退出登录</a></li>
                         </ul>
 
                     </li>
-{{--                    <li><a href="{{ url('user/logout') }}"> Logout </a></li>--}}
-{{--                    <li><img src="{{ Auth::user()->avatar }}" class="img-circle" width="42" alt=""></li>--}}
                 @else
                     <li class="{{ Request::is('user/register') ? 'active' : '' }}"><a href="{{ url('/user/register') }}">注册</a></li>
                     <li class="{{ Request::is('user/login') ? 'active' : '' }}"><a href="{{ url('/user/login') }}">登录 <span class="sr-only">(current)</span></a></li>
-                    {{--<li><a href="../navbar-fixed-top/">Fixed top</a></li>--}}
                 @endif
             </ul>
         </div><!--/.nav-collapse -->
     </div>
 </nav>
     @yield('content', 'Default Content')
+
+<hr class="featurette-divider">
+
+<div class="wang-yu" style="background-color: #eae9e9">
+    <div class="container">
+        <footer class="bt mt-20 pt-20 bg-white">
+            <div class="container">
+                <div class="text-center footer">
+                    <div>王宇的个人博客 <span style="color: black">|京ICP备15048358号-1</span></div>
+                    <ul class="bs-docs-footer-links text-muted list-inline">
+                        <li>
+                            <a style="color: #15b982" target="_blank" href="https://github.com/undefinedobj/">
+                                <i class="fab fa-github-square"></i> GitHub 仓库
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </footer>
+    </div>
+</div>
 </body>
 </html>
