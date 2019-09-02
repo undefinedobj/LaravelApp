@@ -7,12 +7,10 @@ use App\Http\Requests\DiscussionUpdateRequest;
 use App\Repositories\DiscussionRepository;
 use App\Validators\DiscussionValidator;
 use App\Transformers\DiscussionTransformer;
-use http\Client\Curl\User;
 use HyperDown\Parser;
 use Prettus\Validator\Contracts\ValidatorInterface;
 use Prettus\Validator\Exceptions\ValidatorException;
 use EndaEditor;
-use function foo\func;
 
 class PostsController extends Controller
 {
@@ -92,9 +90,23 @@ class PostsController extends Controller
     public function store(DiscussionCreateRequest $request)
     {
         try {
+            # 文件上传
+            $strategy = $request->get('strategy', 'images');
+
+            if (! $request->hasFile('img')) {
+                return response()->json([
+                    'error'   => true,
+                    'message' => 'no file found'
+                ]);
+            }
+
+            $path = $strategy.'/'.date('Y').'/'.date('m').'/'.date('d');
+            $imgPath = config('app.url').'/uploads/'.$request->file('img')->store($path, 'picture');
+
             $data = [
                 'user_id'       =>   (int) \Auth::user()->id,
                 'last_user_id'  =>   (int) \Auth::user()->id,
+                'img'           =>    $imgPath
             ];
 
             $this->validator->with(array_merge($request->all(), $data))->passesOrFail(ValidatorInterface::RULE_CREATE);
@@ -141,7 +153,7 @@ class PostsController extends Controller
             'user' => function($query){
                 $query->select('id','name','avatar');
             },
-        ])->find($id, ['id', 'title', 'body', 'preface', 'user_id']);
+        ])->find($id, ['id', 'title', 'reading', 'body', 'preface', 'user_id']);
 
         $html = $parser->makeHtml($discussion->body);
 
@@ -168,19 +180,25 @@ class PostsController extends Controller
     /**
      * Update the specified resource in storage.
      *
-     * @param  DiscussionUpdateRequest $request
-     * @param  string            $id
-     *
-     * @return Response
-     *
-     * @throws \Prettus\Validator\Exceptions\ValidatorException
+     * @param DiscussionUpdateRequest $request
+     * @param $id
+     * @return \Illuminate\Http\JsonResponse|\Illuminate\Http\RedirectResponse
      */
     public function update(DiscussionUpdateRequest $request, $id)
     {
         try {
+            # 文件上传
+            $strategy = $request->get('strategy', 'images');
+
+            if ($request->hasFile('img')) {
+                $path = $strategy.'/'.date('Y').'/'.date('m').'/'.date('d');
+                $imgPath = config('app.url').'/uploads/'.$request->file('img')->store($path, 'picture');
+            }
+
             $data = [
                 'user_id'       =>   (int) \Auth::user()->id,
                 'last_user_id'  =>   (int) \Auth::user()->id,
+                'img'           =>    $imgPath ?? $request->get('hidden-img')
             ];
 
             $this->validator->with(array_merge($request->all(), $data))->passesOrFail(ValidatorInterface::RULE_UPDATE);

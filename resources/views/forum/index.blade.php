@@ -6,7 +6,9 @@
     <div class="jumbotron">
         <div class="container">
             <h2>Welcome To {{ config('app.name') }}
-{{--                <a class="btn btn-danger btn-lg pull-right" href="{{ url('discussions/create') }}" role="button">发布新的帖子 »</a>--}}
+                @if (Auth::check())
+                    <a class="btn btn-danger btn-lg pull-right" href="{{ url('discussions/create') }}" role="button">发布新的文章 »</a>
+                @endif
             </h2>
         </div>
     </div>

@@ -55,6 +55,14 @@ return [
             'visibility' => 'public',
         ],
 
+        'picture' => [
+            'driver' => 'local',
+            'root' => public_path('/uploads'),
+            'url' => env('APP_URL').'/public/uploads/',
+            // 文件将上传到public/uploads目录 如果需要浏览器直接访问 请设置成这个
+            'visibility' => 'public',
+        ],
+
         's3' => [
             'driver' => 's3',
             'key' => env('AWS_ACCESS_KEY_ID'),

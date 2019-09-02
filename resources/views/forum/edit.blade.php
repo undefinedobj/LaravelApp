@@ -11,7 +11,7 @@
         <div class="row">
             <div class="col-md-offset-2" role="main">
 
-                {!! Form::model($discussion, ['url' => '/discussions/'.$discussion->id, 'method' => 'put']) !!}
+                {!! Form::model($discussion, ['url' => '/discussions/'.$discussion->id, 'enctype' => 'multipart/form-data', 'method' => 'put']) !!}
 
                 @include('forum.form', ['discussion' => $discussion])
 

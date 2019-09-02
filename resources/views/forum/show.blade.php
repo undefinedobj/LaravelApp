@@ -13,14 +13,14 @@
                 </div>
                 <div class="media-body">
                     @if (Auth::check() && Auth::user()->id == $discussion->user_id)
-                        <a class="btn btn-primary btn-lg pull-right" href="{{ url("discussions/$discussion->id/edit") }}" role="button">修改帖子</a>
+                        <a class="btn btn-primary btn-lg pull-right" href="{{ url("discussions/$discussion->id/edit") }}" role="button">修改文章</a>
                     @endif
 
                     {{--<h4 class="media-heading">{{ $discussion->title }}</h4>
                     {{ $discussion->user->name }}--}}
                     <span>
-                        <i class="fa fa-tags"></i>
-                        <span href="###">阅读 <span>(10)</span></span>
+                        <i class="fa fa-fire"></i>
+                        <span href="###">阅读 <span>({{ $discussion->reading }})</span></span>
                     </span>
                         <span>
                         <i class="fa fa-tags"></i>

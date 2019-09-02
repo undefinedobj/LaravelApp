@@ -9,17 +9,28 @@
 
     <div class="container">
         <div class="row">
-            <div class="col-md-offset-2" role="main">
+            <div class="col-md-1"></div>
 
-                {!! Form::open(['url' => '/discussions', 'method' => 'post']) !!}
+            <div class="col-md-10" role="main">
+                @if ($errors->any())
+                    <ul class="list-group">
+                        @foreach ($errors->all() as $error)
+                            <li class="list-group-item list-group-item-danger">{{ $error }}</li>
+                        @endforeach
+                    </ul>
+                @endif
+
+                {!! Form::open(['url' => '/discussions', 'enctype' => 'multipart/form-data', 'method' => 'post']) !!}
 
                 @include('forum.form')
 
                 <div>
-                    {!! Form::submit('发表帖子', ['class' => 'btn btn-primary form-control']) !!}
+                    {!! Form::submit('发布文章', ['class' => 'btn btn-primary form-control']) !!}
                 </div>
                 {!! Form::close() !!}
             </div>
+
+            <div class="col-md-1"></div>
         </div>
     </div>
 @endsection
