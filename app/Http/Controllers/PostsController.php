@@ -188,9 +188,8 @@ class PostsController extends Controller
     {
         try {
             # 文件上传
-            $strategy = $request->get('strategy', 'images');
-
             if ($request->hasFile('img')) {
+                $strategy = $request->get('strategy', 'images');
                 $path = $strategy.'/'.date('Y').'/'.date('m').'/'.date('d');
                 $imgPath = config('app.url').'/uploads/'.$request->file('img')->store($path, 'picture');
             }

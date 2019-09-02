@@ -1,18 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e7441571-f487-46a0-8a65-1b6ba75734c6" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/PostsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/PostsController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Requests/DiscussionCreateRequest.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Requests/DiscussionCreateRequest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Discussion.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Discussion.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/filesystems.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/filesystems.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/forum/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/forum/create.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/forum/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/forum/edit.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/forum/form.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/forum/form.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/forum/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/forum/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/forum/show.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/forum/show.blade.php" afterDir="false" />
-    </list>
+    <list default="true" id="e7441571-f487-46a0-8a65-1b6ba75734c6" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -258,11 +247,12 @@
       <command value="git commit -m &quot;重构首页、页头、页脚、样式等&quot;" />
       <command value="git commit -m &quot;文章表&quot;" />
       <command value="git commit -m &quot;文章图片&quot;" />
-      <command value="git add -A" />
       <command value="git commit -m &quot;修改样式&quot;" />
+      <command value="composer dump-autoload" />
+      <command value="git add -A" />
+      <command value="git commit -m &quot;发布文章 &amp;  修改文章&quot;" />
       <command value="git pull" />
       <command value="git push" />
-      <command value="composer dump-autoload" />
     </option>
   </component>
   <component name="RunDashboard">
@@ -408,7 +398,7 @@
       <workItem from="1567134445877" duration="15776000" />
       <workItem from="1567308260532" duration="33745000" />
       <workItem from="1567385867112" duration="5895000" />
-      <workItem from="1567420443283" duration="14220000" />
+      <workItem from="1567420443283" duration="14539000" />
     </task>
     <servers />
   </component>
