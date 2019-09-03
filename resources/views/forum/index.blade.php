@@ -32,10 +32,10 @@
                             <span>
                                 <i class="fa fa-folder-open"></i> <a style="color: #15b982" href="###">PHP</a>
                             </span>
-                            <span>
+                            {{--<span>
                                 <i class="fa fa-tags"></i>
                                 <a href="" style="color: #15b982" href="###">拍黄片</a>
-                            </span>
+                            </span>--}}
                             </div>
                         </div>
                         <div class="col-md-6">
@@ -44,7 +44,7 @@
                     </div>
                 </div>
                 <div class="col-md-5">
-                    {{--445.1 * 190--}}
+                    {{--445 * 190--}}
                     <img class="featurette-image img-responsive center-block" style="height: 190px" src="{{ $discussion->img }}" data-holder-rendered="true">
                 </div>
             </div>

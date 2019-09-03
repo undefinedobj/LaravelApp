@@ -61,7 +61,7 @@ class PostsController extends Controller
                 $query->select('id', 'discussion_id');
             },
         ])->orderBy('updated_at', 'desc')
-            ->orderBy('sort', 'desc')
+            ->orderBy('order', 'desc')
             ->orderBy('created_at', 'desc')
             ->paginate(null, $columns);
 

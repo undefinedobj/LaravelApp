@@ -17,14 +17,15 @@ class CreateDiscussionsTable extends Migration
             $table->bigIncrements('id');
             $table->string('title');
             $table->text('preface');
-            $table->text('img')->nullable()->comment('图片');
+            $table->text('img')->nullable()->comment('图片 445*190');
             $table->integer('reading')->nullable()->default(0)->comment('阅读量');
-            $table->integer('sort')->nullable()->default(0)->comment('排序');
+            $table->integer('order')->nullable()->default(0);
             $table->text('body');
+            $table->integer('categories_id')->unsigned();
             $table->integer('user_id')->unsigned();
             $table->integer('last_user_id')->unsigned();
 //            定义这张表的id 必须为`users`表的外键
-            $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
+//            $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
             $table->timestamps();
         });
     }

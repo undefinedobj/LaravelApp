@@ -2,6 +2,8 @@
 
 namespace App\Providers;
 
+use Faker\Factory as FakerFactory;
+use Faker\Generator as FakerGenerator;
 use Illuminate\Support\ServiceProvider;
 use Illuminate\Pagination\Paginator;
 
@@ -33,6 +35,9 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        //
+        // Faker 本地化
+        $this->app->singleton(FakerGenerator::class, function () {
+            return FakerFactory::create('zh_CN');
+        });
     }
 }

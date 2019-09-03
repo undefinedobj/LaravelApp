@@ -20,12 +20,13 @@
                     {{ $discussion->user->name }}--}}
                     <span>
                         <i class="fa fa-fire"></i>
-                        <span href="###">阅读 <span>({{ $discussion->reading }})</span></span>
+                        <span>阅读 <span>({{ $discussion->reading }})</span></span>
                     </span>
-                        <span>
+                    {{--<span>
                         <i class="fa fa-tags"></i>
                         <a href="###">拍黄片</a>
-                    </span><br><br>
+                    </span>--}}
+                    <br><br>
                     <span><i class="fa fa-calendar-alt"></i> 2019-08-12 17:35:40</span>
                 </div>
             </div>

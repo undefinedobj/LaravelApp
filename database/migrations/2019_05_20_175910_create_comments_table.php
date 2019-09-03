@@ -18,14 +18,14 @@ class CreateCommentsTable extends Migration
             $table->text('body');
             $table->integer('user_id')->unsigned();
             $table->integer('discussion_id')->unsigned();
-            $table->foreign('user_id')
-                ->references('id')
-                ->on('users')
-                ->onDelete('cascade');
-            $table->foreign('discussion_id')
-                ->references('id')
-                ->on('discussions')
-                ->onDelete('cascade');
+//            $table->foreign('user_id')
+//                ->references('id')
+//                ->on('users')
+//                ->onDelete('cascade');
+//            $table->foreign('discussion_id')
+//                ->references('id')
+//                ->on('discussions')
+//                ->onDelete('cascade');
             $table->timestamps();
         });
     }

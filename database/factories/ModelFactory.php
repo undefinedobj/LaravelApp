@@ -14,27 +14,22 @@ use Faker\Generator as Faker;
 |
 */
 
-$factory->define(App\Models\User::class, function (Faker $faker) {
-    return [
-        'name' => $faker->name,
-        'avatar' => $faker->imageUrl(256, 256),
-        'email' => $faker->unique()->safeEmail,
-        'confirm_code' => Str::random(10),
-        'email_verified_at' => now(),
-        'password' => bcrypt(Str::random(10)),
-        'remember_token' => Str::random(10),
-    ];
-});
-
 $factory->define(App\Models\Discussion::class, function (Faker $faker) {
 
     $user_ids = App\Models\User::pluck('id')->toArray();
+    $categories_id = App\Models\Category::pluck('id')->toArray();
 
     return [
-        'title' => $faker->sentence,
-        'body' => $faker->paragraph,
-        'user_id' => $faker->randomElement($user_ids),
-        'last_user_id' => $faker->randomElement($user_ids)
+        'title'         => $faker->sentence,
+        'preface'       => $faker->paragraph,
+        'img'           => $faker->imageUrl(445, 190),
+        'reading'       => $faker->randomNumber(),
+        'body'          => $faker->paragraph,
+        'categories_id' => $faker->randomElement($categories_id),
+        'user_id'       => 2,
+        'last_user_id'  => 2
+//        'user_id'       => $faker->randomElement($user_ids),
+//        'last_user_id'  => $faker->randomElement($user_ids)
     ];
 });
 
@@ -44,8 +39,20 @@ $factory->define(App\Models\Comment::class, function (Faker $faker) {
     $discussion_ids = App\Models\Discussion::pluck('id')->toArray();
 
     return [
-        'body' => $faker->paragraph,
-        'user_id' => $faker->randomElement($user_ids),
+        'body'          => $faker->paragraph,
+        'user_id'       => $faker->randomElement($user_ids),
         'discussion_id' => $faker->randomElement($discussion_ids)
+    ];
+});
+
+$factory->define(App\Models\User::class, function (Faker $faker) {
+    return [
+        'name'              => $faker->name,
+        'avatar'            => $faker->imageUrl(256, 256),
+        'email'             => $faker->unique()->safeEmail,
+        'confirm_code'      => Str::random(10),
+        'email_verified_at' => now(),
+        'password'          => bcrypt(Str::random(10)),
+        'remember_token'    => Str::random(10),
     ];
 });
