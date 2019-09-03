@@ -3,9 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="e7441571-f487-46a0-8a65-1b6ba75734c6" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2019_09_03_162146_create_categories_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2019_09_03_162146_create_categories_table.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/database/seeds/CategoryTableSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/CategoryTableSeeder.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/app.blade.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -254,14 +252,10 @@
       <command value="git commit -m &quot;文章图片&quot;" />
       <command value="git commit -m &quot;修改样式&quot;" />
       <command value="git commit -m &quot;发布文章 &amp;  修改文章&quot;" />
-      <command value="git pull" />
-      <command value="git push" />
       <command value="artisan make:model" />
       <command value="artisan make:model mODELS/Category -m" />
       <command value="php artisan migrate:reset" />
       <command value="artisan migrate:refresh" />
-      <command value="artisan migrate:reset" />
-      <command value="artisan migrate" />
       <command value="artisan make:seed" />
       <command value="artisan make:seed DiscussionSeeder" />
       <command value="artisan make:seeder DiscussionSeeder" />
@@ -270,16 +264,22 @@
       <command value="artisan make:seeder UserTableSeeder" />
       <command value="artisan make:seeder CategoryTableSeeder" />
       <command value="php artisan db:seed --class=CategoryTableSeeder" />
-      <command value="artisan db:seed --class=CategoryTableSeeder" />
       <command value="php artisan db:seed" />
+      <command value="artisan db:seed --class=DiscussionTableSeeder" />
+      <command value="artisan db:seed --class=CommentTableSeeder" />
+      <command value="git commit -m &quot;类别功能的表结构设计，数据迁移，数据填充&quot;" />
+      <command value="composer dump-autoload" />
+      <command value="artisan migrate:reset" />
+      <command value="artisan migrate" />
+      <command value="git add -A" />
+      <command value="git commit -m&quot;文章分类，表结构更改， CateGoryTableSedder&quot;" />
+      <command value="git pull" />
+      <command value="git push" />
       <command value="artisan db:seed" />
       <command value="php artisan db:seed --class=UserTableSeeder" />
       <command value="artisan db:seed --class=UserTableSeeder" />
-      <command value="artisan db:seed --class=DiscussionTableSeeder" />
-      <command value="artisan db:seed --class=CommentTableSeeder" />
-      <command value="git add -A" />
-      <command value="git commit -m &quot;类别功能的表结构设计，数据迁移，数据填充&quot;" />
-      <command value="composer dump-autoload" />
+      <command value="artisan db:seed --class=CategoryTableSeeder -v" />
+      <command value="artisan db:seed --class=CategoryTableSeeder" />
     </option>
   </component>
   <component name="RunDashboard">
@@ -426,7 +426,7 @@
       <workItem from="1567308260532" duration="33745000" />
       <workItem from="1567385867112" duration="5895000" />
       <workItem from="1567420443283" duration="14835000" />
-      <workItem from="1567498166826" duration="9804000" />
+      <workItem from="1567498166826" duration="10431000" />
     </task>
     <servers />
   </component>
