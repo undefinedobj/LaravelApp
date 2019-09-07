@@ -51,7 +51,7 @@
                 @if (Auth::check())
                     <li>
                         <a id="" type="button" data-toggle="dropdown" href="###">
-                            <img src="{{ Auth::user()->avatar }}" class="img-circle" width="42" alt="">
+                            <img src="{{ Auth::user()->avatar }}" class="img-circle" width="42" height="42" alt="">
                             {{ Auth::user()->name }}
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="dLabel">

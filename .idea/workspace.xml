@@ -3,12 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="e7441571-f487-46a0-8a65-1b6ba75734c6" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/PostsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/PostsController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Requests/DiscussionCreateRequest.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Requests/DiscussionCreateRequest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Requests/DiscussionUpdateRequest.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Requests/DiscussionUpdateRequest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Discussion.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Discussion.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/forum/form.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/forum/form.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/forum/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/forum/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/UsersController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/UsersController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/app.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/users/avatar.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/users/avatar.blade.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -240,7 +237,6 @@
       <command value="artisan make controller" />
       <command value="artisan make:controller" />
       <command value="git commit -m &quot;重构项目&quot;" />
-      <command value="git pull " />
       <command value="git commit -m &quot;修改页面样式，env 函数改为 config 函数&quot;" />
       <command value="git commit -m &quot;首页的SQL 查询优化&quot;" />
       <command value="git commit -m &quot;env 函数改为 config 函数&quot;" />
@@ -291,8 +287,10 @@
       <command value="composer dump-autoload" />
       <command value="git commit -m &quot;文章分类&quot;" />
       <command value="git pull" />
-      <command value="git push" />
       <command value="git add -A" />
+      <command value="git commit -m &quot;文章分类的 select 选择框&quot;" />
+      <command value="git pull " />
+      <command value="git push" />
     </option>
   </component>
   <component name="RunDashboard">
@@ -445,7 +443,7 @@
       <workItem from="1567695983855" duration="4681000" />
       <workItem from="1567757281277" duration="13357000" />
       <workItem from="1567787003912" duration="338000" />
-      <workItem from="1567787358513" duration="22147000" />
+      <workItem from="1567787358513" duration="27400000" />
     </task>
     <servers />
   </component>

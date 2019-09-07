@@ -15,7 +15,7 @@
                 @endif
                 <div class="text-center">
                     <div id="validation-errors"></div>
-                    <img src="{{ Auth::user()->avatar }}" width="120" class="img-circle" id="user-avatar" alt="">
+                    <img src="{{ Auth::user()->avatar }}" width="120" height="120" class="img-circle" id="user-avatar" alt="">
 
                     @php
                         $id = Auth::user()->id
@@ -23,6 +23,7 @@
 
                     {{-- 头像上传.form --}}
                     {!! Form::open(['url' => "user/$id/avatar", 'enctype' => 'multipart/form-data', 'method' => 'post']) !!}
+                    {!! Form::label('avatar', 'Avatar (120 * 120)') !!}
                     {!! Form::file('avatar') !!}
                     {!! Form::submit('上传头像', ['class' => 'btn btn-success pull-right']) !!}
                     {!! Form::close() !!}

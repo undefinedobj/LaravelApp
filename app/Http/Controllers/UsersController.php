@@ -300,9 +300,9 @@ class UsersController extends Controller
 //            upload files
             $file = $request->avatar;
             $timestamp = Carbon::now()->timestamp;
-            $filepath = '/uploads/'.Auth::user()->id.'-'.$timestamp.'-'.$file->getClientOriginalName();
+            $filepath = '/uploads/avatar/'.Auth::user()->id.'_'.$timestamp.'_'.$file->getClientOriginalName();
 //            intervention image
-            Image::make($file)->resize(200)->save(public_path($filepath));
+            Image::make($file)->resize(200, 200)->save(public_path($filepath));
 
             $this->repository->update(['avatar' => $filepath], $id);
 
