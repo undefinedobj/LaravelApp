@@ -9,6 +9,11 @@
 </div>
 
 <div class="form-group">
+    {!! Form::label('category', 'Category') !!}
+    {!! Form::select('categories_id', $category, null, ['class' => 'form-control','id'=>'form-control']) !!}
+</div>
+
+<div class="form-group">
     <div class="editor">
         {!! Form::label('body', 'Body') !!}
         {!! Form::textarea('body', null, ['class' => 'form-control','id'=>'myEditor']) !!}
@@ -16,13 +21,13 @@
 </div>
 
 <div class="form-group">
-    {!! Form::label('img', 'Image') !!}
+    {!! Form::label('img', 'Image(445 * 190)') !!}
     {!! Form::file('img', ['class' => 'form-control','id'=>'form-control']) !!}
 </div>
 
 <div class="form-group">
-    {!! Form::label('sort', 'Sort') !!}
-    {!! Form::number('sort',null, ['class' => 'form-control','id'=>'form-control']) !!}
+    {!! Form::label('order', 'Sort') !!}
+    {!! Form::number('order',null, ['class' => 'form-control','id'=>'form-control']) !!}
 </div>
 
 <div class="form-group">

@@ -38,7 +38,7 @@ class Discussion extends Model implements Transformable
      *
      * @var array
      */
-    protected $fillable = ['title','preface','img','reading','order','body', 'user_id', 'last_user_id'];
+    protected $fillable = ['title','preface','img','reading','order','body', 'user_id', 'last_user_id', 'categories_id'];
 
     /**
      * 获得拥有此帖子的用户

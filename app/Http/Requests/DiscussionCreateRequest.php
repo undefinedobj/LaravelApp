@@ -24,11 +24,12 @@ class DiscussionCreateRequest extends FormRequest
     public function rules()
     {
         return [
-            'title'     => 'required',
-            'preface'   => 'required',
-            'img'       => 'required|image|mimes:jpeg,jpg,png,gif',
-            'sort'      => 'nullable|integer',
-            'body'      => 'required',
+            'title'         => 'required',
+            'preface'       => 'required',
+            'img'           => 'required|image|mimes:jpeg,jpg,png,gif',
+            'sort'          => 'nullable|integer',
+            'body'          => 'required',
+            'categories_id' => 'required|nullable|integer'
         ];
     }
 }

@@ -30,7 +30,7 @@
                                 <i class="fa fa-user-tie"></i> {{ $discussion->user->name }}
                             </span>
                             <span>
-                                <i class="fa fa-folder-open"></i> <a style="color: #15b982" href="/category/{{ $discussion->category->id }}">{{ $discussion->category->title }}</a>
+                                <i class="fa fa-folder-open"></i> <a style="color: #15b982" href="/category/{{ $discussion->category->id }}">{{ $discussion->category->title ?? '未分类' }}</a>
                             </span>
                             {{--<span>
                                 <i class="fa fa-tags"></i>

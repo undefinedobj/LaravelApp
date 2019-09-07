@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Http\Requests\DiscussionCreateRequest;
 use App\Http\Requests\DiscussionUpdateRequest;
+use App\Models\Category;
 use App\Repositories\DiscussionRepository;
 use App\Validators\DiscussionValidator;
 use App\Transformers\DiscussionTransformer;
@@ -79,7 +80,10 @@ class PostsController extends Controller
      */
     public function create()
     {
-        return  view('forum.create');
+        $category = Category::where('parent_id', '!=', 0)->pluck('title', 'id');
+//        $category = Category::where('parent_id', '!=', 0)->get();
+
+        return  view('forum.create', compact('category'));
     }
 
     /**
@@ -174,11 +178,13 @@ class PostsController extends Controller
     {
         $discussion = $this->repository->find($id);
 
+        $category = Category::where('parent_id', '!=', 0)->pluck('title', 'id');
+
         if (\Auth::user()->id !== $discussion->user_id) {
             return redirect('/');
         }
 
-        return view('forum.edit', compact('discussion'));
+        return view('forum.edit', compact('discussion', 'category'));
     }
 
     /**

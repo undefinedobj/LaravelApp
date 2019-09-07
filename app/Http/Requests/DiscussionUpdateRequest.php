@@ -24,8 +24,11 @@ class DiscussionUpdateRequest extends FormRequest
     public function rules()
     {
         return [
-            'title' => 'required',
-            'body'  => 'required',
+            'title'         => 'required',
+            'preface'       => 'required',
+            'order'         => 'nullable|integer',
+            'body'          => 'required',
+            'categories_id' => 'required|nullable|integer'
         ];
     }
 }
