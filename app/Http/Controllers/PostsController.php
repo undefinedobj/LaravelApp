@@ -51,7 +51,7 @@ class PostsController extends Controller
      */
     public function index()
     {
-        $columns = ['id','title','preface','img','body','user_id','created_at'];
+        //$columns = ['id','title','preface','img','body','user_id','created_at'];
 
         $discussions = $this->repository->with([
             'user' => function($query){
@@ -60,10 +60,14 @@ class PostsController extends Controller
             'comments' => function($query){
                 $query->select('id', 'discussion_id');
             },
+            'category' => function($query){
+                $query->select('id', 'title');
+            },
         ])->orderBy('updated_at', 'desc')
             ->orderBy('order', 'desc')
             ->orderBy('created_at', 'desc')
-            ->paginate(null, $columns);
+            ->paginate();
+            //->paginate(null, $columns);
 
         return  view('forum.index', compact('discussions'));
     }

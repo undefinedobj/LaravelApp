@@ -30,6 +30,7 @@ Route::resources([
     'comments'          =>      'CommentsController',
 ]);
 Route::get('user/person', 'UsersController@person');
+Route::get('category/{id}', 'CategoriesController@index');
 
 /**
  * 纯属瞎玩, 基本没啥用

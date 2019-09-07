@@ -2,8 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e7441571-f487-46a0-8a65-1b6ba75734c6" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/app/Http/View/Composers/CategoryComposer.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/forum/category.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/seeds/CategoryTableSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/CategoryTableSeeder.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/PostsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/PostsController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/UsersController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/UsersController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Category.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Category.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Discussion.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Discussion.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Providers/AppServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Providers/AppServiceProvider.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Providers/RepositoryServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Providers/RepositoryServiceProvider.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/app.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/forum/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/forum/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -210,17 +220,18 @@
     <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/New Scratch File" value="Blade" />
     <property name="com.jetbrains.php.phpunit.codeGeneration.PhpNewTestDialog.defaultLibrary" value="PHPUnit" />
     <property name="editor.config.ad.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../laravelTesting" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/views/forum" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="php.override.implement.member.chooser.php.doc" value="DEFAULT" />
-    <property name="settings.editor.selected.configurable" value="Console" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
     <property name="ts.external.directory.path" value="D:\Program Files (x86)\JetBrains\PhpStorm 2018.3.4\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\laragon\www\LaravelApp\resources\views\forum" />
       <recent name="D:\laragon\www\laravelapp\app\Http\Middleware" />
       <recent name="D:\laragon\www\laravelapp\routes" />
       <recent name="D:\laragon\www\laravelapp\app" />
@@ -265,21 +276,27 @@
       <command value="artisan make:seeder CategoryTableSeeder" />
       <command value="php artisan db:seed --class=CategoryTableSeeder" />
       <command value="php artisan db:seed" />
-      <command value="artisan db:seed --class=DiscussionTableSeeder" />
-      <command value="artisan db:seed --class=CommentTableSeeder" />
       <command value="git commit -m &quot;类别功能的表结构设计，数据迁移，数据填充&quot;" />
-      <command value="composer dump-autoload" />
       <command value="artisan migrate:reset" />
       <command value="artisan migrate" />
-      <command value="git add -A" />
       <command value="git commit -m&quot;文章分类，表结构更改， CateGoryTableSedder&quot;" />
       <command value="git pull" />
       <command value="git push" />
       <command value="artisan db:seed" />
       <command value="php artisan db:seed --class=UserTableSeeder" />
-      <command value="artisan db:seed --class=UserTableSeeder" />
       <command value="artisan db:seed --class=CategoryTableSeeder -v" />
       <command value="artisan db:seed --class=CategoryTableSeeder" />
+      <command value="git commit -m&quot;CateGoryTableSedder&quot;" />
+      <command value="artisan db:seed --class=DiscussionTableSeeder" />
+      <command value="artisan db:seed --class=CommentTableSeeder" />
+      <command value="artisan db:seed --class=UserTableSeeder" />
+      <command value="php artisan make:repository Category" />
+      <command value="artisan make:repository Category" />
+      <command value="artisan make:entity Category" />
+      <command value="git add -A" />
+      <command value="artisan make:provider ComposerServiceProvider" />
+      <command value="artisan make:controller CategoriesController" />
+      <command value="composer dump-autoload" />
     </option>
   </component>
   <component name="RunDashboard">
@@ -426,7 +443,13 @@
       <workItem from="1567308260532" duration="33745000" />
       <workItem from="1567385867112" duration="5895000" />
       <workItem from="1567420443283" duration="14835000" />
-      <workItem from="1567498166826" duration="10431000" />
+      <workItem from="1567498166826" duration="11717000" />
+      <workItem from="1567509957553" duration="3174000" />
+      <workItem from="1567645381092" duration="1210000" />
+      <workItem from="1567695983855" duration="4681000" />
+      <workItem from="1567757281277" duration="13357000" />
+      <workItem from="1567787003912" duration="338000" />
+      <workItem from="1567787358513" duration="7287000" />
     </task>
     <servers />
   </component>

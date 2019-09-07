@@ -6,6 +6,7 @@ use Faker\Factory as FakerFactory;
 use Faker\Generator as FakerGenerator;
 use Illuminate\Support\ServiceProvider;
 use Illuminate\Pagination\Paginator;
+use Illuminate\Support\Facades\View;
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -35,6 +36,11 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
+        // 将视图合成器添加到全部视图
+        View::composer(
+            '*', 'App\Http\View\Composers\CategoryComposer'
+        );
+
         // Faker 本地化
         $this->app->singleton(FakerGenerator::class, function () {
             return FakerFactory::create('zh_CN');

@@ -56,6 +56,15 @@ class Discussion extends Model implements Transformable
         return  $this->hasMany(Comment::class);
     }
 
+    /**
+     * 获得拥有此帖子的分类
+     *
+     * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
+     */
+    public function category()
+    {
+        return  $this->belongsTo(Category::class, 'categories_id');
+    }
 
     /**
      * 远程一对多关联

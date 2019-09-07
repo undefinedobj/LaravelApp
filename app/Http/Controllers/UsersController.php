@@ -19,6 +19,7 @@ use Illuminate\Support\Facades\Auth;
 use App\Mail\RegisterMail;
 use Illuminate\Foundation\Auth\RegistersUsers;
 use Avatar;
+use App\Models\Category;
 
 /**
  * Class UsersController.

@@ -33,90 +33,19 @@
         </div>
         <div id="navbar" class="navbar-collapse collapse">
             <ul class="nav navbar-nav">
-
-{{--                <li><a href="#service"><i class="glyphicon glyphicon-align-justify"></i> 服务器</a></li>--}}
+            {{--<li><a href="#service"><i class="glyphicon glyphicon-align-justify"></i> 服务器</a></li>--}}
+            @foreach($categories as $category)
                 <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i class="fab fa-laravel"></i> 后端<span class="caret"></span></a>
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                        <i class="{{ $category->icon }}"></i> {{ $category->title }}<span class="caret"></span>
+                    </a>
                     <ul class="dropdown-menu">
-                        <li><a href="#">PHP</a></li>
-                        <li><a href="#">GoLang</a></li>
-                        <li><a href="#">Laravel</a></li>
-                        <li><a href="#">ThinkPHP</a></li>
-                        <li><a href="#">Yii</a></li>
+                        @foreach($category->list as $val)
+                        <li><a href="/category/{{ $val->id }}"> {{ $val->title }}</a></li>
+                        @endforeach
                     </ul>
                 </li>
-
-                <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i class="fab fa-html5"></i> 前端 <span class="caret"></span></a>
-                    <ul class="dropdown-menu">
-                        <li><a href="#">MySQL</a></li>
-                        <li><a href="#">Oracle</a></li>
-                        <li><a href="#">SQLServer</a></li>
-                        <li role="separator" class="divider"></li>
-                        <li class="dropdown-header">NoSQL</li>
-                        <li><a href="#">Redis</a></li>
-                        <li><a href="#">Memcache</a></li>
-                    </ul>
-                </li>
-
-                <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i class="fas fa-server"></i> 服务器<span class="caret"></span></a>
-                    <ul class="dropdown-menu">
-                        <li><a href="#">MySQL</a></li>
-                        <li><a href="#">Oracle</a></li>
-                        <li><a href="#">SQLServer</a></li>
-                        <li role="separator" class="divider"></li>
-                        <li class="dropdown-header">NoSQL</li>
-                        <li><a href="#">Redis</a></li>
-                        <li><a href="#">Memcache</a></li>
-                    </ul>
-                </li>
-
-                <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i class="fas fa-database"></i> 数据库 <span class="caret"></span></a>
-                    <ul class="dropdown-menu">
-                        <li><a href="#">MySQL</a></li>
-                        <li><a href="#">Oracle</a></li>
-                        <li><a href="#">SQLServer</a></li>
-                        <li role="separator" class="divider"></li>
-                        <li class="dropdown-header">NoSQL</li>
-                        <li><a href="#">Redis</a></li>
-                        <li><a href="#">Memcache</a></li>
-                    </ul>
-                </li>
-
-                <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i class="fa fa-wrench"></i> 工具<span class="caret"></span></a>
-                    <ul class="dropdown-menu">
-                        <li><a href="#">MySQL</a></li>
-                        <li><a href="#">Oracle</a></li>
-                        <li><a href="#">SQLServer</a></li>
-                        <li role="separator" class="divider"></li>
-                        <li class="dropdown-header">NoSQL</li>
-                        <li><a href="#">Redis</a></li>
-                        <li><a href="#">Memcache</a></li>
-                    </ul>
-                </li>
-
-                <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i class="fas fa-cube"></i> 其它<span class="caret"></span></a>
-                    <ul class="dropdown-menu">
-                        <li><a href="#">MySQL</a></li>
-                        <li><a href="#">Oracle</a></li>
-                        <li><a href="#">SQLServer</a></li>
-                        <li role="separator" class="divider"></li>
-                        <li class="dropdown-header">NoSQL</li>
-                        <li><a href="#">Redis</a></li>
-                        <li><a href="#">Memcache</a></li>
-                    </ul>
-                </li>
-
-{{--                <div class="view">--}}
-{{--                    <form class="form-search">--}}
-{{--                        <input class="input-medium search-query" type="text">--}}
-{{--                        <button type="submit" class="btn" contenteditable="true">查找</button>--}}
-{{--                    </form>--}}
-{{--                </div>--}}
+                @endforeach
             </ul>
             <ul class="nav navbar-nav navbar-right">
                 @if (Auth::check())
