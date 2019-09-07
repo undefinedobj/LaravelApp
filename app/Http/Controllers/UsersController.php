@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Http\Requests\UserAvatarUpdateRequest;
 use App\Http\Requests\UserLoginRequest;
 use App\Http\Requests\UserRegisterRequest;
+use App\Models\Comment;
 use Carbon\Carbon;
 use Intervention\Image\Facades\Image;
 use Prettus\Validator\Contracts\ValidatorInterface;
@@ -19,13 +20,7 @@ use Illuminate\Support\Facades\Auth;
 use App\Mail\RegisterMail;
 use Illuminate\Foundation\Auth\RegistersUsers;
 use Avatar;
-use App\Models\Category;
 
-/**
- * Class UsersController.
- *
- * @package namespace App\Http\Controllers;
- */
 class UsersController extends Controller
 {
     use RegistersUsers;
@@ -53,14 +48,8 @@ class UsersController extends Controller
     }
 
     /**
-     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
-     */
-    public function register()
-    {
-        return view('users.register');
-    }
-
-    /**
+     * 登录视图页
+     *
      * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
      */
     public function login()
@@ -69,16 +58,17 @@ class UsersController extends Controller
     }
 
     /**
+     * 用户登录
+     *
      * @param UserLoginRequest $request
      * @return \Illuminate\Http\RedirectResponse|\Illuminate\Routing\Redirector
      */
     public function signIn(UserLoginRequest $request)
     {
-//        登录验证并保存 Auth
+        // 登录验证并保存 Auth
         if (Auth::attempt([
             'email'         => $request->email,
             'password'      => $request->password,
-//            'is_confirmed'  => 1,
         ])) {
             return redirect('/');
         }
@@ -88,6 +78,18 @@ class UsersController extends Controller
     }
 
     /**
+     * 注册视图页
+     *
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
+     */
+    public function register()
+    {
+        return view('users.register');
+    }
+
+    /**
+     * 用户注册
+     *
      * Store a newly created resource in storage.
      *
      * @param  UserCreateRequest $request
@@ -138,6 +140,91 @@ class UsersController extends Controller
     }
 
     /**
+     * 退出登录
+     *
+     * @return \Illuminate\Http\RedirectResponse|\Illuminate\Routing\Redirector
+     */
+    public function logout()
+    {
+        \Auth::logout();
+        return redirect('/');
+    }
+
+    /**
+     * 头像视图页
+     *
+     * User Avatar View
+     *
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
+     */
+    public function avatar()
+    {
+        return  view('users.avatar');
+    }
+
+    /**
+     * 更新头像
+     *
+     * Update the specified resource in storage.
+     *
+     * @param  UserAvatarUpdateRequest $request
+     * @param  string            $id
+     *
+     * @return Response
+     *
+     * @throws \Prettus\Validator\Exceptions\ValidatorException
+     */
+    public function updateAvatar(UserAvatarUpdateRequest $request, $id)
+    {
+        try {
+            $this->validator->with($request->all())->passesOrFail(ValidatorInterface::RULE_UPDATE);
+
+            // upload files
+            $file = $request->avatar;
+            $timestamp = Carbon::now()->timestamp;
+            $filepath = '/uploads/avatar/'.Auth::user()->id.'_'.$timestamp.'_'.$file->getClientOriginalName();
+
+            // intervention image
+            Image::make($file)->resize(200, 200)->save(public_path($filepath));
+
+            $this->repository->update(['avatar' => $filepath], $id);
+
+            return redirect()->action('UsersController@avatar');
+        } catch (ValidatorException $e) {
+
+            if ($request->wantsJson()) {
+
+                return response()->json([
+                    'error'   => true,
+                    'message' => $e->getMessageBag()
+                ]);
+            }
+
+            return redirect()->back()->withErrors($e->getMessageBag())->withInput();
+        }
+    }
+
+    /**
+     * 个人中心
+     *
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
+     */
+    public function person()
+    {
+        $id = Auth::user()->id;
+
+        $comments = Comment::with('discussion')
+            ->where('user_id', $id)
+            ->paginate(config('app.perPage'));
+
+        return view('users.person', compact('comments'));
+    }
+
+    // ============================以下为无用代码==============================
+
+    /**
+     * 邮箱验证(此功能废弃)
+     *
      * @param $confirm_code
      * @return \Illuminate\Http\RedirectResponse|\Illuminate\Routing\Redirector
      */
@@ -238,7 +325,6 @@ class UsersController extends Controller
         }
     }
 
-
     /**
      * Remove the specified resource from storage.
      *
@@ -259,71 +345,5 @@ class UsersController extends Controller
         }
 
         return redirect()->back()->with('message', 'User deleted.');
-    }
-
-    /**
-     * 退出登录
-     *
-     * @return \Illuminate\Http\RedirectResponse|\Illuminate\Routing\Redirector
-     */
-    public function logout()
-    {
-        \Auth::logout();
-        return redirect('/');
-    }
-
-    /**
-     * User Avatar View
-     *
-     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
-     */
-    public function avatar()
-    {
-        return  view('users.avatar');
-    }
-
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  UserAvatarUpdateRequest $request
-     * @param  string            $id
-     *
-     * @return Response
-     *
-     * @throws \Prettus\Validator\Exceptions\ValidatorException
-     */
-    public function updateAvatar(UserAvatarUpdateRequest $request, $id)
-    {
-        try {
-            $this->validator->with($request->all())->passesOrFail(ValidatorInterface::RULE_UPDATE);
-
-//            upload files
-            $file = $request->avatar;
-            $timestamp = Carbon::now()->timestamp;
-            $filepath = '/uploads/avatar/'.Auth::user()->id.'_'.$timestamp.'_'.$file->getClientOriginalName();
-//            intervention image
-            Image::make($file)->resize(200, 200)->save(public_path($filepath));
-
-            $this->repository->update(['avatar' => $filepath], $id);
-
-            return redirect()->action('UsersController@avatar');
-        } catch (ValidatorException $e) {
-
-            if ($request->wantsJson()) {
-
-                return response()->json([
-                    'error'   => true,
-                    'message' => $e->getMessageBag()
-                ]);
-            }
-
-            return redirect()->back()->withErrors($e->getMessageBag())->withInput();
-        }
-    }
-
-    public function person()
-    {
-//        dd(123);
-        return view('users.person');
     }
 }

@@ -29,7 +29,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="/">{{ env('APP_NAME') }}</a>
+            <a class="navbar-brand" href="/">{{ config('app.name') }}</a>
         </div>
         <div id="navbar" class="navbar-collapse collapse">
             <ul class="nav navbar-nav">
@@ -55,8 +55,7 @@
                             {{ Auth::user()->name }}
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="dLabel">
-                            <li><a href="/user/person"> <i class="fa fa-bath"></i> {{ Auth::user()->name }}</a></li>
-{{--                            <li><a href="#"> <i class="fa fa-bath"></i> {{ Auth::user()->name }}</a></li>--}}
+                            <li><a href="/user/person"> <i class="fa fa-bath"></i> 个人中心</a></li>
                             <li><a href="/user/avatar"> <i class="fa fa-user"></i> 更换头像</a></li>
                             <li><a href="#"> <i class="fa fa-cog"></i> 更换密码</a></li>
                             <li role="separator" class="divider"></li>

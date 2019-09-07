@@ -30,43 +30,27 @@
             <div class="col-md-8">
                 <div class="panel panel-success">
                     <!-- Default panel contents -->
-                    <div class="panel-heading">我的评论 <span style="color: red">(4)</span></div>
-                    <div class="panel-body">
-                        <p>你还没有评论</p>
-                    </div>
-
-                    <!-- List group -->
-                    <ul class="list-group">
-                        <li class="list-group-item">
-                            <a href="#title">评论文章：go语言中的接口</a>
-                            <div class="panel-body">
-                                接口是一组方法签名 接口只定义方法，不写方法的实现 结构体是接口的实现 接口是一组方法签名 接口只定义方法，不写方法的实现 结构体是接口的实现
-                            </div>
-                            <span class="glyphicon glyphicon-time"></span> 2019-09-01 12:38:19
-                        </li>
-                        <li class="list-group-item">
-                            <a href="#title">评论文章：go语言中的接口</a>
-                            <div class="panel-body">
-                                接口是一组方法签名 接口只定义方法，不写方法的实现 结构体是接口的实现 接口是一组方法签名 接口只定义方法，不写方法的实现 结构体是接口的实现
-                            </div>
-                            <span class="glyphicon glyphicon-time"></span> 2019-09-01 12:38:19
-                        </li>
-                        <li class="list-group-item">
-                            <a href="#title">评论文章：go语言中的接口</a>
-                            <div class="panel-body">
-                                接口是一组方法签名 接口只定义方法，不写方法的实现 结构体是接口的实现 接口是一组方法签名 接口只定义方法，不写方法的实现 结构体是接口的实现
-                            </div>
-                            <span class="glyphicon glyphicon-time"></span> 2019-09-01 12:38:19
-                        </li>
-                        <li class="list-group-item">
-                            <a href="#title">评论文章：go语言中的接口</a>
-                            <div class="panel-body">
-                                接口是一组方法签名 接口只定义方法，不写方法的实现 结构体是接口的实现 接口是一组方法签名 接口只定义方法，不写方法的实现 结构体是接口的实现
-                            </div>
-                            <span class="glyphicon glyphicon-time"></span> 2019-09-01 12:38:19
-                        </li>
-                    </ul>
+                    <div class="panel-heading">我的评论 <span style="color: red">({{ $comments->total() }})</span></div>
+                    @if ($comments->isEmpty())
+                        <div class="panel-body">
+                            <p>你还没有评论</p>
+                        </div>
+                    @else
+                        <!-- List group -->
+                        <ul class="list-group">
+                        @foreach($comments as $comment)
+                            <li class="list-group-item">
+                                <a href="/discussions/{{ $comment->discussion->id }}">评论文章：{{ $comment->discussion->title }}</a>
+                                <div class="panel-body">
+                                    {{ $comment->body }}
+                                </div>
+                                <span class="glyphicon glyphicon-time"></span> {{ $comment->created_at }}
+                            </li>
+                        @endforeach
+                        </ul>
+                    @endif
                 </div>
+                {{ $comments->links() }}
             </div>
 
         </div>

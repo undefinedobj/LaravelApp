@@ -46,6 +46,8 @@ class PostsController extends Controller
     }
 
     /**
+     * 应用首页
+     *
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
@@ -67,13 +69,15 @@ class PostsController extends Controller
         ])->orderBy('updated_at', 'desc')
             ->orderBy('order', 'desc')
             ->orderBy('created_at', 'desc')
-            ->paginate();
+            ->paginate(config('app.perPage'));
             //->paginate(null, $columns);
 
         return  view('forum.index', compact('discussions'));
     }
 
     /**
+     * 发布帖子视图页
+     *
      * Show the form for creating a new resource.
      *
      * @return \Illuminate\Http\Response
@@ -81,12 +85,13 @@ class PostsController extends Controller
     public function create()
     {
         $category = Category::where('parent_id', '!=', 0)->pluck('title', 'id');
-//        $category = Category::where('parent_id', '!=', 0)->get();
 
         return  view('forum.create', compact('category'));
     }
 
     /**
+     * 存储帖子
+     *
      * Store a newly created resource in storage.
      *
      * @param  DiscussionCreateRequest $request
@@ -147,6 +152,8 @@ class PostsController extends Controller
     }
 
     /**
+     * 帖子详情视图页
+     *
      * Display the specified resource.
      *
      * @param  int $id
@@ -169,6 +176,8 @@ class PostsController extends Controller
     }
 
     /**
+     * 帖子编辑视图页
+     *
      * Show the form for editing the specified resource.
      *
      * @param  int  $id
@@ -188,6 +197,8 @@ class PostsController extends Controller
     }
 
     /**
+     * 更新帖子
+     *
      * Update the specified resource in storage.
      *
      * @param DiscussionUpdateRequest $request
@@ -239,18 +250,6 @@ class PostsController extends Controller
             return redirect()->back()->withErrors($e->getMessageBag())->withInput();
         }
     }
-
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy($id)
-    {
-        //
-    }
-
 
     /**
      * Markdown 编辑器 - 中的图片上传

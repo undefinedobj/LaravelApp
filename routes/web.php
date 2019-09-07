@@ -21,16 +21,15 @@ Route::post('user/login', 'UsersController@signIn');
 Route::get('user/logout', 'UsersController@logout')->name('logout');
 Route::get('user/avatar', 'UsersController@avatar');
 Route::post('user/{id}/avatar', 'UsersController@updateAvatar')->name('avatar');
-
-Route::get('/verify/{confirm_code}', 'UsersController@confirmEmail')->name('mail-verify');
+Route::get('/verify/{confirm_code}', 'UsersController@confirmEmail')->name('mail-verify');// 功能废弃
+Route::get('user/person', 'UsersController@person');
+Route::get('category/{id}', 'CategoriesController@index');
 
 Route::resources([
     'discussions'       =>      'PostsController',
     'users'             =>      'UsersController',
-    'comments'          =>      'CommentsController',
+//    'comments'          =>      'CommentsController',
 ]);
-Route::get('user/person', 'UsersController@person');
-Route::get('category/{id}', 'CategoriesController@index');
 
 /**
  * 纯属瞎玩, 基本没啥用

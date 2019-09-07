@@ -1,9 +1,4 @@
-    <?php
-
-use Barryvdh\Debugbar\ServiceProvider;
-use Barryvdh\LaravelIdeHelper\IdeHelperServiceProvider;
-use Collective\Html\HtmlServiceProvider;
-use Illuminate\View\ViewServiceProvider;
+<?php
 
 return [
 
@@ -19,6 +14,15 @@ return [
     */
 
     'name' => env('APP_NAME', 'Laravel App'),
+
+    /*
+    |--------------------------------------------------------------------------
+    | Application Paginate Settings
+    |--------------------------------------------------------------------------
+    |
+    */
+
+    'perPage' => env('PER_PAGE', 10),
 
     /*
     |--------------------------------------------------------------------------
