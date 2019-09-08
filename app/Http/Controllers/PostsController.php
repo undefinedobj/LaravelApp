@@ -56,25 +56,32 @@ class PostsController extends Controller
      */
     public function index()
     {
-        //$columns = ['id','title','preface','img','body','user_id','created_at'];
+        if (Cache::has('discussions_all')){
 
-        $discussions = $this->repository->with([
-            'user' => function($query){
-                $query->select('id','name','avatar');
-            },
-            'comments' => function($query){
-                $query->select('id', 'discussion_id');
-            },
-            'category' => function($query){
-                $query->select('id', 'title');
-            },
-        ])->orderBy('updated_at', 'desc')
-            ->orderBy('order', 'desc')
-            ->orderBy('created_at', 'desc')
-            ->paginate(config('app.perPage'));
-            //->paginate(null, $columns);
+            $cache = Cache::get('discussions_all');
+        }else{
 
-        return  view('forum.index', compact('discussions'));
+            $columns = ['id','title','preface','img','categories_id','user_id','user_id','created_at'];
+
+            $cache = $this->repository->with([
+                'user' => function($query){
+                    $query->select('id','name','avatar');
+                },
+                'comments' => function($query){
+                    $query->select('id', 'discussion_id');
+                },
+                'category' => function($query){
+                    $query->select('id', 'title');
+                },
+            ])->orderBy('updated_at', 'desc')
+                ->orderBy('order', 'desc')
+                ->orderBy('created_at', 'desc')
+                ->paginate(config('app.perPage'), $columns);
+
+            Cache::put('discussions_all', $cache, now()->addDay());
+        }
+
+        return  view('forum.index', ['discussions' => $cache]);
     }
 
     /**
@@ -163,7 +170,7 @@ class PostsController extends Controller
      */
     public function show($id, Parser $parser/*, Discussion $discussion*/)
     {
-        // 如:在 cache 中查找 discussion_5 的文章, 缓存时间 600s
+        // 如:在 cache 中查找 discussion_5 的文章, 过期时间为: 当前时间 + 1天
         if (Cache::has('discussion_'.$id)){
             $cache = Cache::get('discussion_'.$id);
         }else{
@@ -179,7 +186,7 @@ class PostsController extends Controller
                 },
             ])->find($id, $columns);
 
-            Cache::put('discussion_'.$id, $cache, 600);
+            Cache::put('discussion_'.$id, $cache, now()->addDay());
         }
 
         $html = $parser->makeHtml($cache->body);
@@ -204,7 +211,9 @@ class PostsController extends Controller
      */
     public function edit($id)
     {
-        $discussion = $this->repository->find($id);
+        $columns = ['id','title','order','body','preface','img','user_id'];
+
+        $discussion = $this->repository->find($id, $columns);
 
         $category = Category::where('parent_id', '!=', 0)->pluck('title', 'id');
 

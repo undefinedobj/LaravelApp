@@ -27,7 +27,7 @@
 </div>
 
 <div class="form-group">
-    {!! Form::label('order', 'Sort') !!}
+    {!! Form::label('order', 'Order') !!}
     {!! Form::number('order',null, ['class' => 'form-control','id'=>'form-control']) !!}
 </div>
 

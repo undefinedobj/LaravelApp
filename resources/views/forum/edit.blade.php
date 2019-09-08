@@ -16,7 +16,7 @@
 
     <div class="container">
         <div class="row">
-            <div class="col-md-offset-2" role="main">
+            <div class="col-md-offset-1" role="main">
 
                 {!! Form::model($discussion, ['url' => '/discussions/'.$discussion->id, 'enctype' => 'multipart/form-data', 'method' => 'put']) !!}
 
@@ -28,4 +28,5 @@
                 {!! Form::close() !!}
             </div>
         </div>
+    </div>
 @endsection
