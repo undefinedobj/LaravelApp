@@ -39,6 +39,6 @@ class SyncDiscussionViewCounts extends Command
     public function handle(Discussion $discussion)
     {
         $discussion->syncDiscussionViewCounts();
-        $this->info("同步成功！");
+        $this->info("Sync Success");
     }
 }
