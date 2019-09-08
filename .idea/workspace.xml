@@ -1,21 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e7441571-f487-46a0-8a65-1b6ba75734c6" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/Traits/ViewCountsHelper.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_ide_helper.php" beforeDir="false" afterPath="$PROJECT_DIR$/_ide_helper.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Console/Kernel.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Console/Kernel.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/PostsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/PostsController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Discussion.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Discussion.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/cache.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/cache.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/factories/ModelFactory.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/factories/ModelFactory.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2019_04_24_093956_create_discussions_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2019_04_24_093956_create_discussions_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/plugin/editor/js/fileupload.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/plugin/editor/js/fileupload.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/vendor/laravel-admin/bootstrap-fileinput/js/fileinput.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/vendor/laravel-admin/bootstrap-fileinput/js/fileinput.min.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/forum/show.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/forum/show.blade.php" afterDir="false" />
-    </list>
+    <list default="true" id="e7441571-f487-46a0-8a65-1b6ba75734c6" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -301,16 +287,17 @@
       <command value="composer require jenssegers/agent" />
       <command value="git commit -m  &quot;个人中心，我的评论&quot;" />
       <command value="git commit -m  &quot;帖子的评论&quot;" />
-      <command value="git add -A" />
       <command value="git commit -m  &quot;帖子详情&quot;" />
-      <command value="git pull" />
-      <command value="git push" />
       <command value="artisan event:generate" />
       <command value="artisan make:event PostViewCount" />
       <command value="artisan queue:work queue=emails" />
       <command value="artisan queue -h" />
       <command value="artisan make:command SyncTopicViewCounts" />
       <command value="artisan discussion:sync-discussion-view-counts" />
+      <command value="git add -A" />
+      <command value="git commit -m  &quot;(MySQL + Redis 实现帖子的浏览数(未完成))&quot;" />
+      <command value="git pull" />
+      <command value="git push" />
     </option>
   </component>
   <component name="RunDashboard">

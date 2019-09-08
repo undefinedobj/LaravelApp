@@ -1,6 +1,7 @@
 <?php
 
-namespace App\Traits;
+
+namespace App\Models\Traits;
 
 use Redis;
 use Carbon\Carbon;
