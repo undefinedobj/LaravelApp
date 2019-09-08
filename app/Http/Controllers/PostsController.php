@@ -12,6 +12,7 @@ use App\Transformers\DiscussionTransformer;
 use HyperDown\Parser;
 use Prettus\Validator\Contracts\ValidatorInterface;
 use Prettus\Validator\Exceptions\ValidatorException;
+use Illuminate\Support\Facades\Cache;
 use EndaEditor;
 
 class PostsController extends Controller
@@ -162,23 +163,32 @@ class PostsController extends Controller
      */
     public function show($id, Parser $parser/*, Discussion $discussion*/)
     {
-        $model = $this->repository->with([
-            'comments' => function($query){
-                $query->select('id','body','user_id','discussion_id');
-            },
-            'user' => function($query){
-                $query->select('id','name','avatar');
-            },
-        ])->find($id, ['id', 'title', 'view_count', 'body', 'preface', 'user_id', 'created_at']);
+        // 如:在 cache 中查找 discussion_5 的文章, 缓存时间 600s
+        if (Cache::has('discussion_'.$id)){
+            $cache = Cache::get('discussion_'.$id);
+        }else{
+            $cache = $this->repository->with([
+                'comments' => function($query){
+                    $query->select('id','body','user_id','discussion_id');
+                },
+                'user' => function($query){
+                    $query->select('id','name','avatar');
+                },
+            ])->find($id, ['id', 'title', 'view_count', 'body', 'preface', 'user_id', 'created_at']);
 
-        $html = $parser->makeHtml($model->body);
+            Cache::put('discussion_'.$id, $cache, 600);
+        }
 
-        // (MySQL + Redis 实现浏览数) 未完成
-        /*$discussion->viewCountIncrement(); // 自增浏览数
+        $html = $parser->makeHtml($cache->body);
 
-        dd($discussion->view_count); // 获取浏览数*/
+        return  view('forum.show', ['discussion' => $cache, 'html' => $html]);
 
-        return  view('forum.show', ['discussion' => $model, 'html' => $html]);
+//        // (MySQL + Redis 实现浏览数) 未完成
+//        /*$discussion->viewCountIncrement(); // 自增浏览数
+//
+//        dd($discussion->view_count); // 获取浏览数*/
+//
+//        return  view('forum.show', ['discussion' => $model, 'html' => $html]);
     }
 
     /**
