@@ -167,14 +167,17 @@ class PostsController extends Controller
         if (Cache::has('discussion_'.$id)){
             $cache = Cache::get('discussion_'.$id);
         }else{
+
+            $columns = ['title', 'view_count', 'body', 'preface', 'user_id', 'created_at'];
+
             $cache = $this->repository->with([
                 'comments' => function($query){
                     $query->select('id','body','user_id','discussion_id');
                 },
-                'user' => function($query){
+                'comments.user' => function($query){
                     $query->select('id','name','avatar');
                 },
-            ])->find($id, ['id', 'title', 'view_count', 'body', 'preface', 'user_id', 'created_at']);
+            ])->find($id, $columns);
 
             Cache::put('discussion_'.$id, $cache, 600);
         }

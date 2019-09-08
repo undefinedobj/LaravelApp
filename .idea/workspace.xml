@@ -3,8 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="e7441571-f487-46a0-8a65-1b6ba75734c6" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/View/Composers/CategoryComposer.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/View/Composers/CategoryComposer.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Category.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Category.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/PostsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/PostsController.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -299,12 +298,13 @@
       <command value="artisan make:command SyncTopicViewCounts" />
       <command value="git commit -m  &quot;(MySQL + Redis 实现帖子的浏览数(未完成))&quot;" />
       <command value="git commit -m &quot;更改 trits 目录位置&quot;" />
-      <command value="git pull" />
-      <command value="git push" />
       <command value="artisan discussion:sync-discussion-view-counts" />
       <command value="git commit -m &quot;command 信息返回&quot;" />
-      <command value="git add -A" />
       <command value="git commit -m &quot;缓存处理 文章详情&quot;" />
+      <command value="git add -A" />
+      <command value="git commit -m &quot;缓存处理 文章的类别，优化 SQL 查询&quot;" />
+      <command value="git pull" />
+      <command value="git push" />
     </option>
   </component>
   <component name="RunDashboard">
