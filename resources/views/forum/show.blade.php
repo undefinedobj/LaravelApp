@@ -1,6 +1,6 @@
 @extends('app')
 
-@section('title', config('app.name'))
+@section('title', $discussion->title.' - '.$discussion->user->name.'的文章 - '.config('app.name'))
 
 @section('content')
     <div class="jumbotron">

@@ -1,14 +1,16 @@
 @extends('app')
 
-@section('title', '个人中心'.config('app.name'))
+@section('title', Auth::user()->name.' - '.config('app.name'))
 
 @section('content')
+
     <div class="jumbotron">
         <div class="container">
             <h2>Welcome To {{ config('app.name') }}
             </h2>
         </div>
     </div>
+
     <div class="container">
         <div class="row">
             <div class="col-md-4">

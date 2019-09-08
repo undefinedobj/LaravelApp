@@ -1,8 +1,16 @@
 @extends('app')
 
-@section('Register', 'avatar')
+@section('title', '更换头像'.' - '.config('app.name'))
 
 @section('content')
+
+    <div class="jumbotron">
+        <div class="container">
+            <h2>Welcome To {{ config('app.name') }}
+            </h2>
+        </div>
+    </div>
+
     <div class="container">
         <div class="row">
             <div class="col-md-6 col-md-offset-3">

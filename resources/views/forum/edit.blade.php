@@ -1,11 +1,18 @@
 @extends('app')
 
-@section('title', config('app.name'))
+@section('title', '编辑 - '.$discussion->title.' - '.config('app.name'))
 
 @section('content')
 
 {{--引入Markdown编辑器代码--}}
 @include('editor::head')
+
+    <div class="jumbotron">
+        <div class="container">
+            <h2>Welcome To {{ config('app.name') }}
+            </h2>
+        </div>
+    </div>
 
     <div class="container">
         <div class="row">

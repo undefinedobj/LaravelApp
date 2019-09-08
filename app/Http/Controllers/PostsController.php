@@ -168,7 +168,7 @@ class PostsController extends Controller
             $cache = Cache::get('discussion_'.$id);
         }else{
 
-            $columns = ['title', 'view_count', 'body', 'preface', 'user_id', 'created_at'];
+            $columns = ['id', 'title', 'view_count', 'body', 'preface', 'user_id', 'created_at'];
 
             $cache = $this->repository->with([
                 'comments' => function($query){
