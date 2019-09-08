@@ -3,18 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="e7441571-f487-46a0-8a65-1b6ba75734c6" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/CategoriesController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/CategoriesController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/CommentsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/CommentsController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/PostsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/PostsController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/UsersController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/UsersController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/app.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/app.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/app.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/forum/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/forum/create.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/forum/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/forum/edit.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/forum/form.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/forum/form.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/forum/show.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/forum/show.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/users/person.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/users/person.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/welcome.blade.php" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -298,11 +287,12 @@
       <command value="git commit -m &quot;文章分类&quot;" />
       <command value="git commit -m &quot;文章分类的 select 选择框&quot;" />
       <command value="git pull " />
-      <command value="git add -A" />
       <command value="git commit -m &quot;avatar&quot;" />
+      <command value="composer require jenssegers/agent" />
+      <command value="git add -A" />
+      <command value="git commit -m  &quot;个人中心，我的评论&quot;" />
       <command value="git pull" />
       <command value="git push" />
-      <command value="composer require jenssegers/agent" />
     </option>
   </component>
   <component name="RunDashboard">

@@ -25,10 +25,11 @@ Route::get('/verify/{confirm_code}', 'UsersController@confirmEmail')->name('mail
 Route::get('user/person', 'UsersController@person');
 Route::get('category/{id}', 'CategoriesController@index');
 
+Route::post('comments', 'CommentsController@store');    // 评论
 Route::resources([
     'discussions'       =>      'PostsController',
     'users'             =>      'UsersController',
-//    'comments'          =>      'CommentsController',
+    // 'comments'          =>      'CommentsController',
 ]);
 
 /**

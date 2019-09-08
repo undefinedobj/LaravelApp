@@ -42,26 +42,8 @@ class CommentsController extends Controller
     }
 
     /**
-     * Display a listing of the resource.
+     * 帖子的评论
      *
-     * @return \Illuminate\Http\Response
-     */
-    public function index()
-    {
-        $this->repository->pushCriteria(app('Prettus\Repository\Criteria\RequestCriteria'));
-        $comments = $this->repository->all();
-
-        if (request()->wantsJson()) {
-
-            return response()->json([
-                'data' => $comments,
-            ]);
-        }
-
-        return view('comments.index', compact('comments'));
-    }
-
-    /**
      * Store a newly created resource in storage.
      *
      * @param  CommentsCreateRequest $request
@@ -100,6 +82,28 @@ class CommentsController extends Controller
 
             return redirect()->back()->withErrors($e->getMessageBag())->withInput();
         }
+    }
+
+    // =========================================以下为无用代码========================================
+
+    /**
+     * Display a listing of the resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function index()
+    {
+        $this->repository->pushCriteria(app('Prettus\Repository\Criteria\RequestCriteria'));
+        $comments = $this->repository->all();
+
+        if (request()->wantsJson()) {
+
+            return response()->json([
+                'data' => $comments,
+            ]);
+        }
+
+        return view('comments.index', compact('comments'));
     }
 
     /**
@@ -179,7 +183,6 @@ class CommentsController extends Controller
             return redirect()->back()->withErrors($e->getMessageBag())->withInput();
         }
     }
-
 
     /**
      * Remove the specified resource from storage.
