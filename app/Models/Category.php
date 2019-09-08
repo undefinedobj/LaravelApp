@@ -23,12 +23,19 @@ class Category extends Model implements Transformable
     protected $fillable = ['parent_id', 'order', 'title', 'icon', 'uri'];
 
     /**
+     * 文章类别的递归处理
+     *
      * @param int $parent_id
      * @return array
      */
     public static function tree($parent_id = 0)
     {
-        $rows = self::where('parent_id', $parent_id)->get();
+        $columns = ['id', 'order', 'title', 'icon'];
+
+        $rows = self::where('parent_id', $parent_id)
+            ->orderBy('order', 'DESC')
+            ->orderBy('id', 'DESC')
+            ->get($columns);
 
         $array = [];
 
