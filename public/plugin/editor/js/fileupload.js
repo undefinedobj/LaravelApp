@@ -157,7 +157,7 @@
 		}
 
 		if (!settings.resizeImage && canReadFormData) {
-			log('INFO: Bypass file reading, insert file object into FormData object directly.');
+			log('INFO: Bypass file view_count, insert file object into FormData object directly.');
 			handleForm(settings, 'file', file, info);
 		} else if (window.FileReader) {
 			log('INFO: Using FileReader to do asynchronously file reading.');

@@ -23,7 +23,7 @@ $factory->define(App\Models\Discussion::class, function (Faker $faker) {
         'title'         => $faker->sentence,
         'preface'       => $faker->paragraph,
         'img'           => $faker->imageUrl(445, 190),
-        'reading'       => $faker->randomNumber(),
+        'view_count'       => $faker->randomNumber(),
         'body'          => $faker->paragraph,
         'categories_id' => $faker->randomElement($categories_id),
         'user_id'       => 2,

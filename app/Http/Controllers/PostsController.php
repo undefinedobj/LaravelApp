@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Http\Requests\DiscussionCreateRequest;
 use App\Http\Requests\DiscussionUpdateRequest;
 use App\Models\Category;
+use App\Models\Discussion;
 use App\Repositories\DiscussionRepository;
 use App\Validators\DiscussionValidator;
 use App\Transformers\DiscussionTransformer;
@@ -152,27 +153,32 @@ class PostsController extends Controller
     }
 
     /**
-     * 帖子详情视图页
+     * 帖子详情视图页  MySQL + Redis 实现浏览数 （未完成）
      *
      * Display the specified resource.
      *
      * @param  int $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id, Parser $parser)
+    public function show($id, Parser $parser/*, Discussion $discussion*/)
     {
-        $discussion = $this->repository->with([
+        $model = $this->repository->with([
             'comments' => function($query){
                 $query->select('id','body','user_id','discussion_id');
             },
             'user' => function($query){
                 $query->select('id','name','avatar');
             },
-        ])->find($id, ['id', 'title', 'reading', 'body', 'preface', 'user_id', 'created_at']);
+        ])->find($id, ['id', 'title', 'view_count', 'body', 'preface', 'user_id', 'created_at']);
 
-        $html = $parser->makeHtml($discussion->body);
+        $html = $parser->makeHtml($model->body);
 
-        return  view('forum.show', compact('discussion', 'html'));
+        // (MySQL + Redis 实现浏览数) 未完成
+        /*$discussion->viewCountIncrement(); // 自增浏览数
+
+        dd($discussion->view_count); // 获取浏览数*/
+
+        return  view('forum.show', ['discussion' => $model, 'html' => $html]);
     }
 
     /**

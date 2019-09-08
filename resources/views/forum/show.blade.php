@@ -20,7 +20,7 @@
                     {{ $discussion->user->name }}--}}
                     <span>
                         <i class="fa fa-fire"></i>
-                        <span>阅读 <span>({{ $discussion->reading }})</span></span>
+                        <span>阅读 <span>({{ $discussion->view_count }})</span></span>
                     </span>
                     {{--<span>
                         <i class="fa fa-tags"></i>

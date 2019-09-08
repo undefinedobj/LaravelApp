@@ -26,6 +26,9 @@ class Kernel extends ConsoleKernel
     {
         // $schedule->command('inspire')
         //          ->hourly();
+
+        // 定时任务：将帖子 view_count 从 Redis 同步到数据库中
+        $schedule->command('discussion:sync-discussion-view-counts')->dailyAt('00:00');
     }
 
     /**

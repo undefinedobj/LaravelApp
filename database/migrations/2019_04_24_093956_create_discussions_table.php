@@ -18,7 +18,7 @@ class CreateDiscussionsTable extends Migration
             $table->string('title');
             $table->text('preface');
             $table->text('img')->nullable()->comment('图片 445*190');
-            $table->integer('reading')->nullable()->default(0)->comment('阅读量');
+            $table->unsignedInteger('view_count')->default(0)->comment('浏览数');
             $table->integer('order')->nullable()->default(0);
             $table->text('body');
             $table->integer('categories_id')->unsigned();

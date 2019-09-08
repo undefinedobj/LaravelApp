@@ -5,6 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Model;
 use Prettus\Repository\Contracts\Transformable;
 use Prettus\Repository\Traits\TransformableTrait;
+use App\Traits\ViewCountsHelper;
 
 /**
  * App\Models\Discussion
@@ -31,14 +32,14 @@ use Prettus\Repository\Traits\TransformableTrait;
  */
 class Discussion extends Model implements Transformable
 {
-    use TransformableTrait;
+    use TransformableTrait, ViewCountsHelper;
 
     /**
      * 可以被批量赋值的属性。
      *
      * @var array
      */
-    protected $fillable = ['title','preface','img','reading','order','body', 'user_id', 'last_user_id', 'categories_id'];
+    protected $fillable = ['title','preface','img','view_count','order','body', 'user_id', 'last_user_id', 'categories_id'];
 
     /**
      * 获得拥有此帖子的用户
