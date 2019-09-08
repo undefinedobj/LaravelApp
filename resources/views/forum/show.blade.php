@@ -27,7 +27,7 @@
                         <a href="###">拍黄片</a>
                     </span>--}}
                     <br><br>
-                    <span><i class="fa fa-calendar-alt"></i> 2019-08-12 17:35:40</span>
+                    <span><i class="fa fa-calendar-alt"></i> {{ $discussion->created_at }}</span>
                 </div>
             </div>
         </div>
