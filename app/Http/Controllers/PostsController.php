@@ -56,10 +56,10 @@ class PostsController extends Controller
      */
     public function index()
     {
-        /*if (Cache::has('discussions_all')){
+        if (Cache::has('discussions_all')){
 
             $cache = Cache::get('discussions_all');
-        }else{*/
+        }else{
 
             $columns = ['id','title','preface','img','categories_id','user_id','user_id','created_at'];
 
@@ -78,8 +78,8 @@ class PostsController extends Controller
                 ->orderBy('created_at', 'desc')
                 ->paginate(config('app.perPage'), $columns);
 
-            /*Cache::put('discussions_all', $cache, now()->addDay());
-        }*/
+            Cache::put('discussions_all', $cache, now()->addDay());
+        }
 
         return  view('forum.index', ['discussions' => $cache]);
     }

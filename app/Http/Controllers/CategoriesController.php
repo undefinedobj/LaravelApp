@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Discussion;
+use Illuminate\Support\Facades\Cache;
 
 class CategoriesController extends Controller
 {
@@ -14,12 +15,25 @@ class CategoriesController extends Controller
      */
     public function index($id)
     {
-        $discussions = Discussion::with([
-            'category' => function ($query) {
-                $query->select('id','title');
-            }
-        ])->where('categories_id', $id)->limit(10)->paginate(config('app.perPage'));
+        if (Cache::has('discussions_all')){
 
-        return  view('forum.category', compact('discussions'));
+            $cache = Cache::get('discussions_all');
+        }else{
+
+            $columns = ['id','user_id','categories_id','title','preface','created_at'];
+
+            $cache = Discussion::with([
+                'category' => function ($query) {
+                    $query->select('id','title');
+                },
+                'user' => function ($query) {
+                    $query->select('id','name');
+                }
+            ])->where('categories_id', $id)->paginate(config('app.perPage'),$columns);
+
+            Cache::put('discussions_all', $cache, now()->addDay());
+        }
+
+        return  view('forum.category', ['discussions' => $cache]);
     }
 }
