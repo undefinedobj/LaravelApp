@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e7441571-f487-46a0-8a65-1b6ba75734c6" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Category.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Category.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/app.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/PostsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/PostsController.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -304,11 +302,12 @@
       <command value="git commit -m &quot;缓存处理 文章的类别，优化 SQL 查询&quot;" />
       <command value="git commit -m &quot;修改前端样式布局， SEO 优化&quot;" />
       <command value="git commit -m &quot;帖子详情和修改：查询优化，缓存处理，样式修改&quot;" />
-      <command value="git pull" />
-      <command value="git push" />
-      <command value="git add -A" />
       <command value="git commit -m &quot;查询优化，缓存处理&quot;" />
       <command value="composer dump-autoload" />
+      <command value="git add -A" />
+      <command value="git commit -m &quot;菜单栏的分类进行优化处理&quot;" />
+      <command value="git pull" />
+      <command value="git push" />
     </option>
   </component>
   <component name="RunDashboard">
@@ -462,7 +461,7 @@
       <workItem from="1567757281277" duration="13357000" />
       <workItem from="1567787003912" duration="338000" />
       <workItem from="1567787358513" duration="27400000" />
-      <workItem from="1567992581205" duration="7450000" />
+      <workItem from="1567992581205" duration="7741000" />
     </task>
     <servers />
   </component>

@@ -56,32 +56,24 @@ class PostsController extends Controller
      */
     public function index()
     {
-        if (Cache::has('discussions_all')){
+        $columns = ['id','title','preface','img','categories_id','user_id','user_id','created_at'];
 
-            $cache = Cache::get('discussions_all');
-        }else{
+        $discussions = $this->repository->with([
+            'user' => function($query){
+                $query->select('id','name','avatar');
+            },
+            'comments' => function($query){
+                $query->select('id', 'discussion_id');
+            },
+            'category' => function($query){
+                $query->select('id', 'title');
+            },
+        ])->orderBy('updated_at', 'desc')
+            ->orderBy('order', 'desc')
+            ->orderBy('created_at', 'desc')
+            ->paginate(config('app.perPage'), $columns);
 
-            $columns = ['id','title','preface','img','categories_id','user_id','user_id','created_at'];
-
-            $cache = $this->repository->with([
-                'user' => function($query){
-                    $query->select('id','name','avatar');
-                },
-                'comments' => function($query){
-                    $query->select('id', 'discussion_id');
-                },
-                'category' => function($query){
-                    $query->select('id', 'title');
-                },
-            ])->orderBy('updated_at', 'desc')
-                ->orderBy('order', 'desc')
-                ->orderBy('created_at', 'desc')
-                ->paginate(config('app.perPage'), $columns);
-
-            Cache::put('discussions_all', $cache, now()->addDay());
-        }
-
-        return  view('forum.index', ['discussions' => $cache]);
+        return  view('forum.index', compact('discussions'));
     }
 
     /**
