@@ -23,28 +23,51 @@ class Category extends Model implements Transformable
     protected $fillable = ['parent_id', 'order', 'title', 'icon', 'uri'];
 
     /**
-     * 文章类别的递归处理
+     * 文章类别的树形结构
      *
-     * @param int $parent_id
      * @return array
      */
-    public static function tree($parent_id = 0)
+    public function tree()
     {
-        $columns = ['id', 'order', 'title', 'icon'];
+        $categories = self::all(['id', 'parent_id', 'order', 'title', 'icon'])->toArray();
 
-        $rows = self::where('parent_id', $parent_id)
-            ->orderBy('order', 'DESC')
-            ->orderBy('id', 'DESC')
-            ->get($columns);
+        return $this->list_to_tree($categories);
+    }
 
-        $array = [];
-
-        if (sizeof($rows) != 0){
-            foreach ($rows as $key => $val){
-                $val['list'] = self::tree($val['id']);
-                $array[] = $val;
+    /**
+     * 将数组进行树形结构处理
+     *
+     * @param $list
+     * @param string $primary_key
+     * @param string $parent_id
+     * @param string $child
+     * @param int $root
+     * @return array
+     */
+    public function list_to_tree($list, $primary_key = 'id', $parent_id = 'parent_id', $child = '_child', $root = 0)
+    {
+        // 创建Tree
+        $tree = [];
+        if(is_array($list)) {
+            // 创建基于主键的数组引用
+            $refer = [];
+            foreach ($list as $key => $data) {
+                $refer[$data[$primary_key]] =& $list[$key];
             }
-            return $array;
+
+            foreach ($list as $key => $data) {
+                // 判断是否存在parent_id
+                $parentId = $data[$parent_id];
+                if ($root == $parentId) {
+                    $tree[] =& $list[$key];
+                }else{
+                    if (isset($refer[$parentId])) {
+                        $parent =& $refer[$parentId];
+                        $parent[$child][] =& $list[$key];
+                    }
+                }
+            }
         }
+        return $tree;
     }
 }
