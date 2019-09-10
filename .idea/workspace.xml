@@ -2,13 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e7441571-f487-46a0-8a65-1b6ba75734c6" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/factories/ModelFactory.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/factories/ModelFactory.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/seeds/CategoryTableSeeder.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/seeds/CommentTableSeeder.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/seeds/DiscussionTableSeeder.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/seeds/UserTableSeeder.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/CategoriesController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/CategoriesController.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -307,10 +301,7 @@
       <command value="git commit -m &quot;帖子详情和修改：查询优化，缓存处理，样式修改&quot;" />
       <command value="git commit -m &quot;查询优化，缓存处理&quot;" />
       <command value="git commit -m &quot;菜单栏的分类进行优化处理&quot;" />
-      <command value="git add -A" />
       <command value="git commit -m &quot;首页的帖子列表取消 cache 处理，cache 后不能分页问题&quot;" />
-      <command value="git pull" />
-      <command value="git push" />
       <command value="artisan make:command BlogInstall" />
       <command value="artisan migrate" />
       <command value="artisan migrate:refresh --seed" />
@@ -324,6 +315,10 @@
       <command value="artisan tinker" />
       <command value="artisan migrate:reset" />
       <command value="artisan migrate --seed" />
+      <command value="git add -A" />
+      <command value="git commit -m&quot;数据填充&quot;" />
+      <command value="git pull" />
+      <command value="git push" />
     </option>
   </component>
   <component name="RunDashboard">
@@ -481,7 +476,7 @@
       <workItem from="1568012727782" duration="608000" />
       <workItem from="1568026012116" duration="1937000" />
       <workItem from="1568055699102" duration="618000" />
-      <workItem from="1568107940123" duration="5667000" />
+      <workItem from="1568107940123" duration="6015000" />
     </task>
     <servers />
   </component>

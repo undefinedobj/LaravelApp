@@ -15,10 +15,10 @@ class CategoriesController extends Controller
      */
     public function index($id)
     {
-        if (Cache::has('discussions_all')){
+        /*if (Cache::has('discussions_all')){
 
             $cache = Cache::get('discussions_all');
-        }else{
+        }else{*/
 
             $columns = ['id','user_id','categories_id','title','preface','created_at'];
 
@@ -31,8 +31,8 @@ class CategoriesController extends Controller
                 }
             ])->where('categories_id', $id)->paginate(config('app.perPage'),$columns);
 
-            Cache::put('discussions_all', $cache, now()->addDay());
-        }
+        /*    Cache::put('discussions_all', $cache, now()->addDay());
+        }*/
 
         return  view('forum.category', ['discussions' => $cache]);
     }
