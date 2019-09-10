@@ -1,9 +1,12 @@
 <?php
 
-use Illuminate\Database\Seeder;
+use App\Models\Comment;
+use App\Models\Discussion;
+use App\Models\User;
 use App\Models\Category;
+use Illuminate\Database\Seeder;
 
-class CategoryTableSeeder extends Seeder
+class BlogTablesSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -12,8 +15,19 @@ class CategoryTableSeeder extends Seeder
      */
     public function run()
     {
-//        Category::truncate();
+        // create a user
+        User::truncate();
+        factory(User::class, 30)->create();
 
+        $user = User::first();
+
+        $user->name = 'Savory';
+        $user->email = '8wy701645@163.com';
+        $user->password = bcrypt(123456);
+        $user->save();
+
+        // create a category
+        Category::truncate();
         Category::insert([
             [
                 'parent_id' => 0,
@@ -128,54 +142,63 @@ class CategoryTableSeeder extends Seeder
                 'uri'       => '/',
             ],
             [
-                'parent_id' => 4,
+                'parent_id' => 6,
                 'order'     => 17,
                 'title'     => 'MySQL',
                 'icon'      => 'glyphicon glyphicon-align-justify',
                 'uri'       => '/',
             ],
             [
-                'parent_id' => 4,
+                'parent_id' => 6,
                 'order'     => 18,
                 'title'     => 'SQLServer',
                 'icon'      => 'glyphicon glyphicon-align-justify',
                 'uri'       => '/',
             ],
             [
-                'parent_id' => 4,
+                'parent_id' => 6,
                 'order'     => 19,
                 'title'     => 'Redis',
                 'icon'      => 'glyphicon glyphicon-align-justify',
                 'uri'       => '/',
             ],
             [
-                'parent_id' => 4,
+                'parent_id' => 6,
                 'order'     => 20,
                 'title'     => 'Memcache',
                 'icon'      => 'glyphicon glyphicon-align-justify',
                 'uri'       => '/',
             ],
             [
-                'parent_id' => 5,
+                'parent_id' => 4,
                 'order'     => 21,
                 'title'     => 'PHPStorm',
                 'icon'      => 'glyphicon glyphicon-align-justify',
                 'uri'       => '/',
             ],
             [
-                'parent_id' => 5,
+                'parent_id' => 4,
                 'order'     => 22,
                 'title'     => 'Git',
                 'icon'      => 'glyphicon glyphicon-align-justify',
                 'uri'       => '/',
             ],
             [
-                'parent_id' => 6,
+                'parent_id' => 5,
                 'order'     => 23,
                 'title'     => '生活笔记',
                 'icon'      => 'glyphicon glyphicon-align-justify',
                 'uri'       => '/',
             ],
         ]);
+
+        // create a discussion
+        Discussion::truncate();
+        factory(Discussion::class, 30)->create();
+
+        // create a comment
+        Comment::truncate();
+        factory(Comment::class, 30)->create();
     }
+
 }

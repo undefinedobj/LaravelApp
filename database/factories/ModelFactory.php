@@ -16,8 +16,7 @@ use Faker\Generator as Faker;
 
 $factory->define(App\Models\Discussion::class, function (Faker $faker) {
 
-    $user_ids = App\Models\User::pluck('id')->toArray();
-    $categories_id = App\Models\Category::pluck('id')->toArray();
+    $categories_id = App\Models\Category::where('parent_id', '!=', 0)->pluck('id')->toArray();
 
     return [
         'title'         => $faker->sentence,
@@ -26,10 +25,10 @@ $factory->define(App\Models\Discussion::class, function (Faker $faker) {
         'view_count'       => $faker->randomNumber(),
         'body'          => $faker->paragraph,
         'categories_id' => $faker->randomElement($categories_id),
-        'user_id'       => 2,
-        'last_user_id'  => 2
-//        'user_id'       => $faker->randomElement($user_ids),
-//        'last_user_id'  => $faker->randomElement($user_ids)
+        'user_id'       => 1,
+        'last_user_id'  => 1
+        // 'user_id'       => $faker->randomElement($user_ids),
+        // 'last_user_id'  => $faker->randomElement($user_ids)
     ];
 });
 

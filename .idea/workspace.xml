@@ -2,7 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e7441571-f487-46a0-8a65-1b6ba75734c6" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/PostsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/PostsController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/factories/ModelFactory.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/factories/ModelFactory.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/seeds/CategoryTableSeeder.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/seeds/CommentTableSeeder.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/seeds/DiscussionTableSeeder.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/seeds/UserTableSeeder.php" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -237,7 +243,6 @@
       <command value="git commit -m &quot;修改页面样式，env 函数改为 config 函数&quot;" />
       <command value="git commit -m &quot;首页的SQL 查询优化&quot;" />
       <command value="git commit -m &quot;env 函数改为 config 函数&quot;" />
-      <command value="artisan tinker" />
       <command value="git commit -m &quot;重构登录、注册、邮件发送业务，&quot;" />
       <command value="git commit -m &quot;更改迁移文件表结构&quot;" />
       <command value="git commit -m &quot;安装 laravolt/avatar 且兼容中文头像&quot;" />
@@ -265,8 +270,6 @@
       <command value="php artisan db:seed --class=CategoryTableSeeder" />
       <command value="php artisan db:seed" />
       <command value="git commit -m &quot;类别功能的表结构设计，数据迁移，数据填充&quot;" />
-      <command value="artisan migrate:reset" />
-      <command value="artisan migrate" />
       <command value="git commit -m&quot;文章分类，表结构更改， CateGoryTableSedder&quot;" />
       <command value="artisan db:seed" />
       <command value="php artisan db:seed --class=UserTableSeeder" />
@@ -303,11 +306,24 @@
       <command value="git commit -m &quot;修改前端样式布局， SEO 优化&quot;" />
       <command value="git commit -m &quot;帖子详情和修改：查询优化，缓存处理，样式修改&quot;" />
       <command value="git commit -m &quot;查询优化，缓存处理&quot;" />
-      <command value="composer dump-autoload" />
-      <command value="git add -A" />
       <command value="git commit -m &quot;菜单栏的分类进行优化处理&quot;" />
+      <command value="git add -A" />
+      <command value="git commit -m &quot;首页的帖子列表取消 cache 处理，cache 后不能分页问题&quot;" />
       <command value="git pull" />
       <command value="git push" />
+      <command value="artisan make:command BlogInstall" />
+      <command value="artisan migrate" />
+      <command value="artisan migrate:refresh --seed" />
+      <command value="artisan install the blog" />
+      <command value="install the blog" />
+      <command value="artisan install:blog" />
+      <command value="artisan make:command InstallCommand" />
+      <command value="artisan make:seeder BlogTablesSeeder" />
+      <command value="composer dump-autoload" />
+      <command value="artisan blog:install" />
+      <command value="artisan tinker" />
+      <command value="artisan migrate:reset" />
+      <command value="artisan migrate --seed" />
     </option>
   </component>
   <component name="RunDashboard">
@@ -461,7 +477,11 @@
       <workItem from="1567757281277" duration="13357000" />
       <workItem from="1567787003912" duration="338000" />
       <workItem from="1567787358513" duration="27400000" />
-      <workItem from="1567992581205" duration="7741000" />
+      <workItem from="1567992581205" duration="8719000" />
+      <workItem from="1568012727782" duration="608000" />
+      <workItem from="1568026012116" duration="1937000" />
+      <workItem from="1568055699102" duration="618000" />
+      <workItem from="1568107940123" duration="5667000" />
     </task>
     <servers />
   </component>
