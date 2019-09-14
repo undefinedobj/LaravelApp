@@ -103,7 +103,7 @@ class UsersController extends Controller
         try {
             $request->flash();
 
-            Avatar::create("$request->name")->save($avatar = 'images/'.$request->name.uniqid('_').'.jpg', 100);
+            Avatar::create("$request->name")->save($avatar = 'uploads/avatar/'.$request->name.uniqid('_').'.jpg', 100);
 
             $data = [
                 'confirm_code'      => \Str::random(48),
