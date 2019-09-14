@@ -27,7 +27,10 @@ class Kernel extends ConsoleKernel
         // $schedule->command('inspire')
         //          ->hourly();
 
-        // 定时任务：将帖子 view_count 从 Redis 同步到数据库中
+        // 定时任务：为新注册的用户发送电子邮件, 每分钟执行
+        $schedule->command('queue:work --queue=emails')->everyMinute();
+
+        // 定时任务：将帖子 view_count 从 Redis 同步到数据库中，每天的零点执行
         $schedule->command('discussion:sync-discussion-view-counts')->dailyAt('00:00');
     }
 
