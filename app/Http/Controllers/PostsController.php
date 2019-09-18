@@ -105,17 +105,7 @@ class PostsController extends Controller
     {
         try {
             # 文件上传
-            $strategy = $request->get('strategy', 'images');
-
-            if (! $request->hasFile('img')) {
-                return response()->json([
-                    'error'   => true,
-                    'message' => 'no file found'
-                ]);
-            }
-
-            $path = $strategy.'/'.date('Y').'/'.date('m').'/'.date('d');
-            $imgPath = config('app.url').'/uploads/'.$request->file('img')->store($path, 'picture');
+            $imgPath = save_image_file($request->img, 'discussion');
 
             $data = [
                 'user_id'       =>   (int) \Auth::user()->id,
@@ -228,12 +218,7 @@ class PostsController extends Controller
     public function update(DiscussionUpdateRequest $request, $id)
     {
         try {
-            # 文件上传
-            if ($request->hasFile('img')) {
-                $strategy = $request->get('strategy', 'images');
-                $path = $strategy.'/'.date('Y').'/'.date('m').'/'.date('d');
-                $imgPath = config('app.url').'/uploads/'.$request->file('img')->store($path, 'picture');
-            }
+            $imgPath = save_image_file($request->img, 'discussion');
 
             $data = [
                 'user_id'       =>   (int) \Auth::user()->id,
