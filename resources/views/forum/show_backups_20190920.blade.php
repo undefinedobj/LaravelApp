@@ -24,7 +24,7 @@
                     </span>
                     {{--<span>
                         <i class="fa fa-tags"></i>
-                        <a href="###">ww片</a>
+                        <a href="###">拍黄片</a>
                     </span>--}}
                     <br><br>
                     <span><i class="fa fa-calendar-alt"></i> {{ $discussion->created_at }}</span>
@@ -46,20 +46,20 @@
                 <hr>
 
                 {{-- 评论 --}}
-                <div class="content">
-                    @foreach ($discussion->comments as $comment)
-                        <div class="media">
-                            <div class="media-left">
-                                <a href="#">
-                                    <img class="media-object img-circle" src="{{ $comment->user->avatar }}" alt="64*64" style="width: 64px; height: 64px">
-                                </a>
-                            </div>
-                            <div class="media-body">
-                                <h4 class="media-heading">{{ $comment->user->name }}</h4>
-                                {{ $comment->body }}
-                            </div>
+                @foreach ($discussion->comments as $comment)
+                    <div class="media">
+                        <div class="media-left">
+                            <a href="#">
+                                <img class="media-object img-circle" src="{{ $comment->user->avatar }}" alt="64*64" style="width: 64px; height: 64px">
+                            </a>
                         </div>
-                    @endforeach
+
+                        <div class="media-body">
+                            <h4 class="media-heading">{{ $comment->user->name }}</h4>
+                            {{ $comment->body }}
+                        </div>
+                    </div>
+                @endforeach
                     {{-- vue.js.star--}}
                     <div class="media" v-for="comment in comments">
                         <div class="media-left">
@@ -74,7 +74,6 @@
                         </div>
                     </div>
                     {{-- vue.js.end--}}
-                </div>
                 <hr>
 
                 {{-- 评论输框 --}}
@@ -89,17 +88,17 @@
 
                     {!! Form::open(['url' => '/comments', 'method' => 'post', 'v-on:submit' => 'onSubmitForm']) !!}
 
-                    <div class="form-group">
-                        {!! Form::hidden('discussion_id', $discussion->id, ['class' => 'form-control']) !!}
-                    </div>
+                        <div class="form-group">
+                            {!! Form::hidden('discussion_id', $discussion->id, ['class' => 'form-control']) !!}
+                        </div>
 
-                    <div class="form-group">
-                        {!! Form::textarea('body', null, ['class' => 'form-control', 'v-model' => 'newComment.body']) !!}
-                    </div>
+                        <div class="form-group">
+                            {!! Form::textarea('body', null, ['class' => 'form-control', 'v-model' => 'newComment.body']) !!}
+                        </div>
 
-                    <div>
-                        {!! Form::submit('发表评论', ['class' => 'btn btn-primary form-control']) !!}
-                    </div>
+                        <div>
+                            {!! Form::submit('发表评论', ['class' => 'btn btn-primary form-control']) !!}
+                        </div>
                     {!! Form::close() !!}
                 @else
                     <a href="/user/login" class="btn btn-block btn-success">登录参与评论</a>
@@ -142,20 +141,6 @@
                         avatar: '{{ Auth::user()->avatar ?? null }}',
                         body: ''
                     };
-                    if (post.body!=''){
-                        let str='<div class="media">\n' +
-                            '<div class="media-left">\n' +
-                            '<a href="#">\n' +
-                            '<img class="media-object img-circle" src="'+comment.avatar+'" alt="64*64" style="width: 64px; height: 64px">\n' +
-                            '</a>\n' +
-                            '</div>\n' +
-                            '<div class="media-body">\n' +
-                            '<h4 class="media-heading">'+comment.name+'</h4>\n' +
-                            '\n' +post.body+
-                            '</div>\n' +
-                            '</div>';
-                        $('.content').append(str);
-                    }
                 }
             }
         });
