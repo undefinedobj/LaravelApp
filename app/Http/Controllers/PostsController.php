@@ -152,10 +152,10 @@ class PostsController extends Controller
      */
     public function show($id, Parser $parser/*, Discussion $discussion*/)
     {
-        // 如:在 cache 中查找 discussion_5 的文章, 过期时间为: 当前时间 + 1天
-        if (Cache::has('discussion_'.$id)){
-            $cache = Cache::get('discussion_'.$id);
-        }else{
+//        // 如:在 cache 中查找 discussion_5 的文章, 过期时间为: 当前时间 + 1天
+//        if (Cache::has('discussion_'.$id)){
+//            $cache = Cache::get('discussion_'.$id);
+//        }else{
 
             $columns = ['id', 'title', 'view_count', 'body', 'preface', 'user_id', 'created_at'];
 
@@ -169,7 +169,7 @@ class PostsController extends Controller
             ])->find($id, $columns);
 
             Cache::put('discussion_'.$id, $cache, now()->addDay());
-        }
+//        }
 
         $html = $parser->makeHtml($cache->body);
 

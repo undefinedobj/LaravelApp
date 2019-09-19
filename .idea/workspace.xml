@@ -2,10 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e7441571-f487-46a0-8a65-1b6ba75734c6" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/helpers.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/PostsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/PostsController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -319,11 +317,12 @@
       <command value="artisan migrate --seed" />
       <command value="git commit -m&quot;数据填充&quot;" />
       <command value="git commit -m &quot;用户注册 avatar 头像保存目录&quot;" />
-      <command value="git add -A" />
       <command value="git commit -m &quot;定时任务计划&quot;" />
+      <command value="composer dump-autoload" />
+      <command value="git add -A" />
+      <command value="git commit -m&quot;文件上传的代码封装成一个公共方法&quot;" />
       <command value="git pull" />
       <command value="git push" />
-      <command value="composer dump-autoload" />
     </option>
   </component>
   <component name="RunDashboard">
@@ -482,7 +481,10 @@
       <workItem from="1568026012116" duration="1937000" />
       <workItem from="1568055699102" duration="618000" />
       <workItem from="1568107940123" duration="6015000" />
-      <workItem from="1568772833158" duration="14048000" />
+      <workItem from="1568772833158" duration="15413000" />
+      <workItem from="1568811800736" duration="588000" />
+      <workItem from="1568824715641" duration="2476000" />
+      <workItem from="1568862906836" duration="861000" />
     </task>
     <servers />
   </component>
