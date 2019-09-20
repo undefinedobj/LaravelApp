@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e7441571-f487-46a0-8a65-1b6ba75734c6" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/resources/views/forum/show_backups_20190920.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/forum/form.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/forum/form.blade.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -210,7 +210,7 @@
     <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/New Scratch File" value="Blade" />
     <property name="com.jetbrains.php.phpunit.codeGeneration.PhpNewTestDialog.defaultLibrary" value="PHPUnit" />
     <property name="editor.config.ad.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/views/forum" />
+    <property name="last_opened_file_path" value="D:/xampp/htdocs/shufu" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
@@ -320,8 +320,9 @@
       <command value="git commit -m &quot;定时任务计划&quot;" />
       <command value="composer dump-autoload" />
       <command value="git commit -m&quot;文件上传的代码封装成一个公共方法&quot;" />
-      <command value="git add -A" />
       <command value="git commit -m &quot;解决缓存后不显示评论内容&quot;" />
+      <command value="git add -A" />
+      <command value="git commit -m&quot;评论功能无刷新提交&quot;" />
       <command value="git pull" />
       <command value="git push" />
     </option>
@@ -486,7 +487,7 @@
       <workItem from="1568811800736" duration="588000" />
       <workItem from="1568824715641" duration="2476000" />
       <workItem from="1568862906836" duration="2747000" />
-      <workItem from="1568913746944" duration="417000" />
+      <workItem from="1568913746944" duration="8539000" />
     </task>
     <servers />
   </component>
