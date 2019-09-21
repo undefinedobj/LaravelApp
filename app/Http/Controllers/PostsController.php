@@ -14,6 +14,7 @@ use Prettus\Validator\Contracts\ValidatorInterface;
 use Prettus\Validator\Exceptions\ValidatorException;
 use Illuminate\Support\Facades\Cache;
 use EndaEditor;
+use Illuminate\Http\Request;
 
 class PostsController extends Controller
 {
@@ -269,6 +270,14 @@ class PostsController extends Controller
         $data = EndaEditor::uploadImgFile('uploads');
 
         return json_encode($data);
+
+    }
+
+    public function search(Request $request)
+    {
+//        dump(Discussion::search($request->keyword)->get()->toArray());
+
+        dd($request->all());
 
     }
 }

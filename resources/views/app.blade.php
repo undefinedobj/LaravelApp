@@ -47,6 +47,15 @@
                 </li>
                 @endforeach
             </ul>
+
+            <!-- Search -->
+            <form class="navbar-form navbar-left" method="get" action="{{ url('/search') }}" enctype="multipart/form-data">
+                <div class="form-group">
+                    <input name="keywords" type="text" class="form-control" placeholder="搜索文章或内容">
+                </div>
+                <button type="submit" class="btn btn-default">Search</button>
+            </form>
+
             <ul class="nav navbar-nav navbar-right">
                 @if (Auth::check())
                     <li>

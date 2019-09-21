@@ -31,6 +31,7 @@ Route::resources([
     'users'             =>      'UsersController',
     // 'comments'          =>      'CommentsController',
 ]);
+Route::get('/search', 'PostsController@search');
 
 /**
  * 纯属瞎玩, 基本没啥用
