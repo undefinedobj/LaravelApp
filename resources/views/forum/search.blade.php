@@ -43,8 +43,8 @@
 
                 <hr class="featurette-divider">
             @endforeach
-        {{ $discussions->appends(Request::all())->links() }}
-        <!-- /END THE FEATURETTES -->
+            {{ $discussions->appends(Request::all())->links() }}
+            <!-- /END THE FEATURETTES -->
 
             <!-- FOOTER -->
             <footer>
