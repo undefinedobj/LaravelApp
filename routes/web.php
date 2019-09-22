@@ -14,14 +14,14 @@
 Route::get('/', 'PostsController@index');
 // laravel 5 Markdown 编辑器 - 图片上传
 Route::post('markdown/upload', 'PostsController@markdownUpload');
-Route::get('/user/register', 'UsersController@register');
-Route::post('/user/register', 'UsersController@store');
+Route::get('user/register', 'UsersController@register');
+Route::post('user/register', 'UsersController@store');
 Route::get('user/login', 'UsersController@login')->name('login');
 Route::post('user/login', 'UsersController@signIn');
 Route::get('user/logout', 'UsersController@logout')->name('logout');
 Route::get('user/avatar', 'UsersController@avatar');
 Route::post('user/{id}/avatar', 'UsersController@updateAvatar')->name('avatar');
-Route::get('/verify/{confirm_code}', 'UsersController@confirmEmail')->name('mail-verify');// 功能废弃
+Route::get('verify/{confirm_code}', 'UsersController@confirmEmail')->name('mail-verify');// 功能废弃
 Route::get('user/person', 'UsersController@person');
 Route::get('category/{id}', 'CategoriesController@index');
 
