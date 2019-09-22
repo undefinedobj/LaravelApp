@@ -27,7 +27,7 @@ class Kernel extends ConsoleKernel
         // $schedule->command('inspire')
         //          ->hourly();
 
-        // 定时任务：为新注册的用户发送电子邮件, 每1z0分钟执行
+        // 定时任务：为新注册的用户发送电子邮件, 每10分钟执行
         $schedule->command('queue:work --queue=emails')->everyTenMinutes();
 
         // 定时任务：将帖子 view_count 从 Redis 同步到数据库中，每天的零点执行
