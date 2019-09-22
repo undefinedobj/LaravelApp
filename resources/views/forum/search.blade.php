@@ -42,7 +42,7 @@
                 </div>
 
                 <hr class="featurette-divider">
-        @endforeach
+            @endforeach
         {{ $discussions->appends(Request::all())->links() }}
         <!-- /END THE FEATURETTES -->
 
