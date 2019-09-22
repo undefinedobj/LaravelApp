@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="e7441571-f487-46a0-8a65-1b6ba75734c6" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Console/Kernel.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Console/Kernel.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -340,11 +341,13 @@
       <command value="composer require fukuball/jieba-php --ignore-platform-reqs" />
       <command value="artisan vendor:publish --provider=&quot;Laravel\Scout\ScoutServiceProvider&quot;" />
       <command value="git commit -m&quot;TNTSearch + jieba-php 中文全文搜索&quot;" />
-      <command value="git add -A" />
       <command value="git commit -m &quot;代码整洁一点&quot;" />
       <command value="artisan scout:import &quot;App\Models\Discussion&quot;" />
       <command value="git pull" />
       <command value="git push" />
+      <command value="git add -" />
+      <command value="git add -A" />
+      <command value="git commit -m&quot;删除无用的文件&quot;" />
     </option>
   </component>
   <component name="RunDashboard">
@@ -509,7 +512,7 @@
       <workItem from="1568862906836" duration="2747000" />
       <workItem from="1568913746944" duration="8539000" />
       <workItem from="1569077461488" duration="16559000" />
-      <workItem from="1569132424762" duration="633000" />
+      <workItem from="1569132424762" duration="2122000" />
     </task>
     <servers />
   </component>
