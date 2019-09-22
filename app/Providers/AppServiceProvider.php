@@ -41,6 +41,14 @@ class AppServiceProvider extends ServiceProvider
             '*', 'App\Http\View\Composers\CategoryComposer'
         );
 
+        /**
+         * 增加内存防止中文分词报错
+         *
+         * php 默认的 memory_limit 是 128M；
+         * 为了防止 PHP Fatal error: Allowed memory size of n bytes exhausted ；
+         */
+        ini_set('memory_limit', "256M");
+
         // Faker 本地化
         $this->app->singleton(FakerGenerator::class, function () {
             return FakerFactory::create('zh_CN');

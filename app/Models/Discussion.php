@@ -6,6 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 use Prettus\Repository\Contracts\Transformable;
 use Prettus\Repository\Traits\TransformableTrait;
 use App\Models\Traits\ViewCountsHelper;
+use Laravel\Scout\Searchable;
 
 /**
  * App\Models\Discussion
@@ -32,7 +33,7 @@ use App\Models\Traits\ViewCountsHelper;
  */
 class Discussion extends Model implements Transformable
 {
-    use TransformableTrait, ViewCountsHelper;
+    use TransformableTrait, ViewCountsHelper, Searchable;
 
     /**
      * 可以被批量赋值的属性。
@@ -75,5 +76,22 @@ class Discussion extends Model implements Transformable
     public function users()
     {
         return $this->hasManyThrough('App\Models\User', 'App\Models\Discussion');
+    }
+
+
+    /**
+     * 索引的字段
+     *
+     * @return array
+     */
+    public function toSearchableArray()
+    {
+        // return $this->only(['id', 'title', 'body', 'name'=>$this->user->name]);
+        return [
+            'id'    => $this->id,
+            'title' => $this->title,
+            'body'  => $this->body,
+            'name'  => $this->user->name
+        ];
     }
 }

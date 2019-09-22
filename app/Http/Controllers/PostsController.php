@@ -273,11 +273,18 @@ class PostsController extends Controller
 
     }
 
+    /**
+     * 全文搜索
+     *
+     * @param Request $request
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
+     */
     public function search(Request $request)
     {
-//        dump(Discussion::search($request->keyword)->get()->toArray());
+        $keywords = $request->keywords;
 
-        dd($request->all());
+        $discussions = Discussion::search($keywords)->paginate(config('app.perPage'));
 
+        return view('forum.search', compact('discussions', 'keywords'));
     }
 }

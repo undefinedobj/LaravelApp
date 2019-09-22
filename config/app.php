@@ -186,6 +186,11 @@ return [
         Intervention\Image\ImageServiceProvider::class,
 //        Laravel 使用 laravel-5-markdown-editor
         YuanChao\Editor\EndaEditorServiceProvider::class,
+        /**
+         * TNTSearch 全文搜索
+         */
+        Laravel\Scout\ScoutServiceProvider::class,
+        Vanry\Scout\TNTSearchScoutServiceProvider::class,
 
         /*
          * Application Service Providers...

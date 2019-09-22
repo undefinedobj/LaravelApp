@@ -2,8 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e7441571-f487-46a0-8a65-1b6ba75734c6" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/resources/views/forum/search.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/laravelapp.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/laravelapp.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/forum/form.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/forum/form.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/PostsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/PostsController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Discussion.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Discussion.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Providers/AppServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Providers/AppServiceProvider.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/app.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/app.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/app.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -199,6 +209,10 @@
       <path value="$PROJECT_DIR$/vendor/laracasts/flash" />
       <path value="$PROJECT_DIR$/vendor/danielstjules/stringy" />
       <path value="$PROJECT_DIR$/vendor/laravolt/avatar" />
+      <path value="$PROJECT_DIR$/vendor/teamtnt/tntsearch" />
+      <path value="$PROJECT_DIR$/vendor/vanry/laravel-scout-tntsearch" />
+      <path value="$PROJECT_DIR$/vendor/laravel/scout" />
+      <path value="$PROJECT_DIR$/vendor/fukuball/jieba-php" />
     </include_path>
   </component>
   <component name="ProjectId" id="1PbzoNmm3Hd7nqenFVpUrTpTmHA" />
@@ -321,10 +335,25 @@
       <command value="composer dump-autoload" />
       <command value="git commit -m&quot;文件上传的代码封装成一个公共方法&quot;" />
       <command value="git commit -m &quot;解决缓存后不显示评论内容&quot;" />
-      <command value="git add -A" />
       <command value="git commit -m&quot;评论功能无刷新提交&quot;" />
+      <command value="git add -A" />
+      <command value="git commit -m &quot;搜索&quot;" />
       <command value="git pull" />
       <command value="git push" />
+      <command value="composer require laravel/scout --ignore-platform-reqs" />
+      <command value="composer require algolia/scout-extended --ignore-platform-reqs" />
+      <command value="artisan scout:import" />
+      <command value="composer remove algolia/scout-extended" />
+      <command value="composer remove algolia/scout-extended --ignore-platform-reqs" />
+      <command value="composer require algolia/algoliasearch-client-php:^2.2 --ignore-platform-reqs" />
+      <command value="artisan scout:import &quot;App\Models\Discussions&quot;" />
+      <command value="composer remove algolia/algoliasearch-client-php --ignore-platform-reqs" />
+      <command value="composer require vanry/laravel-scout-tntsearch" />
+      <command value="composer remove laravel/scout --ignore-platform-reqs" />
+      <command value="composer require vanry/laravel-scout-tntsearch --ignore-platform-reqs" />
+      <command value="composer require fukuball/jieba-php --ignore-platform-reqs" />
+      <command value="artisan vendor:publish --provider=&quot;Laravel\Scout\ScoutServiceProvider&quot;" />
+      <command value="artisan scout:import &quot;App\Models\Discussion&quot;" />
     </option>
   </component>
   <component name="RunDashboard">
@@ -488,6 +517,7 @@
       <workItem from="1568824715641" duration="2476000" />
       <workItem from="1568862906836" duration="2747000" />
       <workItem from="1568913746944" duration="8539000" />
+      <workItem from="1569077461488" duration="13463000" />
     </task>
     <servers />
   </component>
