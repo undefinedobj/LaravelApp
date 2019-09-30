@@ -2,8 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e7441571-f487-46a0-8a65-1b6ba75734c6" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/laravelapp.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/laravelapp.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Console/Kernel.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Console/Kernel.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Providers/EventServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Providers/EventServiceProvider.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/app.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/app.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/services.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/services.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -203,6 +210,10 @@
       <path value="$PROJECT_DIR$/vendor/vanry/laravel-scout-tntsearch" />
       <path value="$PROJECT_DIR$/vendor/laravel/scout" />
       <path value="$PROJECT_DIR$/vendor/fukuball/jieba-php" />
+      <path value="$PROJECT_DIR$/vendor/league/oauth1-client" />
+      <path value="$PROJECT_DIR$/vendor/laravel/socialite" />
+      <path value="$PROJECT_DIR$/vendor/socialiteproviders/manager" />
+      <path value="$PROJECT_DIR$/vendor/socialiteproviders/weibo" />
     </include_path>
   </component>
   <component name="ProjectId" id="1PbzoNmm3Hd7nqenFVpUrTpTmHA" />
@@ -214,7 +225,7 @@
     <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/New Scratch File" value="Blade" />
     <property name="com.jetbrains.php.phpunit.codeGeneration.PhpNewTestDialog.defaultLibrary" value="PHPUnit" />
     <property name="editor.config.ad.shown" value="true" />
-    <property name="last_opened_file_path" value="D:/xampp/htdocs/shufu" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../realty" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
@@ -346,8 +357,13 @@
       <command value="git pull" />
       <command value="git push" />
       <command value="git add -" />
-      <command value="git add -A" />
       <command value="git commit -m&quot;删除无用的文件&quot;" />
+      <command value="git add -A" />
+      <command value="git commit -m &quot;使用任务调度， 每 10 分钟处理一次 email 队列&quot;" />
+      <command value="composer dumpload" />
+      <command value="composer require laravel/socialite --ignore-platform-reqs" />
+      <command value="composer require socialiteproviders/weibo --ignore-platform-reqs" />
+      <command value="artisan make:controller Auth\AuthenticationController" />
     </option>
   </component>
   <component name="RunDashboard">
@@ -512,7 +528,23 @@
       <workItem from="1568862906836" duration="2747000" />
       <workItem from="1568913746944" duration="8539000" />
       <workItem from="1569077461488" duration="16559000" />
-      <workItem from="1569132424762" duration="2122000" />
+      <workItem from="1569132424762" duration="5925000" />
+      <workItem from="1569204195974" duration="1205000" />
+      <workItem from="1569224182684" duration="1199000" />
+      <workItem from="1569243756938" duration="18000" />
+      <workItem from="1569314778891" duration="1865000" />
+      <workItem from="1569358078870" duration="738000" />
+      <workItem from="1569378962417" duration="698000" />
+      <workItem from="1569405901482" duration="5000" />
+      <workItem from="1569407743617" duration="33000" />
+      <workItem from="1569409150557" duration="11000" />
+      <workItem from="1569467986539" duration="53000" />
+      <workItem from="1569504270236" duration="77000" />
+      <workItem from="1569504581738" duration="161000" />
+      <workItem from="1569505262021" duration="2000" />
+      <workItem from="1569644794619" duration="191000" />
+      <workItem from="1569655132185" duration="1074000" />
+      <workItem from="1569806819357" duration="1529000" />
     </task>
     <servers />
   </component>

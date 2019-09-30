@@ -191,6 +191,12 @@ return [
          */
         Laravel\Scout\ScoutServiceProvider::class,
         Vanry\Scout\TNTSearchScoutServiceProvider::class,
+        /**
+         * 微博社交扩展
+         */
+        // a whole bunch of providers
+        // remove 'Laravel\Socialite\SocialiteServiceProvider',
+        \SocialiteProviders\Manager\ServiceProvider::class, // add
 
         /*
          * Application Service Providers...

@@ -32,7 +32,13 @@ Route::resources([
     // 'comments'          =>      'CommentsController',
 ]);
 Route::get('search', 'PostsController@search');
-
+/**
+ * 微博社交扩展
+ */
+Route::get( '/auth/{social}', 'Auth\AuthenticationController@getSocialRedirect' )
+    ->middleware('guest');
+Route::get( '/auth/{social}/callback', 'Auth\AuthenticationController@getSocialCallback' )
+    ->middleware('guest');
 /**
  * 纯属瞎玩, 基本没啥用
  *
