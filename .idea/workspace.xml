@@ -2,15 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e7441571-f487-46a0-8a65-1b6ba75734c6" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/laravelapp.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/laravelapp.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Providers/EventServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Providers/EventServiceProvider.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/app.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/app.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/services.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/services.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Auth/AuthenticationController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Auth/AuthenticationController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -225,7 +219,7 @@
     <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/New Scratch File" value="Blade" />
     <property name="com.jetbrains.php.phpunit.codeGeneration.PhpNewTestDialog.defaultLibrary" value="PHPUnit" />
     <property name="editor.config.ad.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../realty" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../phpHospital" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
@@ -354,16 +348,17 @@
       <command value="git commit -m&quot;TNTSearch + jieba-php 中文全文搜索&quot;" />
       <command value="git commit -m &quot;代码整洁一点&quot;" />
       <command value="artisan scout:import &quot;App\Models\Discussion&quot;" />
-      <command value="git pull" />
-      <command value="git push" />
       <command value="git add -" />
       <command value="git commit -m&quot;删除无用的文件&quot;" />
-      <command value="git add -A" />
       <command value="git commit -m &quot;使用任务调度， 每 10 分钟处理一次 email 队列&quot;" />
       <command value="composer dumpload" />
       <command value="composer require laravel/socialite --ignore-platform-reqs" />
       <command value="composer require socialiteproviders/weibo --ignore-platform-reqs" />
       <command value="artisan make:controller Auth\AuthenticationController" />
+      <command value="git add -A" />
+      <command value="git commit -m&quot;install 微博社交扩展登录&quot;" />
+      <command value="git pull" />
+      <command value="git push" />
     </option>
   </component>
   <component name="RunDashboard">
@@ -544,7 +539,14 @@
       <workItem from="1569505262021" duration="2000" />
       <workItem from="1569644794619" duration="191000" />
       <workItem from="1569655132185" duration="1074000" />
-      <workItem from="1569806819357" duration="1529000" />
+      <workItem from="1569806819357" duration="1852000" />
+      <workItem from="1569839873652" duration="50000" />
+      <workItem from="1569840812632" duration="865000" />
+      <workItem from="1570069948773" duration="1351000" />
+      <workItem from="1570776718408" duration="492000" />
+      <workItem from="1570785512830" duration="354000" />
+      <workItem from="1570790621962" duration="1749000" />
+      <workItem from="1570849620552" duration="2383000" />
     </task>
     <servers />
   </component>
