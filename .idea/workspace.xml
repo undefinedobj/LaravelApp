@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="e7441571-f487-46a0-8a65-1b6ba75734c6" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Auth/AuthenticationController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Auth/AuthenticationController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -358,6 +358,8 @@
       <command value="git pull" />
       <command value="git push" />
       <command value="git add -A" />
+      <command value="git commit -m&quot;weibo &quot;" />
+      <command value="git  push" />
     </option>
   </component>
   <component name="RunDashboard">
@@ -546,7 +548,8 @@
       <workItem from="1570785512830" duration="354000" />
       <workItem from="1570790621962" duration="1749000" />
       <workItem from="1570849620552" duration="4668000" />
-      <workItem from="1570859687570" duration="305000" />
+      <workItem from="1570859687570" duration="465000" />
+      <workItem from="1570860160720" duration="469000" />
     </task>
     <servers />
   </component>

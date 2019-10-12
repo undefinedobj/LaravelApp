@@ -23,7 +23,7 @@ class CreateUsersTable extends Migration
             $table->integer('is_confirmed')->default(1)->comment('是否验证,0否,1是');
             $table->timestamp('email_verified_at')->nullable()->comment('验证时间');
             $table->string('provider');
-            $table->integer('provider_id')->unsigned();
+            $table->string('provider_id', 20)->unsigned();
             $table->rememberToken();
             $table->timestamps();
         });
