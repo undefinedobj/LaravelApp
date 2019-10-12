@@ -43,6 +43,10 @@ class AuthenticationController extends Controller
             $newUser->email = $socialUser->getEmail() == '' ? '' : $socialUser->getEmail();
             $newUser->avatar = $socialUser->getAvatar();
             $newUser->password = '';
+            $newUser->confirm_code = \Str::random(10);
+            $newUser->email_verified_at = now();
+            $newUser->remember_token = \Str::random(10);
+
             $newUser->provider = $account;
             $newUser->provider_id = $socialUser->getId();
 
