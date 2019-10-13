@@ -263,6 +263,7 @@ return [
         'Image' => Intervention\Image\Facades\Image::class,
         'EndaEditor' => YuanChao\Editor\Facade\EndaEditorFacade::class,
         'Avatar'    => Laravolt\Avatar\Facade::class,
+        'Socialite' => Laravel\Socialite\Facades\Socialite::class,
     ],
 
 ];
