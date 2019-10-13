@@ -2,7 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e7441571-f487-46a0-8a65-1b6ba75734c6" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/laravelapp.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/laravelapp.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/app.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/app.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/config/services.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/services.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -207,6 +212,7 @@
       <path value="$PROJECT_DIR$/vendor/laravel/socialite" />
       <path value="$PROJECT_DIR$/vendor/socialiteproviders/manager" />
       <path value="$PROJECT_DIR$/vendor/socialiteproviders/weibo" />
+      <path value="$PROJECT_DIR$/vendor/socialiteproviders/weixin-web" />
     </include_path>
   </component>
   <component name="ProjectId" id="1PbzoNmm3Hd7nqenFVpUrTpTmHA" />
@@ -355,12 +361,15 @@
       <command value="composer require socialiteproviders/weibo --ignore-platform-reqs" />
       <command value="artisan make:controller Auth\AuthenticationController" />
       <command value="git commit -m&quot;install 微博社交扩展登录&quot;" />
-      <command value="git pull" />
       <command value="git commit -m&quot;weibo &quot;" />
       <command value="git  push" />
-      <command value="git add -A" />
       <command value="git commit -m&quot;更改为 string 20 类型&quot;" />
+      <command value="git add -A" />
+      <command value="git commit -m &quot;github 登录&quot;" />
+      <command value="git pull" />
       <command value="git push" />
+      <command value="composer require socialiteproviders/weixin-web" />
+      <command value="composer require socialiteproviders/weixin-web --ignore-platform-reqs" />
     </option>
   </component>
   <component name="RunDashboard">
