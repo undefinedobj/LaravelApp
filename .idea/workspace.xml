@@ -2,13 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e7441571-f487-46a0-8a65-1b6ba75734c6" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/laravelapp.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/laravelapp.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/ya-cold/line-edit.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/ya-cold/user-edit.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/app.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/app.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/services.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/services.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -224,7 +221,7 @@
     <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/New Scratch File" value="Blade" />
     <property name="com.jetbrains.php.phpunit.codeGeneration.PhpNewTestDialog.defaultLibrary" value="PHPUnit" />
     <property name="editor.config.ad.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../phpHospital" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/views/ya-cold" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
@@ -235,11 +232,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\laragon\www\LaravelApp\resources\views\ya-cold" />
       <recent name="D:\laragon\www\LaravelApp\resources\views\forum" />
       <recent name="D:\laragon\www\laravelapp\app\Http\Middleware" />
       <recent name="D:\laragon\www\laravelapp\routes" />
       <recent name="D:\laragon\www\laravelapp\app" />
-      <recent name="D:\laragon\www\laravelapp\resources\views\vendor\laravel-admin" />
     </key>
   </component>
   <component name="RunAnythingCache">
@@ -318,7 +315,6 @@
       <command value="git commit -m &quot;菜单栏的分类进行优化处理&quot;" />
       <command value="git commit -m &quot;首页的帖子列表取消 cache 处理，cache 后不能分页问题&quot;" />
       <command value="artisan make:command BlogInstall" />
-      <command value="artisan migrate" />
       <command value="artisan migrate:refresh --seed" />
       <command value="artisan install the blog" />
       <command value="install the blog" />
@@ -370,6 +366,16 @@
       <command value="git push" />
       <command value="composer require socialiteproviders/weixin-web" />
       <command value="composer require socialiteproviders/weixin-web --ignore-platform-reqs" />
+      <command value="artisan make:controller YaCold\UserController" />
+      <command value="artisan make:controller YaCold/UserController" />
+      <command value="artisan make:controller YaCold/LineController --resource" />
+      <command value="artisan make:model YaCold/User" />
+      <command value="artisan make:model Models/YaCold/User" />
+      <command value="artisan make:model Models/YaCold/User -m" />
+      <command value="2019_10_30_202415_create_users_table" />
+      <command value="artisan make:model Models/YaCold/Line -m" />
+      <command value="artisan make:model Models/YaCold/Discount -m" />
+      <command value="artisan migrate" />
     </option>
   </component>
   <component name="RunDashboard">
@@ -560,6 +566,31 @@
       <workItem from="1570849620552" duration="4668000" />
       <workItem from="1570859687570" duration="465000" />
       <workItem from="1570860160720" duration="2619000" />
+      <workItem from="1571015503657" duration="15000" />
+      <workItem from="1571015677458" duration="7000" />
+      <workItem from="1571015898855" duration="3000" />
+      <workItem from="1571016123590" duration="234000" />
+      <workItem from="1571016386105" duration="499000" />
+      <workItem from="1571024388642" duration="415000" />
+      <workItem from="1571024817562" duration="3000" />
+      <workItem from="1571024835502" duration="1437000" />
+      <workItem from="1571041256718" duration="79000" />
+      <workItem from="1571041414230" duration="319000" />
+      <workItem from="1571045863976" duration="11000" />
+      <workItem from="1571046568787" duration="64000" />
+      <workItem from="1571727805686" duration="1057000" />
+      <workItem from="1571801698205" duration="5000" />
+      <workItem from="1571901458138" duration="666000" />
+      <workItem from="1571979201656" duration="5000" />
+      <workItem from="1571993296390" duration="43000" />
+      <workItem from="1572259961575" duration="828000" />
+      <workItem from="1572318843612" duration="365000" />
+      <workItem from="1572319604519" duration="750000" />
+      <workItem from="1572340583340" duration="849000" />
+      <workItem from="1572365026586" duration="36000" />
+      <workItem from="1572402648063" duration="610000" />
+      <workItem from="1572436610442" duration="206000" />
+      <workItem from="1572436842296" duration="26280000" />
     </task>
     <servers />
   </component>
