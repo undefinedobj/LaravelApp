@@ -40,28 +40,6 @@ Route::get( '/auth/{social}', 'Auth\AuthenticationController@getSocialRedirect' 
 Route::get( '/auth/{social}/callback', 'Auth\AuthenticationController@getSocialCallback' )
     ->middleware('guest');
 
-
-/**
- * 亚冷
- */
-Route::group([
-    'prefix'        => 'cold',
-    'namespace'     => 'YaCold',
-], function () {
-    Route::get('users', 'UserController@index')->name('cold.users');
-    Route::get('users/{id}', 'UserController@edit');
-    Route::put('users', 'UserController@update');
-    Route::post('users', 'UserController@store');
-    Route::delete('users', 'UserController@destroy');
-
-    Route::get('lines', 'LineController@index')->name('cold.lines');;
-    Route::get('lines/{id}', 'LineController@edit');
-    Route::put('lines', 'LineController@update');
-    Route::post('lines', 'LineController@store');
-    Route::delete('lines', 'LineController@destroy');
-});
-
-
 /**
  * 纯属瞎玩, 基本没啥用
  *

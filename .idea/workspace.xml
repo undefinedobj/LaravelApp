@@ -2,10 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e7441571-f487-46a0-8a65-1b6ba75734c6" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/resources/views/ya-cold/line-edit.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/ya-cold/user-edit.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -221,7 +218,7 @@
     <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/New Scratch File" value="Blade" />
     <property name="com.jetbrains.php.phpunit.codeGeneration.PhpNewTestDialog.defaultLibrary" value="PHPUnit" />
     <property name="editor.config.ad.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/views/ya-cold" />
+    <property name="last_opened_file_path" value="D:/phpstudy_pro/WWW/shop" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
@@ -360,10 +357,8 @@
       <command value="git commit -m&quot;weibo &quot;" />
       <command value="git  push" />
       <command value="git commit -m&quot;更改为 string 20 类型&quot;" />
-      <command value="git add -A" />
       <command value="git commit -m &quot;github 登录&quot;" />
       <command value="git pull" />
-      <command value="git push" />
       <command value="composer require socialiteproviders/weixin-web" />
       <command value="composer require socialiteproviders/weixin-web --ignore-platform-reqs" />
       <command value="artisan make:controller YaCold\UserController" />
@@ -376,6 +371,10 @@
       <command value="artisan make:model Models/YaCold/Line -m" />
       <command value="artisan make:model Models/YaCold/Discount -m" />
       <command value="artisan migrate" />
+      <command value="git add -A" />
+      <command value="git commit -m &quot;亚冷面试_第三个功能未完成&quot;" />
+      <command value="gitpull" />
+      <command value="git push" />
     </option>
   </component>
   <component name="RunDashboard">
@@ -590,7 +589,9 @@
       <workItem from="1572365026586" duration="36000" />
       <workItem from="1572402648063" duration="610000" />
       <workItem from="1572436610442" duration="206000" />
-      <workItem from="1572436842296" duration="26280000" />
+      <workItem from="1572436842296" duration="26754000" />
+      <workItem from="1572487190717" duration="8311000" />
+      <workItem from="1572510598121" duration="79000" />
     </task>
     <servers />
   </component>
