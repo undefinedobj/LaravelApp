@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="e7441571-f487-46a0-8a65-1b6ba75734c6" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/app.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/app.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -358,7 +359,6 @@
       <command value="git  push" />
       <command value="git commit -m&quot;更改为 string 20 类型&quot;" />
       <command value="git commit -m &quot;github 登录&quot;" />
-      <command value="git pull" />
       <command value="composer require socialiteproviders/weixin-web" />
       <command value="composer require socialiteproviders/weixin-web --ignore-platform-reqs" />
       <command value="artisan make:controller YaCold\UserController" />
@@ -371,9 +371,12 @@
       <command value="artisan make:model Models/YaCold/Line -m" />
       <command value="artisan make:model Models/YaCold/Discount -m" />
       <command value="artisan migrate" />
-      <command value="git add -A" />
       <command value="git commit -m &quot;亚冷面试_第三个功能未完成&quot;" />
       <command value="gitpull" />
+      <command value="git add -A" />
+      <command value="git commit -m &quot;delete ya-cold 亚冷&quot;" />
+      <command value="git pull" />
+      <command value="git pull origin master" />
       <command value="git push" />
     </option>
   </component>
@@ -592,6 +595,11 @@
       <workItem from="1572436842296" duration="26754000" />
       <workItem from="1572487190717" duration="8311000" />
       <workItem from="1572510598121" duration="79000" />
+      <workItem from="1572622119424" duration="366000" />
+      <workItem from="1572830628788" duration="122000" />
+      <workItem from="1572830892951" duration="127000" />
+      <workItem from="1572836326859" duration="15000" />
+      <workItem from="1572844142786" duration="163000" />
     </task>
     <servers />
   </component>
