@@ -2,8 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e7441571-f487-46a0-8a65-1b6ba75734c6" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/laravelapp.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/laravelapp.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/app.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/app.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/auth.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/auth.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -208,6 +212,19 @@
       <path value="$PROJECT_DIR$/vendor/socialiteproviders/manager" />
       <path value="$PROJECT_DIR$/vendor/socialiteproviders/weibo" />
       <path value="$PROJECT_DIR$/vendor/socialiteproviders/weixin-web" />
+      <path value="$PROJECT_DIR$/vendor/pimple/pimple" />
+      <path value="$PROJECT_DIR$/vendor/upyun/sdk" />
+      <path value="$PROJECT_DIR$/vendor/overtrue/laravel-wechat" />
+      <path value="$PROJECT_DIR$/vendor/overtrue/wechat" />
+      <path value="$PROJECT_DIR$/vendor/overtrue/socialite" />
+      <path value="$PROJECT_DIR$/vendor/psr/cache" />
+      <path value="$PROJECT_DIR$/vendor/symfony/var-exporter" />
+      <path value="$PROJECT_DIR$/vendor/symfony/psr-http-message-bridge" />
+      <path value="$PROJECT_DIR$/vendor/symfony/service-contracts" />
+      <path value="$PROJECT_DIR$/vendor/symfony/cache-contracts" />
+      <path value="$PROJECT_DIR$/vendor/symfony/cache" />
+      <path value="$PROJECT_DIR$/vendor/jellybool/flysystem-upyun" />
+      <path value="$PROJECT_DIR$/vendor/easywechat-composer/easywechat-composer" />
     </include_path>
   </component>
   <component name="ProjectId" id="1PbzoNmm3Hd7nqenFVpUrTpTmHA" />
@@ -373,11 +390,16 @@
       <command value="artisan migrate" />
       <command value="git commit -m &quot;亚冷面试_第三个功能未完成&quot;" />
       <command value="gitpull" />
-      <command value="git add -A" />
       <command value="git commit -m &quot;delete ya-cold 亚冷&quot;" />
       <command value="git pull" />
       <command value="git pull origin master" />
       <command value="git push" />
+      <command value="git add -A" />
+      <command value="git commit -m &quot;程序本地化配置&quot;" />
+      <command value="composer update" />
+      <command value="composer install" />
+      <command value="composer install --ignore-platform-reqs" />
+      <command value="composer require jellybool/flysystem-upyun" />
     </option>
   </component>
   <component name="RunDashboard">
@@ -599,7 +621,7 @@
       <workItem from="1572830628788" duration="122000" />
       <workItem from="1572830892951" duration="127000" />
       <workItem from="1572836326859" duration="15000" />
-      <workItem from="1572844142786" duration="163000" />
+      <workItem from="1572844142786" duration="5173000" />
     </task>
     <servers />
   </component>
